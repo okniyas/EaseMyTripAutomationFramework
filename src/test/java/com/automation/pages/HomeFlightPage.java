@@ -1,7 +1,6 @@
 package com.automation.pages;
 
 import com.automation.utils.ConfigReader;
-import com.automation.utils.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -9,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class HomePage extends BasePage{
+public class HomeFlightPage extends BasePage {
 
     @FindBy(className = "srchBtnSe")
     WebElement searchBtn;
@@ -33,13 +32,9 @@ public class HomePage extends BasePage{
     @FindBy(id = "a_Editbox13_show")
     WebElement toCityInput;
 
-    String XPATH_FOR_CITY_DROPDOWN = "//span[contains(text(),'%s')]";
+    String XPATH_FOR_DAY = "//div[@class='main']/div[@class='box']//div[@class='days']//li[contains(@id,'%s')]";
 
-    //div[@class='main']/div[@class='box']//div[@class='month2']  //Aug 2024
-
-    //div[@class='main']/div[@class='box']//div[@class='days']//li[@id='frth_4_22/08/2024']  date
-
-    //div[@class='main']/div[@class='box']//div[@class='days']//li[contains(@id,'22')] date only
+//    String XPATH_FOR_CITY_DROPDOWN = "//span[contains(text(),'%s')]";
 
 
     public void opensTheWebsite() {
@@ -61,12 +56,20 @@ public class HomePage extends BasePage{
     }
 
     public void selectDate(String date) {
-          //Aug 2024
-//        String day =
-//        WebElement monthYear = driver.findElement(By.xpath("//div[@class='main']/div[@class='box']//div[@class='month2']"));
 
+        String day = date.substring(0, date.indexOf(" "));
+        String monthYear = date.substring(date.indexOf(" ") + 1);
 
-        driver.findElement(By.id("frth_2_20/08/2024")).click();
+        WebElement monthAndYear = driver.findElement(By.xpath("//div[@class='main']/div[@class='box']//div[@class='month2']"));
+        WebElement nextMonth = driver.findElement(By.xpath("//div[@class='main1']/div[@class='box1']//div[@class='month3']"));
+
+        while (!monthAndYear.getText().toLowerCase().contains(monthYear.toLowerCase())) {
+
+            nextMonth.click();
+            monthAndYear = driver.findElement(By.xpath("//div[@class='main']/div[@class='box']//div[@class='month2']"));
+        }
+        String xpathDay = String.format(XPATH_FOR_DAY, day);
+        driver.findElement(By.xpath(xpathDay)).click();
     }
 
     public boolean verifyOnHomePage() {
@@ -85,23 +88,23 @@ public class HomePage extends BasePage{
 //        toCityBtn.click();
     }
 
-    public void enterFromCity(String fromCity) throws InterruptedException {
+    public void enterFromCity(String fromCity) {
         fromCityInput.sendKeys(fromCity);
 
         String fromXpath = String.format("//span[contains(text(),'%s')]", fromCity);
         WebElement dropdown = driver.findElement(By.xpath(fromXpath));
-        if(isPresent(dropdown)){
+        if (isPresent(dropdown)) {
             dropdown.click();
         }
     }
 
-    public void enterToCity(String toCity) throws InterruptedException {
+    public void enterToCity(String toCity) {
 
         toCityInput.sendKeys(toCity);
 
         String toXpath = String.format("//span[contains(text(),'%s')]", toCity);
         WebElement dropdown = driver.findElement(By.xpath(toXpath));
-        if(isPresent(dropdown)){
+        if (isPresent(dropdown)) {
             dropdown.click();
         }
     }

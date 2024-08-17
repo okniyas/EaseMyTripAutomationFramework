@@ -8,6 +8,6 @@ Feature: Validate flight search
     And user click on to city
     And user enter to city "Thiruvananthapuram"
     And click on departure date
-    And select date "20 Aug 2024"
+    And select date "27 Sep 2024"
     And click on search button
     Then verify on flight list page

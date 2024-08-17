@@ -55,12 +55,12 @@ public class HomeSteps {
     }
 
     @And("user enter from city {string}")
-    public void userEnterFromCity(String fromCity) {
+    public void userEnterFromCity(String fromCity) throws InterruptedException {
         homePage.enterFromCity(fromCity);
     }
 
     @And("user enter to city {string}")
-    public void userEnterToCity(String toCity) {
+    public void userEnterToCity(String toCity) throws InterruptedException {
         homePage.enterToCity(toCity);
     }
 }

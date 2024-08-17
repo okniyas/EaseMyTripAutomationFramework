@@ -4,7 +4,7 @@ Feature: Validate flight search
     Given user opens the website
     Then verify user is on home page
     When user click on from city
-    And user enter from city "Kochi"
+    And user enter from city "Bangalore"
     And user click on to city
     And user enter to city "Thiruvananthapuram"
     And click on departure date

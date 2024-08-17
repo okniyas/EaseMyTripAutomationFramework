@@ -14,6 +14,7 @@ public class HomePage extends BasePage{
     @FindBy(className = "srchBtnSe")
     WebElement searchBtn;
 
+    //    @FindBy(xpath = "//div[@class='lis']")
     @FindBy(xpath = "//div[@class='top_bar_flgt_1']/div[not (@id) and @price]")
     List<WebElement> flightList;
 
@@ -32,8 +33,13 @@ public class HomePage extends BasePage{
     @FindBy(id = "a_Editbox13_show")
     WebElement toCityInput;
 
-//    String XPATH_FOR_CITY_DROPDOWN = "//span[contains(text(),'%s')]";
+    String XPATH_FOR_CITY_DROPDOWN = "//span[contains(text(),'%s')]";
 
+    //div[@class='main']/div[@class='box']//div[@class='month2']  //Aug 2024
+
+    //div[@class='main']/div[@class='box']//div[@class='days']//li[@id='frth_4_22/08/2024']  date
+
+    //div[@class='main']/div[@class='box']//div[@class='days']//li[contains(@id,'22')] date only
 
 
     public void opensTheWebsite() {
@@ -49,10 +55,17 @@ public class HomePage extends BasePage{
     }
 
     public void clickOnDepartureDate() {
-        departureDateBtn.click();
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("arguments[0].click();", departureDateBtn);
+//        departureDateBtn.click();
     }
 
     public void selectDate(String date) {
+          //Aug 2024
+//        String day =
+//        WebElement monthYear = driver.findElement(By.xpath("//div[@class='main']/div[@class='box']//div[@class='month2']"));
+
+
         driver.findElement(By.id("frth_2_20/08/2024")).click();
     }
 
@@ -61,7 +74,9 @@ public class HomePage extends BasePage{
     }
 
     public void clickOnFromCity() {
-        fromCityBtn.click();
+        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("arguments[0].click();", fromCityBtn);
+//        fromCityBtn.click();
     }
 
     public void clickOnToCity() {
@@ -70,19 +85,24 @@ public class HomePage extends BasePage{
 //        toCityBtn.click();
     }
 
-    public void enterFromCity(String fromCity) {
+    public void enterFromCity(String fromCity) throws InterruptedException {
         fromCityInput.sendKeys(fromCity);
+
         String fromXpath = String.format("//span[contains(text(),'%s')]", fromCity);
-        driver.findElement(By.xpath(fromXpath)).click();
-
-
+        WebElement dropdown = driver.findElement(By.xpath(fromXpath));
+        if(isPresent(dropdown)){
+            dropdown.click();
+        }
     }
 
-    public void enterToCity(String toCity) {
-        toCityInput.sendKeys(toCity);
-        String toXpath = String.format("//span[contains(text(),'%s')]", toCity);
-        System.out.println(toXpath);
-        driver.findElement(By.xpath(toXpath)).click();
+    public void enterToCity(String toCity) throws InterruptedException {
 
+        toCityInput.sendKeys(toCity);
+
+        String toXpath = String.format("//span[contains(text(),'%s')]", toCity);
+        WebElement dropdown = driver.findElement(By.xpath(toXpath));
+        if(isPresent(dropdown)){
+            dropdown.click();
+        }
     }
 }

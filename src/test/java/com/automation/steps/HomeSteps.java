@@ -4,6 +4,7 @@ import com.automation.pages.HomePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class HomeSteps {
@@ -36,5 +37,30 @@ public class HomeSteps {
     @And("select date {string}")
     public void selectDate(String date) {
         homePage.selectDate(date);
+    }
+
+    @Then("verify user is on home page")
+    public void verifyUserIsOnHomePage() {
+        Assert.assertTrue(homePage.verifyOnHomePage());
+    }
+
+    @When("user click on from city")
+    public void userClickOnFromCity() {
+        homePage.clickOnFromCity();
+    }
+
+    @And("user click on to city")
+    public void userClickOnToCity() {
+        homePage.clickOnToCity();
+    }
+
+    @And("user enter from city {string}")
+    public void userEnterFromCity(String fromCity) throws InterruptedException {
+        homePage.enterFromCity(fromCity);
+    }
+
+    @And("user enter to city {string}")
+    public void userEnterToCity(String toCity) throws InterruptedException {
+        homePage.enterToCity(toCity);
     }
 }

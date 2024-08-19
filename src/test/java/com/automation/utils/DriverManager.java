@@ -11,6 +11,7 @@ public class DriverManager {
     static WebDriver driver;
 
     public static void createDriver(){
+
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
         driver = new ChromeDriver(options);

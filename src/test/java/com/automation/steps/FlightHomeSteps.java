@@ -1,66 +1,60 @@
 package com.automation.steps;
 
-import com.automation.pages.HomeFlightPage;
+import com.automation.pages.FlightHomePage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class HomeFlightSteps {
+public class FlightHomeSteps {
 
-    HomeFlightPage homeFlightPage = new HomeFlightPage();
+    FlightHomePage flightHomePage = new FlightHomePage();
 
     @Given("user opens the website")
     public void user_opens_the_website() {
-        homeFlightPage.opensTheWebsite();
+        flightHomePage.opensTheWebsite();
 
     }
 
     @Given("click on search button")
     public void click_on_search_button() {
-        homeFlightPage.clickOnSearchBtn();
-
-    }
-
-    @Then("verify on flight list page")
-    public void verify_on_flight_list_page() {
-        Assert.assertTrue(homeFlightPage.verifyOnFlightListPage());
+        flightHomePage.clickOnSearchBtn();
 
     }
 
     @And("click on departure date")
     public void clickOnDepartureDate() {
-        homeFlightPage.clickOnDepartureDate();
+        flightHomePage.clickOnDepartureDate();
     }
 
     @And("select date {string}")
     public void selectDate(String date) {
-        homeFlightPage.selectDate(date);
+        flightHomePage.selectDate(date);
     }
 
     @Then("verify user is on home page")
     public void verifyUserIsOnHomePage() {
-        Assert.assertTrue(homeFlightPage.verifyOnHomePage());
+        Assert.assertTrue(flightHomePage.verifyOnHomePage());
     }
 
     @When("user click on from city")
     public void userClickOnFromCity() {
-        homeFlightPage.clickOnFromCity();
+        flightHomePage.clickOnFromCity();
     }
 
     @And("user click on to city")
     public void userClickOnToCity() {
-        homeFlightPage.clickOnToCity();
+        flightHomePage.clickOnToCity();
     }
 
     @And("user enter from city {string}")
     public void userEnterFromCity(String fromCity) {
-        homeFlightPage.enterFromCity(fromCity);
+        flightHomePage.enterFromCity(fromCity);
     }
 
     @And("user enter to city {string}")
     public void userEnterToCity(String toCity) {
-        homeFlightPage.enterToCity(toCity);
+        flightHomePage.enterToCity(toCity);
     }
 }

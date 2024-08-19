@@ -8,16 +8,12 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class HomeFlightPage extends BasePage {
+public class FlightHomePage extends BasePage {
 
     @FindBy(className = "srchBtnSe")
     WebElement searchBtn;
 
-    //    @FindBy(xpath = "//div[@class='lis']")
-    @FindBy(xpath = "//div[@class='top_bar_flgt_1']/div[not (@id) and @price]")
-    List<WebElement> flightList;
-
-    @FindBy(xpath = "//input[@id='ddate']")
+    @FindBy(xpath = "//input[@id='ddate']/parent::div")
     WebElement departureDateBtn;
 
     @FindBy(id = "tocity")
@@ -45,14 +41,14 @@ public class HomeFlightPage extends BasePage {
         searchBtn.click();
     }
 
-    public boolean verifyOnFlightListPage() {
-        return flightList.size() > 0;
-    }
-
     public void clickOnDepartureDate() {
-        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
-        javascriptExecutor.executeScript("arguments[0].click();", departureDateBtn);
-//        departureDateBtn.click();
+//        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+//        javascriptExecutor.executeScript("arguments[0].click();", departureDateBtn);
+        if(departureDateBtn.isEnabled()){
+//            departureDateBtn.click();
+            clickByJS(departureDateBtn);
+        }
+
     }
 
     public void selectDate(String date) {
@@ -65,11 +61,14 @@ public class HomeFlightPage extends BasePage {
 
         while (!monthAndYear.getText().toLowerCase().contains(monthYear.toLowerCase())) {
 
-            nextMonth.click();
+//            nextMonth.click();
+            clickByJS(nextMonth);
             monthAndYear = driver.findElement(By.xpath("//div[@class='main']/div[@class='box']//div[@class='month2']"));
         }
         String xpathDay = String.format(XPATH_FOR_DAY, day);
-        driver.findElement(By.xpath(xpathDay)).click();
+//        driver.findElement(By.xpath(xpathDay)).click();
+        WebElement clickDay = driver.findElement(By.xpath(xpathDay));
+        clickByJS(clickDay);
     }
 
     public boolean verifyOnHomePage() {
@@ -77,14 +76,16 @@ public class HomeFlightPage extends BasePage {
     }
 
     public void clickOnFromCity() {
-        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
-        javascriptExecutor.executeScript("arguments[0].click();", fromCityBtn);
+        clickByJS(fromCityBtn);
+//        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+//        javascriptExecutor.executeScript("arguments[0].click();", fromCityBtn);
 //        fromCityBtn.click();
     }
 
     public void clickOnToCity() {
-        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
-        javascriptExecutor.executeScript("arguments[0].click();", toCityBtn);
+        clickByJS(toCityBtn);
+//        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+//        javascriptExecutor.executeScript("arguments[0].click();", toCityBtn);
 //        toCityBtn.click();
     }
 
@@ -92,20 +93,21 @@ public class HomeFlightPage extends BasePage {
         fromCityInput.sendKeys(fromCity);
 
         String fromXpath = String.format("//span[contains(text(),'%s')]", fromCity);
+        waitForElementToPresent(fromXpath);
         WebElement dropdown = driver.findElement(By.xpath(fromXpath));
         if (isPresent(dropdown)) {
-            dropdown.click();
+            clickByJS(dropdown);
         }
     }
 
     public void enterToCity(String toCity) {
 
         toCityInput.sendKeys(toCity);
-
         String toXpath = String.format("//span[contains(text(),'%s')]", toCity);
+        waitForElementToPresent(toXpath);
         WebElement dropdown = driver.findElement(By.xpath(toXpath));
         if (isPresent(dropdown)) {
-            dropdown.click();
+            clickByJS(dropdown);
         }
     }
 }

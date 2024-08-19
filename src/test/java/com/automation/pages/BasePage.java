@@ -1,19 +1,38 @@
 package com.automation.pages;
 
 import com.automation.utils.DriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
 public class BasePage {
 
     WebDriver driver;
+    WebDriverWait wait;
 
     public BasePage() {
         this.driver = DriverManager.getDriver();
         PageFactory.initElements(driver, this);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+    }
+
+    public void clickByJS(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", element);
+    }
+
+    public void waitForElementToPresent(String loc) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(loc)));
+    }
+
+    public void waitForElementToBeClickable(WebElement element) {
+        wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public static boolean isDisplay(WebElement element) {
@@ -23,6 +42,7 @@ public class BasePage {
             return false;
         }
     }
+
     public boolean isPresent(WebElement element) {
         try {
             setImplicitWait(15);

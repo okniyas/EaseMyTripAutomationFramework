@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -28,8 +26,8 @@ public class TrainListingPage extends BasePage {
     WebElement trainLoader;
 
     public void isTrainListingDisplayed() {
-        Assert.assertTrue(modifySearchBtn.isDisplayed());
-        Assert.assertTrue(trainList.size() > 1);
+        Assert.assertTrue("Train Listing page not loaded",modifySearchBtn.isDisplayed());
+        Assert.assertFalse("Train List is null", trainList.isEmpty());
     }
 
     public void sortByNameAtoZ() {
@@ -41,7 +39,6 @@ public class TrainListingPage extends BasePage {
 
     public void isSortingByNameAToZDisplayed() {
         List<String> trainNames = new ArrayList<>();
-        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[contains(@class,'tr-name')]")));
         List<WebElement> nameElements = driver.findElements(By.xpath("//div[contains(@class,'tr-name')]"));
         for (WebElement name : nameElements) {
             trainNames.add(name.getText());

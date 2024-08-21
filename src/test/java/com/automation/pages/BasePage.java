@@ -35,6 +35,10 @@ public class BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
+    public void waitForElementToBeInvisible(WebElement element) {
+        wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
     public static boolean isDisplay(WebElement element) {
         try {
             return element.isDisplayed();

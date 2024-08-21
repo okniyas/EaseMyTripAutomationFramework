@@ -1,9 +1,10 @@
 package com.automation.pages;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class TrainHomePage extends BasePage{
+public class TrainHomePage extends BasePage {
     @FindBy(xpath = "//li[@class='trains mainMenu']")
     WebElement trainMenuBtn;
 
@@ -38,25 +39,25 @@ public class TrainHomePage extends BasePage{
 
     public void enterSourceStation(String fromStation) {
         fromCityInput.sendKeys(fromStation);
-        driver.findElement(By.xpath(String.format("//li//div[contains(text(),'%s')]",fromStation)));
-
+        WebElement fromCity=driver.findElement(By.xpath(String.format("//li//div[contains(text(),'%s')]", fromStation)));
+        fromCity.click();
     }
 
     public void enterDestinationStation(String toStation) {
         toCityInput.sendKeys(toStation);
-        driver.findElement(By.xpath(String.format("//li//div[contains(text(),'%s')]",toStation)));
-
+        WebElement toCity=driver.findElement(By.xpath(String.format("//li//div[contains(text(),'%s')]", toStation)));
+        toCity.click();
     }
 
     public void enterDepartDate(String date) {
         dateBtn.click();
-        String day=date.substring(0,date.indexOf(" "));
-        String month=date.substring(date.indexOf(" ")+1,date.lastIndexOf(" "));
-        while (!monthElement.getText().contains(month)){
+        String day = date.substring(0, date.indexOf(" "));
+        String month = date.substring(date.indexOf(" ") + 1, date.lastIndexOf(" "));
+        while (!monthElement.getText().contains(month)) {
             nextMonthBtn.click();
         }
-        String dayPath="//div[contains(@class,'corner-left')]/..//a[text()='%s']";
-        WebElement dayElement= driver.findElement(By.xpath(String.format(dayPath,day)));
+        String dayPath = "//div[contains(@class,'corner-left')]/..//a[text()='%s']";
+        WebElement dayElement = driver.findElement(By.xpath(String.format(dayPath, day)));
         dayElement.click();
     }
 

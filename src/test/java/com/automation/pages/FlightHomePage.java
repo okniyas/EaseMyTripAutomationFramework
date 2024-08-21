@@ -2,11 +2,8 @@ package com.automation.pages;
 
 import com.automation.utils.ConfigReader;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.List;
 
 public class FlightHomePage extends BasePage {
 
@@ -44,7 +41,7 @@ public class FlightHomePage extends BasePage {
     public void clickOnDepartureDate() {
 //        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
 //        javascriptExecutor.executeScript("arguments[0].click();", departureDateBtn);
-        if(departureDateBtn.isEnabled()){
+        if (departureDateBtn.isEnabled()) {
 //            departureDateBtn.click();
             clickByJS(departureDateBtn);
         }

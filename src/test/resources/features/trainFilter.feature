@@ -11,6 +11,10 @@ Feature: Validate sort functionality for train
     And click on train search button
     Then verify train list is displayed
 
-  Scenario: verify user can sort train by name
+  Scenario: verify user can sort train by name ascending
     When user click on sort by name A to Z
     Then verify sort by name A to Z
+
+  Scenario: verify user can sort train by name descending
+    When user click on sort by name Z to A
+    Then verify sort by name Z to A

@@ -50,6 +50,10 @@ public class BasePage {
         dropdown.selectByValue(value);
     }
 
+    public void waitForElementToBeInvisible(WebElement element) {
+        wait.until(ExpectedConditions.invisibilityOf(element));
+    }
+
     public static boolean isDisplay(WebElement element) {
         try {
             return element.isDisplayed();
@@ -60,7 +64,7 @@ public class BasePage {
 
     public boolean isPresent(WebElement element) {
         try {
-            setImplicitWait(25);
+            setImplicitWait(15);
             return element.isDisplayed();
         } catch (Exception e) {
             return false;

@@ -1,9 +1,10 @@
-package com.automation.pages;
+package com.automation.pages.web;
 
+import com.automation.pages.interfaces.HolidayHomePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HolidayHomePage extends BasePage{
+public class HolidayHomePageWeb extends BasePageWeb implements HolidayHomePage {
 
     @FindBy(xpath = "//ul[@id='homepagemenuUL']/li[contains(@class, 'holidays')]")
     WebElement holidayNavBar;

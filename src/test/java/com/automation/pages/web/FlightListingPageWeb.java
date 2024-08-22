@@ -1,12 +1,13 @@
-package com.automation.pages;
+package com.automation.pages.web;
 
+import com.automation.pages.interfaces.FlightListingPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class FlightListingPage extends BasePage {
+public class FlightListingPageWeb extends BasePageWeb implements FlightListingPage {
 
     //    @FindBy(xpath = "//div[@class='lis']")
     @FindBy(xpath = "//div[@class='top_bar_flgt_1']/div[not (@id) and @price]")

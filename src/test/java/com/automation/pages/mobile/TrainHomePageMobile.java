@@ -1,10 +1,11 @@
-package com.automation.pages;
+package com.automation.pages.mobile;
 
+import com.automation.pages.interfaces.TrainHomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class TrainHomePage extends BasePage {
+public class TrainHomePageMobile extends BasePageMobile implements TrainHomePage {
     @FindBy(xpath = "//li[@class='trains mainMenu']")
     WebElement trainMenuBtn;
 

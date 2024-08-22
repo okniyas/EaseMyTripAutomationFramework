@@ -1,7 +1,8 @@
-package com.automation.pages;
+package com.automation.pages.mobile;
 
-import com.automation.utils.ConfigReader;
-import com.automation.utils.DriverManager;
+import com.automation.utils.DriverManagerMobile;
+import com.automation.utils.DriverManagerWeb;
+import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -13,13 +14,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class BasePage {
+public class BasePageMobile {
 
-    WebDriver driver;
+    AppiumDriver driver;
     WebDriverWait wait;
 
-    public BasePage() {
-        this.driver = DriverManager.getDriver();
+    public BasePageMobile() {
+        this.driver = DriverManagerMobile.getDriver();
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
     }

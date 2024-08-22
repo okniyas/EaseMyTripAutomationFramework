@@ -1,14 +1,28 @@
 package com.automation.steps;
 
-import com.automation.pages.BusBookingTravellersPage;
+import com.automation.pages.interfaces.BusBookingTravellersPage;
+import com.automation.pages.mobile.BusBookingTravellersPageMobile;
+import com.automation.pages.web.BusBookingTravellersPageWeb;
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class BusBookingTravellersSteps {
+    BusBookingTravellersPage busBookingTravellersPage;
 
-    BusBookingTravellersPage busBookingTravellersPage = new BusBookingTravellersPage();
+    public BusBookingTravellersSteps(){
+        String env = ConfigReader.getConfigValue("application.type");
+
+        if(env.equals("mobile")) {
+            busBookingTravellersPage = new BusBookingTravellersPageMobile();
+        }else{
+            busBookingTravellersPage = new BusBookingTravellersPageWeb();
+        }
+    }
+
+//    BusBookingTravellersPageWeb busBookingTravellersPage = new BusBookingTravellersPageWeb();
 
     @Then("verify user is on bus booking travellers page")
     public void verifyUserIsOnBusBookingTravellersPage() {

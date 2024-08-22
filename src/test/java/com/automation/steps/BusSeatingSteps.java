@@ -1,14 +1,27 @@
 package com.automation.steps;
 
-import com.automation.pages.BusSeatingPage;
+import com.automation.pages.interfaces.BusSeatingPage;
+import com.automation.pages.mobile.BusListingPageMobile;
+import com.automation.pages.mobile.BusSeatingPageMobile;
+import com.automation.pages.web.BusListingPageWeb;
+import com.automation.pages.web.BusSeatingPageWeb;
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class BusSeatingSteps {
+    BusSeatingPage busSeatingPage;
+    public BusSeatingSteps(){
+        String env = ConfigReader.getConfigValue("application.type");
 
-    BusSeatingPage busSeatingPage = new BusSeatingPage();
+        if(env.equals("mobile")) {
+            busSeatingPage = new BusSeatingPageMobile();
+        }else{
+            busSeatingPage = new BusSeatingPageWeb();
+        }
+    }
+//    BusSeatingPageWeb busSeatingPage = new BusSeatingPageWeb();
 
 
     @And("select the first available seat")

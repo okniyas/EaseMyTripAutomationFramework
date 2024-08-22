@@ -1,13 +1,12 @@
-package com.automation.pages;
+package com.automation.pages.web;
 
+import com.automation.pages.interfaces.BusBookingTravellersPage;
 import com.automation.utils.ConfigReader;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 
-public class BusBookingTravellersPage extends BasePage{
+public class BusBookingTravellersPageWeb extends BasePageWeb implements BusBookingTravellersPage {
 
     @FindBy(xpath = "//input[@value='Continue Booking']")
     WebElement continueBookingBtnInTravellersPage;

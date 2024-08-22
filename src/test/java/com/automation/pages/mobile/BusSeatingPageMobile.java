@@ -1,9 +1,10 @@
-package com.automation.pages;
+package com.automation.pages.mobile;
 
+import com.automation.pages.interfaces.BusSeatingPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class BusSeatingPage extends BasePage{
+public class BusSeatingPageMobile extends BasePageMobile implements BusSeatingPage {
 
     @FindBy(xpath = "//div[@id='myModal']//div[@class='sleeper_normal']")
     WebElement selectAvailableSeat;

@@ -1,14 +1,16 @@
-package com.automation.pages;
+package com.automation.pages.mobile;
 
+import com.automation.pages.interfaces.TrainListingPage;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class TrainListingPage extends BasePage {
+public class TrainListingPageMobile extends BasePageMobile implements TrainListingPage {
 
     @FindBy(xpath = "//div[@class='trlist']")
     List<WebElement> trainList;

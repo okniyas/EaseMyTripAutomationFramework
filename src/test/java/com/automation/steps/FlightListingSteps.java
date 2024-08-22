@@ -1,12 +1,28 @@
 package com.automation.steps;
 
-import com.automation.pages.FlightListingPage;
+import com.automation.pages.interfaces.FlightListingPage;
+import com.automation.pages.mobile.BusSeatingPageMobile;
+import com.automation.pages.mobile.FlightListingPageMobile;
+import com.automation.pages.web.BusSeatingPageWeb;
+import com.automation.pages.web.FlightListingPageWeb;
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class FlightListingSteps {
-    FlightListingPage flightListingPage = new FlightListingPage();
+    FlightListingPage flightListingPage;
+
+    public FlightListingSteps(){
+        String env = ConfigReader.getConfigValue("application.type");
+
+        if(env.equals("mobile")) {
+            flightListingPage = new FlightListingPageMobile();
+        }else{
+            flightListingPage = new FlightListingPageWeb();
+        }
+    }
+//    FlightListingPageWeb flightListingPage = new FlightListingPageWeb();
 
     @Then("verify on flight list page")
     public void verify_on_flight_list_page() {

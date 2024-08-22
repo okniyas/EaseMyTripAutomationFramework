@@ -1,13 +1,27 @@
 package com.automation.steps;
 
-import com.automation.pages.BusHomePage;
+import com.automation.pages.interfaces.BusHomePage;
+import com.automation.pages.mobile.BusBookingTravellersPageMobile;
+import com.automation.pages.mobile.BusHomePageMobile;
+import com.automation.pages.web.BusBookingTravellersPageWeb;
+import com.automation.pages.web.BusHomePageWeb;
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class BusHomeSteps {
+    BusHomePage busHomePage;
+    public BusHomeSteps(){
+        String env = ConfigReader.getConfigValue("application.type");
 
-    BusHomePage busHomePage = new BusHomePage();
+        if(env.equals("mobile")) {
+            busHomePage = new BusHomePageMobile();
+        }else{
+            busHomePage = new BusHomePageWeb();
+        }
+    }
+//    BusHomePageWeb busHomePage = new BusHomePageWeb();
 
     @When("the user clicks on Bus from the navigation bar")
     public void the_user_clicks_on_bus_from_the_navigation_bar() {

@@ -1,10 +1,11 @@
-package com.automation.pages;
+package com.automation.pages.web;
 
+import com.automation.pages.interfaces.HotelPaymentPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HotelPaymentPage extends BasePage{
+public class HotelPaymentPageWeb extends BasePageWeb implements HotelPaymentPage {
 
     @FindBy(xpath = "//div[@class='price_hed-INR']")
     WebElement roomPriceDetailsHeader;

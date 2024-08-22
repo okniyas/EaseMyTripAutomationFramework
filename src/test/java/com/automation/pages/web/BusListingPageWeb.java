@@ -1,11 +1,12 @@
-package com.automation.pages;
+package com.automation.pages.web;
 
+import com.automation.pages.interfaces.BusListingPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class BusListingPage extends BasePage{
+public class BusListingPageWeb extends BasePageWeb implements BusListingPage {
 
     @FindBy(xpath = "//div[@class='list_box']//div[@class='fare_sec']")
     List<WebElement> listOfBusWithOptionSelectSeats;

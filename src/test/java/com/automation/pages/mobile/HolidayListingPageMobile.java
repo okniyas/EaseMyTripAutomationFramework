@@ -1,6 +1,6 @@
-package com.automation.pages;
+package com.automation.pages.mobile;
 
-import io.cucumber.java.sl.In;
+import com.automation.pages.interfaces.HolidayListingPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class HolidayListingPage extends BasePage {
+public class HolidayListingPageMobile extends BasePageMobile implements HolidayListingPage {
 
     @FindBy(xpath = "//div[@class='listpnl']/div//div[contains(@class, 'pkgName')]")
     List<WebElement> packageWithName;
@@ -26,16 +26,14 @@ public class HolidayListingPage extends BasePage {
 
     String XPATH_OF_THEME = "//div[@class='topFilterv2']//span[@class='checkmark_f2']/parent::label[contains(text(), '%s')]";
 
+    @FindBy(xpath = "//android.widget.Image[@text='searchicon']")
+    WebElement searchBtn;
+
+    @FindBy(xpath = "//android.widget.TextView[@text='Going To']")
+    WebElement goingToFilter;
+
     public boolean verifyListingPageHasResultsForTheGivenDestination(String destination) {
-
-        int i = 0;
-        for (WebElement eachPackage : packageWithName) {
-            if (eachPackage.getText().contains(destination)) {
-                i++;
-            }
-        }
-
-        return i > 0 && isPresent(viewPackage);
+        return isPresent(goingToFilter) && isPresent(searchBtn);
     }
 
     public void selectSortingOption(String sortingOption) {

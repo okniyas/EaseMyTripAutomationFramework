@@ -1,5 +1,6 @@
-package com.automation.pages;
+package com.automation.pages.web;
 
+import com.automation.pages.interfaces.HotelBookingPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -7,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.Set;
 
 
-public class HotelBookingPage extends BasePage{
+public class HotelBookingPageWeb extends BasePageWeb implements HotelBookingPage {
 
     @FindBy(xpath = "//a[@id='room']/following-sibling::a")
     WebElement bookNowBtn;

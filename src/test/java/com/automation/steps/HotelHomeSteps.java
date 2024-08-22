@@ -1,12 +1,27 @@
 package com.automation.steps;
 
-import com.automation.pages.HotelHomePage;
+import com.automation.pages.interfaces.HotelHomePage;
+import com.automation.pages.mobile.HotelBookingPageMobile;
+import com.automation.pages.mobile.HotelHomePageMobile;
+import com.automation.pages.web.HotelBookingPageWeb;
+import com.automation.pages.web.HotelHomePageWeb;
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 
 public class HotelHomeSteps {
+    HotelHomePage hotelHomePage;
 
-    HotelHomePage hotelHomePage=new HotelHomePage();
+    public HotelHomeSteps(){
+        String env = ConfigReader.getConfigValue("application.type");
+
+        if(env.equals("mobile")) {
+            hotelHomePage = new HotelHomePageMobile();
+        }else{
+            hotelHomePage = new HotelHomePageWeb();
+        }
+    }
+//    HotelHomePageWeb hotelHomePage=new HotelHomePageWeb();
 
     @When("user click on hotel menu")
     public void user_click_on_hotel_menu() {

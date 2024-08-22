@@ -1,15 +1,15 @@
-package com.automation.pages;
+package com.automation.pages.mobile;
 
+import com.automation.pages.interfaces.HotelListingPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-public class HotelListingPage extends BasePage{
+public class HotelListingPageMobile extends BasePageMobile implements HotelListingPage {
 
     @FindBy(className = "btnsrch")
     WebElement modifySearchBtn;

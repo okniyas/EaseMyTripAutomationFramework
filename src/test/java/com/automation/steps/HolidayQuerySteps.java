@@ -1,13 +1,28 @@
 package com.automation.steps;
 
-import com.automation.pages.HolidayQueryPage;
+import com.automation.pages.interfaces.HolidayQueryPage;
+import com.automation.pages.mobile.HolidayListingPageMobile;
+import com.automation.pages.mobile.HolidayQueryPageMobile;
+import com.automation.pages.web.HolidayListingPageWeb;
+import com.automation.pages.web.HolidayQueryPageWeb;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 
 public class HolidayQuerySteps {
-    
-    HolidayQueryPage holidayQueryPage=new HolidayQueryPage();
+
+    HolidayQueryPage holidayQueryPage;
+
+    public HolidayQuerySteps(){
+        String env = ConfigReader.getConfigValue("application.type");
+
+        if(env.equals("mobile")) {
+            holidayQueryPage = new HolidayQueryPageMobile();
+        }else{
+            holidayQueryPage = new HolidayQueryPageWeb();
+        }
+    }
+//    HolidayQueryPageWeb holidayQueryPageWeb =new HolidayQueryPageWeb();
 
     @Then("verify plan form is displayed")
     public void verify_plan_form_is_displayed() {

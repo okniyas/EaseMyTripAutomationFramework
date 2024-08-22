@@ -1,10 +1,11 @@
-package com.automation.pages;
+package com.automation.pages.mobile;
 
+import com.automation.pages.interfaces.HolidayQueryPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HolidayQueryPage extends BasePage{
+public class HolidayQueryPageMobile extends BasePageMobile implements HolidayQueryPage {
 
     @FindBy(xpath = "//div[@class='form_box']//h4")
     WebElement formTitle;

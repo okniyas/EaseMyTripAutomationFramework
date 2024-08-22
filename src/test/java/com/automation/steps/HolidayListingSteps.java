@@ -1,14 +1,28 @@
 package com.automation.steps;
 
-import com.automation.pages.HolidayListingPage;
+import com.automation.pages.interfaces.HolidayListingPage;
+import com.automation.pages.mobile.HolidayHomePageMobile;
+import com.automation.pages.mobile.HolidayListingPageMobile;
+import com.automation.pages.web.HolidayHomePageWeb;
+import com.automation.pages.web.HolidayListingPageWeb;
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class HolidayListingSteps {
+    HolidayListingPage holidayListingPage;
+    public HolidayListingSteps(){
+        String env = ConfigReader.getConfigValue("application.type");
 
-    HolidayListingPage holidayListingPage = new HolidayListingPage();
+        if(env.equals("mobile")) {
+            holidayListingPage = new HolidayListingPageMobile();
+        }else{
+            holidayListingPage = new HolidayListingPageWeb();
+        }
+    }
+//    HolidayListingPageWeb holidayListingPage = new HolidayListingPageWeb();
 
     @Then("verify the holidays listing page shows results for the destination {string}")
     public void verify_the_holidays_listing_page_shows_results_for_the_destination(String destination) {

@@ -1,10 +1,11 @@
-package com.automation.pages;
+package com.automation.pages.mobile;
 
+import com.automation.pages.interfaces.BusBookingReviewPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class BusBookingReviewPage extends BasePage{
+public class BusBookingReviewPageMobile extends BasePageMobile implements BusBookingReviewPage {
 
     String XPATH_INSURANCE_TYPE = "//div[@class='insurencediv']//label[contains(text(), '%s')]";
 

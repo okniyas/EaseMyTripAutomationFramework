@@ -1,10 +1,11 @@
-package com.automation.pages;
+package com.automation.pages.mobile;
 
+import com.automation.pages.interfaces.BusHomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class BusHomePage extends BasePage {
+public class BusHomePageMobile extends BasePageMobile implements BusHomePage {
 
     @FindBy(xpath = "//ul[@id='homepagemenuUL']/li[contains(@class, 'bus')]")
     WebElement busNavBar;

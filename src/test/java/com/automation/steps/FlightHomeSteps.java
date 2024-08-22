@@ -1,6 +1,9 @@
 package com.automation.steps;
 
-import com.automation.pages.FlightHomePage;
+import com.automation.pages.interfaces.FlightHomePage;
+import com.automation.pages.mobile.FlightHomePageMobile;
+import com.automation.pages.web.FlightHomePageWeb;
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,7 +12,19 @@ import org.junit.Assert;
 
 public class FlightHomeSteps {
 
-    FlightHomePage flightHomePage = new FlightHomePage();
+    FlightHomePage flightHomePage;
+
+    public FlightHomeSteps(){
+        String env = ConfigReader.getConfigValue("application.type");
+
+        if(env.equals("mobile")) {
+            flightHomePage = new FlightHomePageMobile();
+        }else{
+            flightHomePage = new FlightHomePageWeb();
+        }
+    }
+
+//    FlightHomePageWeb flightHomePage = new FlightHomePageWeb();
 
     @Given("user opens the website")
     public void user_opens_the_website() {

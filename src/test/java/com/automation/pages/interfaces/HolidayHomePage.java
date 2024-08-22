@@ -2,11 +2,13 @@ package com.automation.pages.interfaces;
 
 public interface HolidayHomePage {
 
-    public void clickOnHolidaysFromNavBar();
+    void clickOnHolidaysFromNavBar();
 
-    public boolean verifyOnHolidaysHomePage();
+    boolean verifyOnHolidaysHomePage();
 
-    public void enterTheDestination(String destination);
+    void enterTheDestination(String destination);
 
-    public void selectTheDestinationFromDropDownList();
+    void selectTheDestinationFromDropDownList();
+
+    void clickOnPlanYourTripIcon();
 }

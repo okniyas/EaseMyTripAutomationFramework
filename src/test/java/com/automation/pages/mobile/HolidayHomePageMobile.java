@@ -24,6 +24,9 @@ public class HolidayHomePageMobile extends BasePageMobile implements HolidayHome
     @FindBy(xpath = "//android.widget.Button[@text='CONTINUE']")
     WebElement SSLAlertContinueBtn;
 
+    @FindBy(xpath = "//a[@class='modal_btn fancy']/span")
+    WebElement planYourTripBtn;
+
     public void clickOnHolidaysFromNavBar() {
         holidayNavBar.click();
     }
@@ -48,5 +51,8 @@ public class HolidayHomePageMobile extends BasePageMobile implements HolidayHome
     public void selectTheDestinationFromDropDownListMobile(String destination) {
         String xpath = String.format(XPATH_DESTINATION_DROPDOWN, destination);
         driver.findElement(By.xpath(xpath)).click();
+    }
+    public void clickOnPlanYourTripIcon() {
+        planYourTripBtn.click();
     }
 }

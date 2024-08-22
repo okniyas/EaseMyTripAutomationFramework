@@ -33,4 +33,10 @@ public class HolidayHomeSteps {
     public void userSelectTheDestinationFromTheDropdownList() {
         holidayHomePage.selectTheDestinationFromDropDownList();
     }
+
+    @When("user click on plan your trip icon")
+    public void user_click_on_plan_your_trip_icon() {
+        holidayHomePage.clickOnPlanYourTripIcon();
+    }
+
 }

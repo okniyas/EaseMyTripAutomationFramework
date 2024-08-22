@@ -18,6 +18,9 @@ public class HolidayHomePageWeb extends BasePageWeb implements HolidayHomePage {
     @FindBy(xpath = "//button[@class='subm_btn']")
     WebElement searchBtn;
 
+    @FindBy(xpath = "//a[@class='modal_btn fancy']/span")
+    WebElement planYourTripBtn;
+
     public void clickOnHolidaysFromNavBar() {
         holidayNavBar.click();
     }
@@ -34,5 +37,9 @@ public class HolidayHomePageWeb extends BasePageWeb implements HolidayHomePage {
         waitForElementToBePresentNotVisible("//ul[@ng-show='citytrue']/li//p");
 //        waitForElementToBeVisible(destinationDropdown);
         destinationDropdown.click();
+    }
+
+    public void clickOnPlanYourTripIcon() {
+        planYourTripBtn.click();
     }
 }

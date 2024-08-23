@@ -1,9 +1,8 @@
 package com.automation.steps;
 
+
 import com.automation.pages.interfaces.TrainHomePage;
-import com.automation.pages.mobile.HotelPaymentPageMobile;
 import com.automation.pages.mobile.TrainHomePageMobile;
-import com.automation.pages.web.HotelPaymentPageWeb;
 import com.automation.pages.web.TrainHomePageWeb;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.Then;
@@ -11,6 +10,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class TrainHomeSteps {
+
     TrainHomePage trainHomePage;
 
     public TrainHomeSteps(){

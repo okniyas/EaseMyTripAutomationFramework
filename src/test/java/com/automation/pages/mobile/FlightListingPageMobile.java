@@ -10,7 +10,7 @@ import java.util.List;
 public class FlightListingPageMobile extends BasePageMobile implements FlightListingPage {
 
     //    @FindBy(xpath = "//div[@class='lis']")
-    @FindBy(xpath = "//div[@class='top_bar_flgt_1']/div[not (@id) and @price]")
+    @FindBy(xpath = "//android.widget.LinearLayout[@resource-id='com.easemytrip.android:id/flight_details']")
     List<WebElement> flightList;
 
 //    String XPATH_FLIGHT_FILTER_CONTAINER = "//span[contains(@ng-bind,'GetAirLineName')][text()='%s']";

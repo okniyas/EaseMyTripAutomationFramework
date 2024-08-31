@@ -18,20 +18,9 @@ public class TrainListingPageMobile extends BasePageMobile implements TrainListi
     @FindBy(xpath = "//android.widget.TextView[@text='TRAIN NAME']")
     WebElement trainNameSortBtn;
 
-    @FindBy(xpath = "//androidx.recyclerview.widget.RecyclerView[contains(@resource-id,'trainListView')]/android.widget.RelativeLayout[1]")
-    WebElement trainContainer;
-
-    @FindBy(xpath = "//li[@id='b']")
-    WebElement nameDescBtn;
-
-    @FindBy(xpath = "//li[@id='a']")
-    WebElement nameAscBtn;
-
-    @FindBy(id = "divTrainLoader")
-    WebElement trainLoader;
 
     public void isTrainListingDisplayed() {
-        Assert.assertTrue("Train Listing page not loaded",trainNameSortBtn.isDisplayed());
+        Assert.assertTrue("Train Listing page not loaded", trainNameSortBtn.isDisplayed());
         Assert.assertFalse("Train List is null", trainNameList.isEmpty());
     }
 
@@ -39,21 +28,18 @@ public class TrainListingPageMobile extends BasePageMobile implements TrainListi
 
         trainNameSortBtn.click();
         trainNameSortBtn.click();
-//        waitForElementToBeInvisible(trainLoader);
 
     }
 
     public void isSortingByNameAToZDisplayed() {
-        List<String> trainNames = new ArrayList<>();
 
-        List<WebElement> nameElements = driver.findElements(By.xpath("//div[contains(@class,'tr-name')]"));
-        for (WebElement name : nameElements) {
-            trainNames.add(name.getText());
-        }
+        List<String> ascNameList = getListOfTrainNames();
+        System.out.println(ascNameList);
 
-        List<String> namesCopy = new ArrayList<>(trainNames);
-        Collections.sort(namesCopy);
-        Assert.assertEquals(namesCopy, trainNames);
+        List<String> ascNamesCopy = new ArrayList<>(ascNameList);
+        Collections.sort(ascNamesCopy);
+
+        Assert.assertEquals(ascNamesCopy, ascNameList);
     }
 
     public void sortByNameZtoA() {
@@ -62,16 +48,61 @@ public class TrainListingPageMobile extends BasePageMobile implements TrainListi
     }
 
     public void isSortingByNameZToADisplayed() {
-        List<String> trainNamesDesc = new ArrayList<>();
-        List<WebElement> elements = driver.findElements(By.xpath("//div[contains(@class,'tr-name')]"));
-        for (WebElement name : elements) {
-            trainNamesDesc.add(name.getText());
+        List<String> descNameList = getListOfTrainNames();
+        System.out.println(descNameList);
+
+        List<String> descNamesCopy = new ArrayList<>(descNameList);
+        descNamesCopy.sort(Collections.reverseOrder());
+
+        Assert.assertEquals(descNamesCopy, descNameList);
+    }
+
+    public List<String> getListOfTrainNames() {
+
+        List<String> trainNames = new ArrayList<>();
+
+        WebElement trainNoElement = driver.findElement(By.xpath("(//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvTrainNumber'])[1]"));
+        WebElement trainDetailsContainer;
+        WebElement calendarContainer;
+        WebElement trainNameElement;
+        String trainName;
+
+        String prevTrainNo = "";
+        String currentTrainNo = trainNoElement.getText();
+
+        while (!prevTrainNo.equals(currentTrainNo)) {
+
+            trainDetailsContainer = driver.findElement(By.xpath("//androidx.recyclerview.widget.RecyclerView[contains(@resource-id,'trainListView')]/android.widget.RelativeLayout[1]"));
+            calendarContainer = driver.findElement(By.xpath("//androidx.recyclerview.widget.RecyclerView[contains(@resource-id,'calendar_recycle')]"));
+            trainNameElement = driver.findElement(By.xpath("(//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvTrainName'])[1]"));
+
+            trainName = trainNameElement.getText();
+            trainNames.add(trainName);
+
+            int startW = trainDetailsContainer.getSize().getWidth();
+            int startH = trainDetailsContainer.getSize().getHeight();
+            int endW = calendarContainer.getSize().getWidth();
+
+            int startX = trainDetailsContainer.getLocation().getX();
+            int startY = trainDetailsContainer.getLocation().getY();
+            int endX = calendarContainer.getLocation().getX();
+            int endY = calendarContainer.getLocation().getY();
+
+            scrollOrSwipe(startX + (startW / 2), startY + startH, endX + (endW / 2), endY);
+
+            prevTrainNo = currentTrainNo;
+            trainNoElement = driver.findElement(By.xpath("(//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvTrainNumber'])[1]"));
+            currentTrainNo = trainNoElement.getText();
+
         }
 
-        List<String> copy = new ArrayList<>(trainNamesDesc);
-        copy.sort(Collections.reverseOrder());
+        List<WebElement> trainList = driver.findElements(By.xpath("//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvTrainName']"));
 
-        Assert.assertEquals(copy, trainNamesDesc);
+        for (WebElement train : trainList) {
+            trainNames.add(train.getText());
+        }
 
+        return trainNames;
     }
+
 }

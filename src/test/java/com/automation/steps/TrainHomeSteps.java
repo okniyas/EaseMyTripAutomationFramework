@@ -22,7 +22,6 @@ public class TrainHomeSteps {
             trainHomePage = new TrainHomePageWeb();
         }
     }
-//    TrainHomePageWeb trainHomePage = new TrainHomePageWeb();
 
     @When("user click on train menu")
     public void user_click_on_train_menu() {

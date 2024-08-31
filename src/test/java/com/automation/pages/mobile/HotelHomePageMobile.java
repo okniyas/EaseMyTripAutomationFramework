@@ -8,20 +8,26 @@ import org.openqa.selenium.support.ui.Select;
 
 public class HotelHomePageMobile extends BasePageMobile implements HotelHomePage {
 
-    @FindBy(xpath = "//li[@class='hotels mainMenu']")
+    @FindBy(xpath = "(//android.widget.TextView[@text='Hotels'])[1]/..")
     WebElement hotelMenuBtn;
 
-    @FindBy(id = "btnSearch")
+    @FindBy(id = "//android.widget.Button[contains(@resource-id,'Hotel_Search')]")
     WebElement hotelSearchBtn;
 
-    @FindBy(xpath = "//span[@class='hp_city']")
+    @FindBy(xpath = "//android.widget.TextView[contains(@resource-id,'searchCity')]")
     WebElement destinationBtn;
 
-    @FindBy(id = "txtCity")
+    @FindBy(id = "//android.widget.AutoCompleteTextView[contains(@resource-id,'edit_text')]")
     WebElement destinationInput;
 
-    @FindBy(className = "close_o_pp")
-    WebElement adPopUp;
+//    @FindBy(className = "close_o_pp")
+//    WebElement adPopUp;
+
+    @FindBy(xpath = "//android.widget.RelativeLayout[contains(@resource-id,'checkInLayout')]")
+    WebElement checkInBtn;
+
+    @FindBy(xpath = "//android.widget.RelativeLayout[contains(@resource-id,'checkOutLayout')]")
+    WebElement checkOutBtn;
 
     @FindBy(xpath = "//select[@data-handler='selectMonth']")
     WebElement monthElement;
@@ -34,13 +40,14 @@ public class HotelHomePageMobile extends BasePageMobile implements HotelHomePage
 
     public void clickOnHotelMenu() {
         hotelMenuBtn.click();
+
     }
 
     public boolean isHotelHomePageDisplayed() {
 
-        if (isPresent(adPopUp)) {
-            adPopUp.click();
-        }
+//        if (isPresent(adPopUp)) {
+//            adPopUp.click();
+//        }
 
         return isDisplay(hotelSearchBtn);
     }
@@ -49,7 +56,7 @@ public class HotelHomePageMobile extends BasePageMobile implements HotelHomePage
         clickByJS(destinationBtn);
         destinationInput.sendKeys(city);
 
-        String loc = "//ul[contains(@class,'auto_sugg_hotel')]//div[contains(text(),'%s')]";
+        String loc = "(//android.widget.TextView[contains(@text,%s)and  contains(@resource-id,'city')])[1]";
         WebElement selectCity = driver.findElement(By.xpath(String.format(loc, city)));
         clickByJS(selectCity);
 

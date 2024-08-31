@@ -39,14 +39,14 @@ public class TrainHomePageMobile extends BasePageMobile implements TrainHomePage
     public void enterSourceStation(String fromStation) {
         fromCityBtn.click();
         cityInput.sendKeys(fromStation);
-        WebElement fromCity=driver.findElement(By.xpath(String.format("//android.widget.TextView[contains(@text,'%s')]", fromStation)));
+        WebElement fromCity = driver.findElement(By.xpath(String.format("//android.widget.TextView[contains(@text,'%s')]", fromStation)));
         fromCity.click();
     }
 
     public void enterDestinationStation(String toStation) {
         toCityBtn.click();
         cityInput.sendKeys(toStation);
-        WebElement toCity=driver.findElement(By.xpath(String.format("//android.widget.TextView[contains(@text,'%s')]", toStation)));
+        WebElement toCity = driver.findElement(By.xpath(String.format("//android.widget.TextView[contains(@text,'%s')]", toStation)));
         toCity.click();
     }
 
@@ -54,9 +54,8 @@ public class TrainHomePageMobile extends BasePageMobile implements TrainHomePage
         dateBtn.click();
         String day = date.substring(0, date.indexOf(" "));
         String month = date.substring(date.indexOf(" ") + 1);
-        System.out.println(month);
 
-        WebElement monthElement=driver.findElement(By.xpath("//androidx.recyclerview.widget.RecyclerView[contains(@resource-id,'Calendar')]/android.widget.FrameLayout[2]//android.widget.TextView"));
+        WebElement monthElement = driver.findElement(By.xpath("//androidx.recyclerview.widget.RecyclerView[contains(@resource-id,'Calendar')]/android.widget.FrameLayout[2]//android.widget.TextView"));
 
         int w = calendarContainer.getSize().getWidth();
         int h = calendarContainer.getSize().getHeight();
@@ -65,8 +64,8 @@ public class TrainHomePageMobile extends BasePageMobile implements TrainHomePage
         int y = calendarContainer.getLocation().getY();
 
         while (!monthElement.getText().contains(month)) {
-            scrollOrSwipe(x+w/2,y+h,x+w/2,y);
-            monthElement=driver.findElement(By.xpath("//androidx.recyclerview.widget.RecyclerView[contains(@resource-id,'Calendar')]/android.widget.FrameLayout[2]//android.widget.TextView"));
+            scrollOrSwipe(x + w / 2, y + h, x + w / 2, y);
+            monthElement = driver.findElement(By.xpath("//androidx.recyclerview.widget.RecyclerView[contains(@resource-id,'Calendar')]/android.widget.FrameLayout[2]//android.widget.TextView"));
 
         }
         String dayPath = "//androidx.recyclerview.widget.RecyclerView[contains(@resource-id,'Calendar')]/android.widget.FrameLayout[2]//android.widget.TextView[contains(@content-desc,'%s')]";

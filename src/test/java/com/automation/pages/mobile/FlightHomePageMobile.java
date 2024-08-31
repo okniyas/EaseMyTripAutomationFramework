@@ -1,34 +1,42 @@
 package com.automation.pages.mobile;
 
 import com.automation.pages.interfaces.FlightHomePage;
-import com.automation.utils.ConfigReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class FlightHomePageMobile extends BasePageMobile implements FlightHomePage {
 
-    @FindBy(className = "srchBtnSe")
-    WebElement searchBtn;
+    @FindBy(xpath = "(//android.widget.TextView[@text='Flights'])[1]")
+    WebElement flightMenu;
 
-    @FindBy(xpath = "//input[@id='ddate']/parent::div")
-    WebElement departureDateBtn;
+    @FindBy(xpath = "//android.widget.LinearLayout[@resource-id='com.easemytrip.android:id/search_flight_origin_container']")
+    WebElement flightOrigin;
 
-    @FindBy(id = "tocity")
-    WebElement toCityBtn;
+    @FindBy(xpath = "//android.widget.LinearLayout[@resource-id='com.easemytrip.android:id/search_flight_destination_container']")
+    WebElement flightDestination;
 
-    @FindBy(id = "frmcity")
-    WebElement fromCityBtn;
+    @FindBy(xpath = "//android.widget.AutoCompleteTextView[@resource-id='com.easemytrip.android:id/search']")
+    WebElement flightInput;
 
-    @FindBy(id = "a_FromSector_show")
-    WebElement fromCityInput;
+    @FindBy(xpath = "//android.widget.ListView[@resource-id='com.easemytrip.android:id/search_airport_list']/android.widget.LinearLayout")
+    WebElement selectFlightOption;
 
-    @FindBy(id = "a_Editbox13_show")
-    WebElement toCityInput;
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/depdateView']")
+    WebElement departureDate;
 
-    String XPATH_FOR_DAY = "//div[@class='main']/div[@class='box']//div[@class='days']//li[contains(@id,'%s')]";
+    String XPATH_DAY = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvMonthName']/following-sibling::androidx.recyclerview.widget.RecyclerView[@resource-id='com.easemytrip.android:id/rvDateGrid']//android.widget.TextView[@text='%s']";
 
-//    String XPATH_FOR_CITY_DROPDOWN = "//span[contains(text(),'%s')]";
+    @FindBy(xpath = "//android.widget.Button[@resource-id='com.easemytrip.android:id/button_flight_Search']")
+    WebElement flightSearchBtn;
+
+    WebElement monthFullContainer;
+
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvMonthName']")
+    WebElement monthElement;
 
 
     public void opensTheWebsite() {
@@ -36,37 +44,67 @@ public class FlightHomePageMobile extends BasePageMobile implements FlightHomePa
     }
 
     public void clickOnSearchBtn() {
-        searchBtn.click();
+        flightSearchBtn.click();
     }
 
     public void clickOnDepartureDate() {
-//        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
-//        javascriptExecutor.executeScript("arguments[0].click();", departureDateBtn);
-        if (departureDateBtn.isEnabled()) {
-//            departureDateBtn.click();
-            clickByJS(departureDateBtn);
-        }
+        departureDate.click();
 
+        //it takes some time to load the date picker, so waiting
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void selectDate(String date) {
 
         String day = date.substring(0, date.indexOf(" "));
-        String monthYear = date.substring(date.indexOf(" ") + 1);
+        String month = date.substring(date.indexOf(" ") + 1, date.lastIndexOf(" "));
+        String year = date.substring(date.lastIndexOf(" ") + 1);
 
-        WebElement monthAndYear = driver.findElement(By.xpath("//div[@class='main']/div[@class='box']//div[@class='month2']"));
-        WebElement nextMonth = driver.findElement(By.xpath("//div[@class='main1']/div[@class='box1']//div[@class='month3']"));
+        Map<String, String> monthMap = new HashMap<>();
+        monthMap.put("Jan", "January");
+        monthMap.put("Feb", "February");
+        monthMap.put("Mar", "March");
+        monthMap.put("Apr", "April");
+        monthMap.put("May", "May");
+        monthMap.put("Jun", "June");
+        monthMap.put("Jul", "July");
+        monthMap.put("Aug", "August");
+        monthMap.put("Sep", "September");
+        monthMap.put("Oct", "October");
+        monthMap.put("Nov", "November");
+        monthMap.put("Dec", "December");
 
-        while (!monthAndYear.getText().toLowerCase().contains(monthYear.toLowerCase())) {
+        String fullMonthName = monthMap.get(month);
+        String monthYear = fullMonthName + " " + year;
 
-//            nextMonth.click();
-            clickByJS(nextMonth);
-            monthAndYear = driver.findElement(By.xpath("//div[@class='main']/div[@class='box']//div[@class='month2']"));
+        System.out.println("Month"+ monthYear);
+
+
+
+        System.out.println(monthElement.getText());
+        while (!monthElement.getText().equals(monthYear)) {
+            System.out.println("Inside while loop");
+            monthFullContainer = driver.findElement(By.xpath("//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvMonthName']/following-sibling::androidx.recyclerview.widget.RecyclerView"));
+
+            int x = monthFullContainer.getLocation().getX();
+            int y = monthFullContainer.getLocation().getY();
+            int width = monthFullContainer.getSize().getWidth();
+            int height = monthFullContainer.getSize().getHeight();
+
+            System.out.println(monthElement.getText());
+
+            scrollOrSwipe(x + width / 2, y + height, x + width / 2, y);
+
+            monthElement = driver.findElement(By.xpath("//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvMonthName']"));
+
         }
-        String xpathDay = String.format(XPATH_FOR_DAY, day);
-//        driver.findElement(By.xpath(xpathDay)).click();
-        WebElement clickDay = driver.findElement(By.xpath(xpathDay));
-        clickByJS(clickDay);
+        String xpathDay = String.format(XPATH_DAY, day);
+        WebElement dayElement = driver.findElement(By.xpath(xpathDay));
+        dayElement.click();
     }
 
     public boolean verifyOnHomePage() {
@@ -75,38 +113,23 @@ public class FlightHomePageMobile extends BasePageMobile implements FlightHomePa
     }
 
     public void clickOnFromCity() {
-        clickByJS(fromCityBtn);
-//        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
-//        javascriptExecutor.executeScript("arguments[0].click();", fromCityBtn);
-//        fromCityBtn.click();
+        flightMenu.click();
+        flightOrigin.click();
     }
 
     public void clickOnToCity() {
-        clickByJS(toCityBtn);
-//        JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
-//        javascriptExecutor.executeScript("arguments[0].click();", toCityBtn);
-//        toCityBtn.click();
+        flightDestination.click();
     }
 
     public void enterFromCity(String fromCity) {
-        fromCityInput.sendKeys(fromCity);
 
-        String fromXpath = String.format("//span[contains(text(),'%s')]", fromCity);
-        waitForElementToPresent(fromXpath);
-        WebElement dropdown = driver.findElement(By.xpath(fromXpath));
-        if (isPresent(dropdown)) {
-            clickByJS(dropdown);
-        }
+        flightInput.sendKeys(fromCity);
+        selectFlightOption.click();
     }
 
     public void enterToCity(String toCity) {
 
-        toCityInput.sendKeys(toCity);
-        String toXpath = String.format("//span[contains(text(),'%s')]", toCity);
-        waitForElementToPresent(toXpath);
-        WebElement dropdown = driver.findElement(By.xpath(toXpath));
-        if (isPresent(dropdown)) {
-            clickByJS(dropdown);
-        }
+        flightInput.sendKeys(toCity);
+        selectFlightOption.click();
     }
 }

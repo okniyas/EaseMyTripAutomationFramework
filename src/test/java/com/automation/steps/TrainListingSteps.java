@@ -1,9 +1,7 @@
 package com.automation.steps;
 
 import com.automation.pages.interfaces.TrainListingPage;
-import com.automation.pages.mobile.TrainHomePageMobile;
 import com.automation.pages.mobile.TrainListingPageMobile;
-import com.automation.pages.web.TrainHomePageWeb;
 import com.automation.pages.web.TrainListingPageWeb;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.Then;
@@ -22,7 +20,6 @@ public class TrainListingSteps {
             trainListingPage = new TrainListingPageWeb();
         }
     }
-//    TrainListingPageWeb trainListingPage = new TrainListingPageWeb();
 
     @Then("verify train list is displayed")
     public void verify_train_list_is_displayed() {

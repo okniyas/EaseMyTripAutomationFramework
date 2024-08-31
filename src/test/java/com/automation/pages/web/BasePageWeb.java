@@ -1,6 +1,6 @@
 package com.automation.pages.web;
 
-import com.automation.utils.DriverManagerWeb;
+import com.automation.utils.DriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +18,7 @@ public class BasePageWeb {
     WebDriverWait wait;
 
     public BasePageWeb() {
-        this.driver = DriverManagerWeb.getDriver();
+        this.driver = DriverManager.getDriver();
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(60));
     }

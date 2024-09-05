@@ -1,9 +1,7 @@
 package com.automation.steps;
 
 import com.automation.pages.interfaces.HolidayHomePage;
-import com.automation.pages.mobile.FlightListingPageMobile;
 import com.automation.pages.mobile.HolidayHomePageMobile;
-import com.automation.pages.web.FlightListingPageWeb;
 import com.automation.pages.web.HolidayHomePageWeb;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
@@ -37,8 +35,8 @@ public class HolidayHomeSteps {
     }
 
     @When("the user enters the destination {string}")
-    public void the_user_enters_the_destination(String destination) {
-        holidayHomePage.enterTheDestination(destination);
+    public void the_user_enters_the_destination(String destinationKey) {
+        holidayHomePage.enterTheDestination(ConfigReader.getConfigValue(destinationKey));
         
     }
 

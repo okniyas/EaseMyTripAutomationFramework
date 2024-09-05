@@ -52,7 +52,7 @@ public class FlightHomePageMobile extends BasePageMobile implements FlightHomePa
 
         //it takes some time to load the date picker, so waiting
         try {
-            Thread.sleep(3000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

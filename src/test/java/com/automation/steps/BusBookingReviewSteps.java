@@ -1,11 +1,8 @@
 package com.automation.steps;
 
 import com.automation.pages.interfaces.BusBookingReviewPage;
-import com.automation.pages.interfaces.FlightHomePage;
 import com.automation.pages.mobile.BusBookingReviewPageMobile;
-import com.automation.pages.mobile.FlightHomePageMobile;
 import com.automation.pages.web.BusBookingReviewPageWeb;
-import com.automation.pages.web.FlightHomePageWeb;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -40,8 +37,8 @@ public class BusBookingReviewSteps {
     }
 
     @And("enter the email address {string}")
-    public void enterTheEmailAddress(String email) {
-        busBookingReviewPage.enterTheEmailAddress(email);
+    public void enterTheEmailAddress(String emailKey) {
+        busBookingReviewPage.enterTheEmailAddress(emailKey);
     }
 
     @And("user click on continue button in review booking page")

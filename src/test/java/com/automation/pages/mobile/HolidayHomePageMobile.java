@@ -10,7 +10,7 @@ public class HolidayHomePageMobile extends BasePageMobile implements HolidayHome
     @FindBy(xpath = "//android.widget.TextView[@text='Holidays']")
     WebElement holidayNavBar;
 
-    @FindBy(xpath = "//android.widget.EditText")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id='txtDesCity']")
     WebElement destinationSearchBx;
 
     String XPATH_DESTINATION_DROPDOWN = "//android.widget.ListView//android.view.View[@content-desc='%s']";
@@ -33,15 +33,21 @@ public class HolidayHomePageMobile extends BasePageMobile implements HolidayHome
 
     public boolean verifyOnHolidaysHomePage() {
 
-        while(isPresent(SSLAlert)){
-            WebElement SSLAlertContinueBtn = driver.findElement(By.xpath("//android.widget.Button[@text='CONTINUE']"));
-            SSLAlertContinueBtn.click();
-        }
-//        waitForElementToBeVisible(destinationSearchBx);
+//        while(isPresent(SSLAlert)){
+//            WebElement SSLAlertContinueBtn = driver.findElement(By.xpath("//android.widget.Button[@text='CONTINUE']"));
+//            SSLAlertContinueBtn.click();
+//        }
+        waitForElementToBePresentNotVisible("//android.widget.EditText[@resource-id='txtDesCity']");
         return isPresent(destinationSearchBx);
     }
 
     public void enterTheDestination(String destination) {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        waitForElementToBeVisible(destinationSearchBx);
         destinationSearchBx.sendKeys(destination);
         selectTheDestinationFromDropDownListMobile(destination);
 

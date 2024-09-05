@@ -6,7 +6,7 @@ public interface HolidayListingPage {
 
     void selectSortingOption(String sortingOption);
 
-    boolean verifyListingPageHasResultsInAscendingOrder();
+    boolean verifyListingPageHasResultsInAscendingOrder(String sortingType);
 
     void clickOnFilterOptionInHolidayListingPage();
 

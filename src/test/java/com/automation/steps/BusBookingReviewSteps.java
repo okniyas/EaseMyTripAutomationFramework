@@ -38,7 +38,7 @@ public class BusBookingReviewSteps {
 
     @And("enter the email address {string}")
     public void enterTheEmailAddress(String emailKey) {
-        busBookingReviewPage.enterTheEmailAddress(emailKey);
+        busBookingReviewPage.enterTheEmailAddress(ConfigReader.getConfigValue(emailKey));
     }
 
     @And("user click on continue button in review booking page")

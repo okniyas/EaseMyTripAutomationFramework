@@ -11,7 +11,8 @@ public class BusBookingReviewPageWeb extends BasePageWeb implements BusBookingRe
 
     @FindBy(id = "trvlEmail")
     WebElement emailInput;
-    @FindBy(xpath = "//span[text()='Continue Booking']")
+
+    @FindBy(xpath = "//span[text()='Continue']")
     WebElement continueBookingBtnInReview;
 
 

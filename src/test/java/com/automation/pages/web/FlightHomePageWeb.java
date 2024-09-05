@@ -55,16 +55,16 @@ public class FlightHomePageWeb extends BasePageWeb implements FlightHomePage {
         String monthYear = date.substring(date.indexOf(" ") + 1);
 
         WebElement monthAndYear = driver.findElement(By.xpath("//div[@class='main']/div[@class='box']//div[@class='month2']"));
-        WebElement nextMonth = driver.findElement(By.xpath("//div[@class='main1']/div[@class='box1']//div[@class='month3']"));
+//        WebElement nextMonth = driver.findElement(By.xpath("//div[@class='main1']/div[@class='box1']//div[@class='month3']/img"));
+
 
         while (!monthAndYear.getText().toLowerCase().contains(monthYear.toLowerCase())) {
 
-//            nextMonth.click();
-            clickByJS(nextMonth);
+            driver.findElement(By.xpath("//div[@class='main1']/div[@class='box1']//div[@class='month3']")).click();
+
             monthAndYear = driver.findElement(By.xpath("//div[@class='main']/div[@class='box']//div[@class='month2']"));
         }
         String xpathDay = String.format(XPATH_FOR_DAY, day);
-//        driver.findElement(By.xpath(xpathDay)).click();
         WebElement clickDay = driver.findElement(By.xpath(xpathDay));
         clickByJS(clickDay);
     }

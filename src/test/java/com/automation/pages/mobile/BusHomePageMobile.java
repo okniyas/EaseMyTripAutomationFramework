@@ -7,35 +7,39 @@ import org.openqa.selenium.support.FindBy;
 
 public class BusHomePageMobile extends BasePageMobile implements BusHomePage {
 
-    @FindBy(xpath = "//ul[@id='homepagemenuUL']/li[contains(@class, 'bus')]")
+    @FindBy(xpath = "//android.widget.TextView[@text='Bus']")
     WebElement busNavBar;
 
-    @FindBy(id = "txtSrcCity")
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tv_sourcecity_fullname']")
+    WebElement sourceCityBx;
+
+    @FindBy(xpath = "//android.widget.EditText[@resource-id='com.easemytrip.android:id/search']")
     WebElement sourceCityInput;
 
-    @FindBy(id = "txtDesCity")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id='com.easemytrip.android:id/search']")
     WebElement destinationCityInput;
 
-    String sourceCityOption = "//ul[@id='srcNav']/li";
+    @FindBy(xpath = "//android.widget.ListView[@resource-id='com.easemytrip.android:id/search_airport_list']/android.widget.LinearLayout")
+    WebElement sourceCityOption;
 
-    String destinationCityOption = "//ul[@id='desNav']/li";
+    @FindBy(xpath = "//android.widget.ListView[@resource-id='com.easemytrip.android:id/search_airport_list']/android.widget.LinearLayout")
+    WebElement destinationCityOption;
 
-    @FindBy(id = "datepicker")
+    @FindBy(xpath = "//android.widget.LinearLayout[@resource-id='com.easemytrip.android:id/layout_onward_DateTV']")
     WebElement dateInput;
 
-    @FindBy(className = "ui-datepicker-month")
-    WebElement dateMonth;
+    String XPATH_DAY = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvMonthName']/following-sibling::androidx.recyclerview.widget.RecyclerView[@resource-id='com.easemytrip.android:id/rvDateGrid']//android.widget.TextView[@text='%s']";
 
-    @FindBy(className = "ui-datepicker-year")
-    WebElement dateYear;
-
-    @FindBy(xpath = "//div[@id='ui-datepicker-div']//a[contains(@class, 'ui-datepicker-next')]")
-    WebElement nextMonth;
-
-    String XPATH_DAY = "//table[@class='ui-datepicker-calendar']//td[@data-handler='selectDay']/a[contains(text(), '%s')]";
-
-    @FindBy(id = "srcbtn")
+    @FindBy(xpath = "//android.widget.Button[@resource-id='com.easemytrip.android:id/btn_bus_search']")
     WebElement searchBtn;
+
+    WebElement monthFullContainer;
+
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvMonthName']")
+    WebElement monthElement;
+
+    @FindBy(xpath = "//android.widget.TextView[@text='ONLINE BUS TICKETS']")
+    WebElement busTitleText;
 
 
     public void clickOnBusFromNavBar() {
@@ -43,42 +47,51 @@ public class BusHomePageMobile extends BasePageMobile implements BusHomePage {
     }
 
     public boolean verifyUserIsOnBusHomePage() {
-        System.out.println(driver.getCurrentUrl());
-        return driver.getCurrentUrl().contains("bus");
+        return isPresent(busTitleText) && isPresent(sourceCityBx);
     }
 
     public void enterTheSourceCity(String sourceCity) {
+        sourceCityBx.click();
         sourceCityInput.sendKeys(sourceCity);
-//        waitForElementToBePresentNotVisible(sourceCityOption);
-        driver.findElement(By.xpath(sourceCityOption));
+        sourceCityOption.click();
     }
 
     public void enterTheDestinationCity(String destinationCity) {
         destinationCityInput.sendKeys(destinationCity);
-//        waitForElementToBePresentNotVisible(destinationCityOption);
-        driver.findElement(By.xpath(destinationCityOption));
+        destinationCityOption.click();
     }
 
     public void selectDepartureDate(String date) {
         dateInput.click();
 
-        String yearInput = date.substring(date.lastIndexOf(" ") + 1);
-        String monthInput = date.substring(date.indexOf(" ") + 1, date.lastIndexOf(" "));
-        String dayInput = date.substring(0, date.indexOf(" "));
+        String day = date.substring(0, date.indexOf(" "));
+        String month = date.substring(date.indexOf(" ") + 1, date.lastIndexOf(" "));
+        String year = date.substring(date.lastIndexOf(" ") + 1);
 
-//        WebElement nextMonth = driver.findElement(By.xpath("//div[@id='ui-datepicker-div']//a[contains(@class, 'ui-datepicker-next')]"));
+        String monthYear = month + " " + year;
 
-        while (!dateYear.getText().equals(yearInput)) {
-            nextMonth.click();
-            dateYear = driver.findElement(By.className("ui-datepicker-year"));
+        System.out.println("Month"+ monthYear);
+
+        System.out.println(monthElement.getText());
+        while (!monthElement.getText().equals(monthYear)) {
+            System.out.println("Inside while loop");
+            monthFullContainer = driver.findElement(By.xpath("//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvMonthName']/following-sibling::androidx.recyclerview.widget.RecyclerView"));
+
+            int x = monthFullContainer.getLocation().getX();
+            int y = monthFullContainer.getLocation().getY();
+            int width = monthFullContainer.getSize().getWidth();
+            int height = monthFullContainer.getSize().getHeight();
+
+            System.out.println(monthElement.getText());
+
+            scrollOrSwipe(x + width / 2, y + height, x + width / 2, y);
+
+            monthElement = driver.findElement(By.xpath("//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvMonthName']"));
+
         }
-        while (!dateMonth.getText().equals(monthInput)) {
-            nextMonth.click();
-            dateMonth = driver.findElement(By.className("ui-datepicker-month"));
-        }
-
-        String dayXpath = String.format(XPATH_DAY, dayInput);
-        driver.findElement(By.xpath(dayXpath)).click();
+        String xpathDay = String.format(XPATH_DAY, day);
+        WebElement dayElement = driver.findElement(By.xpath(xpathDay));
+        dayElement.click();
     }
 
     public void clickOnSearchBtnOnBusPage() {

@@ -14,12 +14,18 @@ public class BusListingPageMobile extends BasePageMobile implements BusListingPa
     @FindBy(xpath = "//div[@id='myHeader'][@class='bus_info']")
     WebElement busHeaderTags;
 
-    @FindBy(xpath = "//a[@class='modi-srec3'][text()='Search Again']")
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvEmpty']")
     WebElement searchResultNotAvailableDivTag;
+
+    @FindBy(xpath = "//android.widget.FrameLayout[@resource-id='com.easemytrip.android:id/top_id']")
+    List<WebElement> listOfBuses;
+
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvBusCount']")
+    WebElement totalResults;
 
 
     public boolean verifyUserIsOnListingPageOfBus() {
-        return (listOfBusWithOptionSelectSeats.size() > 0 && isPresent(busHeaderTags)) || isPresent(searchResultNotAvailableDivTag);
+        return (listOfBuses.size() > 0 && isPresent(totalResults)) || isPresent(searchResultNotAvailableDivTag);
     }
 
     public void clickOnSelectSeatBtnOfTheFirstBus() {

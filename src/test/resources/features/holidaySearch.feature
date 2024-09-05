@@ -11,21 +11,35 @@ Feature: Validate holidays functionality
 
   Scenario: Verify holidays search functionality
 
-    When the user enters the destination "Kerala"
+    When the user enters the destination "holidays.destination"
     And user select the destination from the dropdown list
-    Then verify the holidays listing page shows results for the destination "Kerala"
+    Then verify the holidays listing page shows results for the destination "holidays.destination"
 
-  Scenario: Verify holidays package sorting from low to high
-    When the user enters the destination "Kerala"
-    And user select the destination from the dropdown list
-    Then verify the holidays listing page shows results for the destination "Kerala"
-    When user select sorting option from "Low to High"
-    Then verify the holidays listing page shows results in ascending order
 
   Scenario: Verify holidays by filtering themes "solo" trip
-    When the user enters the destination "Kerala"
+    When the user enters the destination "holidays.destination"
     And user select the destination from the dropdown list
-    Then verify the holidays listing page shows results for the destination "Kerala"
+    Then verify the holidays listing page shows results for the destination "holidays.destination"
     When user click on more filter option in holidays listing page
-    And select the theme of holiday type as "Solo"
+    And select the theme of holiday type as "holidays.type"
     Then verify the holidays listing page shows results for the selected trip theme
+
+
+  Scenario Outline: Verify holidays package sorting
+    When the user enters the destination "holidays.destination"
+    And user select the destination from the dropdown list
+    Then verify the holidays listing page shows results for the destination "holidays.destination"
+    When user select sorting option from "<sorting type>"
+    Then verify the holidays listing page shows results in "<sorting type>" order
+
+    Examples:
+      | sorting type |
+      | Low to High  |
+      | High to Low  |
+
+    #  Scenario: Verify holidays package sorting from low to high
+#    When the user enters the destination "Kerala"
+#    And user select the destination from the dropdown list
+#    Then verify the holidays listing page shows results for the destination "Kerala"
+#    When user select sorting option from "Low to High"
+#    Then verify the holidays listing page shows results in ascending order

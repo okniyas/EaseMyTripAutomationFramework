@@ -44,8 +44,8 @@ public class FlightHomeSteps {
     }
 
     @And("select date {string}")
-    public void selectDate(String date) {
-        flightHomePage.selectDate(date);
+    public void selectDate(String dateKey) {
+        flightHomePage.selectDate(ConfigReader.getConfigValue(dateKey));
     }
 
     @Then("verify user is on home page")
@@ -64,12 +64,12 @@ public class FlightHomeSteps {
     }
 
     @And("user enter from city {string}")
-    public void userEnterFromCity(String fromCity) {
-        flightHomePage.enterFromCity(fromCity);
+    public void userEnterFromCity(String fromCityKey) {
+        flightHomePage.enterFromCity(ConfigReader.getConfigValue(fromCityKey));
     }
 
     @And("user enter to city {string}")
-    public void userEnterToCity(String toCity) {
-        flightHomePage.enterToCity(toCity);
+    public void userEnterToCity(String toCityKey) {
+        flightHomePage.enterToCity(ConfigReader.getConfigValue(toCityKey));
     }
 }

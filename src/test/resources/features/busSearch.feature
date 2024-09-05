@@ -1,13 +1,13 @@
 Feature: Validate bus functionalities
 
-  Scenario: Verify bus booking
+  Scenario: Verify bus booking checkout
     Given user opens the website
     Then verify user is on home page
     When the user clicks on Bus from the navigation bar
     Then verify the user is on the bus home page
-    When user enter the source city "Bangalore"
-    And user enter the destination city "Hyderabad"
-    And user select departure date as "22 August 2024"
+    When user enter the source city "bus.source.city"
+    And user enter the destination city "bus.destination.city"
+    And user select departure date as "bus.booking.checkout.date"
     And user click on search button on the bus page
     Then verify user is on listing page of the bus page
 
@@ -19,7 +19,7 @@ Feature: Validate bus functionalities
     And user click on continue button
     Then verify user is on bus booking review page
     When user click on "secure my trip with insurance"
-    And enter the email address "testUser@gmail.com"
+    And enter the email address "bus.booking.email"
     And user click on continue button in review booking page
 
     Then verify user is on bus booking travellers page
@@ -27,5 +27,16 @@ Feature: Validate bus functionalities
     And user enter the mobile number
     And user click on continue button in travellers booking page
     Then verify user is on payment booking page
+
+  Scenario: Verify bus booking
+    Given user opens the website
+    Then verify user is on home page
+    When the user clicks on Bus from the navigation bar
+    Then verify the user is on the bus home page
+    When user enter the source city "bus.source.city"
+    And user enter the destination city "bus.destination.city"
+    And user select departure date as "bus.booking.date"
+    And user click on search button on the bus page
+    Then verify user is on listing page of the bus page
 
 

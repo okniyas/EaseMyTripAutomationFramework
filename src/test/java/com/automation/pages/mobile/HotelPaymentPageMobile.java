@@ -31,7 +31,7 @@ public class HotelPaymentPageMobile extends BasePageMobile implements HotelPayme
 
     public void isPriceSummaryCorrect() {
 
-        final double DELTA = 1e-10; // Tolerance value
+        final double DELTA = 1e-10;
         double roomPrice=Double.parseDouble(roomPriceElement.getText());
         double discount=Double.parseDouble(discountPriceElement.getText());
         double priceAfterDiscount=Double.parseDouble(priceAfterDiscountElement.getText());

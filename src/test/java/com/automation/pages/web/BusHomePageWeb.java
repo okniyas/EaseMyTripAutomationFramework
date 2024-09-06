@@ -49,13 +49,13 @@ public class BusHomePageWeb extends BasePageWeb implements BusHomePage {
 
     public void enterTheSourceCity(String sourceCity) {
         sourceCityInput.sendKeys(sourceCity);
-//        waitForElementToBePresentNotVisible(sourceCityOption);
+        waitForElementToBePresentNotVisible(sourceCityOption);
         driver.findElement(By.xpath(sourceCityOption));
     }
 
     public void enterTheDestinationCity(String destinationCity) {
         destinationCityInput.sendKeys(destinationCity);
-//        waitForElementToBePresentNotVisible(destinationCityOption);
+        waitForElementToBePresentNotVisible(destinationCityOption);
         driver.findElement(By.xpath(destinationCityOption));
     }
 

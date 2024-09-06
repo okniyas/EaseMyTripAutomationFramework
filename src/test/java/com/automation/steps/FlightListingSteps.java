@@ -1,9 +1,7 @@
 package com.automation.steps;
 
 import com.automation.pages.interfaces.FlightListingPage;
-import com.automation.pages.mobile.BusSeatingPageMobile;
 import com.automation.pages.mobile.FlightListingPageMobile;
-import com.automation.pages.web.BusSeatingPageWeb;
 import com.automation.pages.web.FlightListingPageWeb;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.Then;
@@ -31,13 +29,13 @@ public class FlightListingSteps {
     }
 
     @When("user unTicks all the flights except the flight to be filtered {string}")
-    public void userUnTicksAllTheFlightsExceptTheFlightToBeFiltered(String flightName) {
-        flightListingPage.userUnTickFlightsExceptOneToBeFiltered(flightName);
+    public void userUnTicksAllTheFlightsExceptTheFlightToBeFiltered(String flightNameKey) {
+        flightListingPage.userUnTickFlightsExceptOneToBeFiltered(ConfigReader.getConfigValue(flightNameKey));
 
     }
 
     @Then("verify that only the filtered flight {string} is present on the flight listing page")
     public void verifyThatOnlyTheFilteredFlightIsPresentOnTheFlightListingPage(String flightName) {
-        Assert.assertTrue(flightListingPage.verifyOnlyTheFilteredFlightIsPresent(flightName));
+        Assert.assertTrue(flightListingPage.verifyOnlyTheFilteredFlightIsPresent(ConfigReader.getConfigValue(flightName)));
     }
 }

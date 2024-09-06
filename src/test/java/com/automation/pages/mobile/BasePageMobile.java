@@ -49,7 +49,7 @@ public class BasePageMobile {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(loc)));
     }
 
-    public void selectByValue(WebElement element, String value){
+    public void selectByValue(WebElement element, String value) {
         Select dropdown = new Select(element);
         dropdown.selectByValue(value);
     }
@@ -80,16 +80,17 @@ public class BasePageMobile {
     public void setImplicitWait(long sec) {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(sec));
     }
+
     public void scrollOrSwipe(int startX, int startY, int endX, int endY) {
         PointerInput finger1 = new PointerInput(PointerInput.Kind.TOUCH, "finger1");
         Sequence sequence = new Sequence(finger1, 1)
                 .addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), startX, startY))
                 .addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
-                .addAction(new Pause(finger1, Duration.ofSeconds(2)))
+                .addAction(new Pause(finger1, Duration.ofMillis(100)))
                 .addAction(finger1.createPointerMove(Duration.ofSeconds(1), PointerInput.Origin.viewport(), endX, endY))
                 .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
-        ((AppiumDriver)driver).perform(Collections.singletonList(sequence));
+        ((AppiumDriver) driver).perform(Collections.singletonList(sequence));
     }
 
 }

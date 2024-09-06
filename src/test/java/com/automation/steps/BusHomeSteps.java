@@ -1,9 +1,7 @@
 package com.automation.steps;
 
 import com.automation.pages.interfaces.BusHomePage;
-import com.automation.pages.mobile.BusBookingTravellersPageMobile;
 import com.automation.pages.mobile.BusHomePageMobile;
-import com.automation.pages.web.BusBookingTravellersPageWeb;
 import com.automation.pages.web.BusHomePageWeb;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.Then;
@@ -36,20 +34,20 @@ public class BusHomeSteps {
     }
 
     @When("user enter the source city {string}")
-    public void user_enter_the_source_city(String sourceCity) {
-        busHomePage.enterTheSourceCity(sourceCity);
+    public void user_enter_the_source_city(String sourceCityKey) {
+        busHomePage.enterTheSourceCity(ConfigReader.getConfigValue(sourceCityKey));
         
     }
 
     @When("user enter the destination city {string}")
-    public void user_enter_the_destination_city(String destinationCity) {
-        busHomePage.enterTheDestinationCity(destinationCity);
+    public void user_enter_the_destination_city(String destinationCityKey) {
+        busHomePage.enterTheDestinationCity(ConfigReader.getConfigValue(destinationCityKey));
         
     }
 
     @When("user select departure date as {string}")
-    public void user_select_departure_date_as(String date) {
-        busHomePage.selectDepartureDate(date);
+    public void user_select_departure_date_as(String dateKey) {
+        busHomePage.selectDepartureDate(ConfigReader.getConfigValue(dateKey));
         
     }
 

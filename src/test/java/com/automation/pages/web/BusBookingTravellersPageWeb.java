@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class BusBookingTravellersPageWeb extends BasePageWeb implements BusBookingTravellersPage {
 
     @FindBy(xpath = "//input[@value='Continue Booking']")
@@ -43,13 +45,13 @@ public class BusBookingTravellersPageWeb extends BasePageWeb implements BusBooki
         return isPresent(continueBookingBtnInTravellersPage) && isDisplay(firstNameInput) && isDisplay(mobileInput);
     }
 
-    public void enterTheTravellerDetails() {
+    public void enterTheTravellerDetails(List<String> travellerDetails) {
 
-        selectByValue(titleInput, ConfigReader.getConfigValue("bus.booking.title"));
+        selectByValue(titleInput, ConfigReader.getConfigValue(travellerDetails.get(0)));
 
-        firstNameInput.sendKeys(ConfigReader.getConfigValue("bus.booking.first.name"));
-        lastNameInput.sendKeys(ConfigReader.getConfigValue("bus.booking.last.name"));
-        ageInput.sendKeys(ConfigReader.getConfigValue("bus.booking.age"));
+        firstNameInput.sendKeys(ConfigReader.getConfigValue(travellerDetails.get(1)));
+        lastNameInput.sendKeys(ConfigReader.getConfigValue(travellerDetails.get(2)));
+        ageInput.sendKeys(ConfigReader.getConfigValue(travellerDetails.get(3)));
     }
 
     public void enterTheMobileNumber() {

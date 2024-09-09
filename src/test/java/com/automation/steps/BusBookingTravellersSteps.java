@@ -9,6 +9,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class BusBookingTravellersSteps {
     BusBookingTravellersPage busBookingTravellersPage;
 
@@ -30,8 +32,8 @@ public class BusBookingTravellersSteps {
     }
 
     @When("user enter the traveller details")
-    public void userEnterTheTravellerDetails() {
-        busBookingTravellersPage.enterTheTravellerDetails();
+    public void userEnterTheTravellerDetails(List<String> travellerDetails) {
+        busBookingTravellersPage.enterTheTravellerDetails(travellerDetails);
     }
 
     @And("user enter the mobile number")

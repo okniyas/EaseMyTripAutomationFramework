@@ -19,11 +19,11 @@ public class BusHomePageMobile extends BasePageMobile implements BusHomePage {
     @FindBy(xpath = "//android.widget.EditText[@resource-id='com.easemytrip.android:id/search']")
     WebElement destinationCityInput;
 
-    @FindBy(xpath = "//android.widget.ListView[@resource-id='com.easemytrip.android:id/search_airport_list']/android.widget.LinearLayout")
-    WebElement sourceCityOption;
+//    @FindBy(xpath = "//android.widget.ListView[@resource-id='com.easemytrip.android:id/search_airport_list']/android.widget.LinearLayout")
+//    WebElement sourceCityOption;
 
-    @FindBy(xpath = "//android.widget.ListView[@resource-id='com.easemytrip.android:id/search_airport_list']/android.widget.LinearLayout")
-    WebElement destinationCityOption;
+//    @FindBy(xpath = "//android.widget.ListView[@resource-id='com.easemytrip.android:id/search_airport_list']/android.widget.LinearLayout")
+//    WebElement cityOption;
 
     @FindBy(xpath = "//android.widget.LinearLayout[@resource-id='com.easemytrip.android:id/layout_onward_DateTV']")
     WebElement dateInput;
@@ -52,13 +52,23 @@ public class BusHomePageMobile extends BasePageMobile implements BusHomePage {
 
     public void enterTheSourceCity(String sourceCity) {
         sourceCityBx.click();
+
         sourceCityInput.sendKeys(sourceCity);
-        sourceCityOption.click();
+        driver.findElement(By.xpath("//android.widget.ListView[@resource-id='com.easemytrip.android:id/search_airport_list']/android.widget.LinearLayout")).click();
+//        waitForElementToBePresentNotVisible("//android.widget.ListView[@resource-id='com.easemytrip.android:id/search_airport_list']/android.widget.LinearLayout");
+//        sourceCityOption.click();
+//        waitForElementToBeVisible(cityOption);
+//        cityOption.click();
     }
 
     public void enterTheDestinationCity(String destinationCity) {
+        waitForElementToBeVisible(destinationCityInput);
         destinationCityInput.sendKeys(destinationCity);
-        destinationCityOption.click();
+        waitForElementToBePresentNotVisible("//android.widget.ListView[@resource-id='com.easemytrip.android:id/search_airport_list']/android.widget.LinearLayout");
+//        destinationCityOption.click();
+//        cityOption.click();
+        driver.findElement(By.xpath("//android.widget.ListView[@resource-id='com.easemytrip.android:id/search_airport_list']/android.widget.LinearLayout")).click();
+
     }
 
     public void selectDepartureDate(String date) {

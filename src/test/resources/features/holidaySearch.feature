@@ -1,3 +1,4 @@
+@web @mobile
 Feature: Validate holidays functionality
 
   Background:
@@ -15,14 +16,14 @@ Feature: Validate holidays functionality
     And user select the destination from the dropdown list
     Then verify the holidays listing page shows results for the destination "holidays.destination"
 
+  Scenario: Verify holidays by filtering themes trip
 
-  Scenario: Verify holidays by filtering themes "solo" trip
     When the user enters the destination "holidays.destination"
     And user select the destination from the dropdown list
     Then verify the holidays listing page shows results for the destination "holidays.destination"
     When user click on more filter option in holidays listing page
     And select the theme of holiday type as "holidays.type"
-    Then verify the holidays listing page shows results for the selected trip theme
+    Then verify the holidays listing page shows results for the selected trip theme "holidays.type"
 
 
   Scenario Outline: Verify holidays package sorting

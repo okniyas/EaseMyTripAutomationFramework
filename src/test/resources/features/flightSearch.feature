@@ -1,3 +1,4 @@
+@web @mobile
 Feature: Validate flight search
 
   Scenario: Verify flight search

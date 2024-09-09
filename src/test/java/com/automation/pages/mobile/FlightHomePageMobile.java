@@ -108,8 +108,8 @@ public class FlightHomePageMobile extends BasePageMobile implements FlightHomePa
     }
 
     public boolean verifyOnHomePage() {
-//        return isDisplay(searchBtn);
-        return true;
+        return isDisplay(flightMenu);
+//        return true;
     }
 
     public void clickOnFromCity() {
@@ -124,6 +124,7 @@ public class FlightHomePageMobile extends BasePageMobile implements FlightHomePa
     public void enterFromCity(String fromCity) {
 
         flightInput.sendKeys(fromCity);
+        waitForElementToBeVisible(selectFlightOption);
         selectFlightOption.click();
     }
 

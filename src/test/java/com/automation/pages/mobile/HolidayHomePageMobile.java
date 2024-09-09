@@ -10,7 +10,8 @@ public class HolidayHomePageMobile extends BasePageMobile implements HolidayHome
     @FindBy(xpath = "//android.widget.TextView[@text='Holidays']")
     WebElement holidayNavBar;
 
-    @FindBy(xpath = "//android.widget.EditText")
+//    @FindBy(xpath = "//android.widget.EditText[@resource-id='txtDesCity']")
+    @FindBy(xpath = "//android.widget.Image[@text='search']/following-sibling::android.widget.EditText")
     WebElement destinationSearchBx;
 
     String XPATH_DESTINATION_DROPDOWN = "//android.widget.ListView//android.view.View[@content-desc='%s']";
@@ -37,17 +38,12 @@ public class HolidayHomePageMobile extends BasePageMobile implements HolidayHome
 //            WebElement SSLAlertContinueBtn = driver.findElement(By.xpath("//android.widget.Button[@text='CONTINUE']"));
 //            SSLAlertContinueBtn.click();
 //        }
-//        waitForElementToBePresentNotVisible("//android.widget.EditText[@resource-id='txtDesCity']");
-        waitForElementToBeVisible(destinationSearchBx);
+        waitForElementToBePresentNotVisible("//android.widget.Image[@text='search']/following-sibling::android.widget.EditText");
         return isPresent(destinationSearchBx);
     }
 
     public void enterTheDestination(String destination) {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+//        waitForElementToBeInvisible(driver.findElement(By.xpath("//android.widget.TextView[@resource-id='com.easemytrip.android:id/pro']")));
         waitForElementToBeVisible(destinationSearchBx);
         destinationSearchBx.sendKeys(destination);
         selectTheDestinationFromDropDownListMobile(destination);
@@ -59,8 +55,9 @@ public class HolidayHomePageMobile extends BasePageMobile implements HolidayHome
     }
 
     public void selectTheDestinationFromDropDownListMobile(String destination) {
-        String xpath = String.format(XPATH_DESTINATION_DROPDOWN, destination);
-        driver.findElement(By.xpath(xpath)).click();
+        String xpathDropdown = String.format(XPATH_DESTINATION_DROPDOWN, destination);
+        waitForElementToBeVisible(driver.findElement(By.xpath(xpathDropdown)));
+        driver.findElement(By.xpath(xpathDropdown)).click();
     }
     public void clickOnPlanYourTripIcon() {
         planYourTripBtn.click();

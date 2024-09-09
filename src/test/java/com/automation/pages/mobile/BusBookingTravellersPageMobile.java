@@ -2,70 +2,87 @@ package com.automation.pages.mobile;
 
 import com.automation.pages.interfaces.BusBookingTravellersPage;
 import com.automation.utils.ConfigReader;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.util.List;
+
 public class BusBookingTravellersPageMobile extends BasePageMobile implements BusBookingTravellersPage {
 
-    @FindBy(xpath = "//input[@value='Continue Booking']")
-    WebElement continueBookingBtnInTravellersPage;
+    @FindBy(xpath = "//android.widget.Button[@resource-id='com.easemytrip.android:id/button_paymentbooking']")
+    WebElement continueBookingBtnInTravellerDetailsPage;
 
-    @FindBy(xpath = "//div/label[text()='Title']/following-sibling::select")
-    WebElement titleInput;
+    String XPATH_OF_TITLE = "//android.widget.RadioButton[@text='%s']";
 
-    @FindBy(id = "firstname0")
+//    @FindBy(xpath = "")
+//    WebElement titleInput;
+
+    @FindBy(xpath = "//android.widget.EditText[@resource-id='com.easemytrip.android:id/input_first_name']")
     WebElement firstNameInput;
 
-    @FindBy(id = "lastname0")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id='com.easemytrip.android:id/input_last_name']")
     WebElement lastNameInput;
 
-    @FindBy(id = "age0")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id='com.easemytrip.android:id/input_age']")
     WebElement ageInput;
 
-    @FindBy(id = "TrvlMobileNo")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id='com.easemytrip.android:id/input_mobile']")
     WebElement mobileInput;
 
-    @FindBy(className = "main-pymnt-bx")
-    WebElement paymentMainBox;
+    @FindBy(xpath = "//android.widget.EditText[@resource-id='com.easemytrip.android:id/input_email']")
+    WebElement emailInput;
 
-    @FindBy(xpath = "//div[@class='main-pymnt-bx']/div[contains(@class, 'timer')]")
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tv_verify']")
+    WebElement upiPaymentVerifyPayBtn;
+
+    @FindBy(xpath = "//android.widget.LinearLayout[@resource-id='com.easemytrip.android:id/layoutTimer']")
     WebElement paymentTimer;
 
-    @FindBy(xpath = "//p[@id='Sec']//span")
-    WebElement paymentPageSuccess;
-
-    @FindBy(xpath = "//div[@class='loadtxtfl']")
-    WebElement paymentPageLoader;
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tv_loader_title']")
+    WebElement paymentWaitLoader;
 
 
     public boolean verifyOnBusBookingTravellersPage() {
-        return isPresent(continueBookingBtnInTravellersPage) && isDisplay(firstNameInput) && isDisplay(mobileInput);
+        return isPresent(continueBookingBtnInTravellerDetailsPage) && isDisplay(firstNameInput);
     }
 
-    public void enterTheTravellerDetails() {
+    public void enterTheTravellerDetails(List<String> travellerDetails) {
 
-        selectByValue(titleInput, ConfigReader.getConfigValue("bus.booking.title"));
+        String titleXpath = String.format(XPATH_OF_TITLE, ConfigReader.getConfigValue(travellerDetails.get(0)));
+        waitForElementToBePresentNotVisible(titleXpath);
+        driver.findElement(By.xpath(titleXpath)).click();
 
-        firstNameInput.sendKeys(ConfigReader.getConfigValue("bus.booking.first.name"));
-        lastNameInput.sendKeys(ConfigReader.getConfigValue("bus.booking.last.name"));
-        ageInput.sendKeys(ConfigReader.getConfigValue("bus.booking.age"));
+        firstNameInput.sendKeys(ConfigReader.getConfigValue(travellerDetails.get(1)));
+        lastNameInput.sendKeys(ConfigReader.getConfigValue(travellerDetails.get(2)));
+        ageInput.sendKeys(ConfigReader.getConfigValue(travellerDetails.get(3)));
+
+        //scroll to enter the email and mobile number
+        Dimension dimension = driver.manage().window().getSize();
+        int width = dimension.getWidth();
+        int height = dimension.getHeight();
+        scrollOrSwipe(width/2, height/2, width/2, height/3);
+
+
+        emailInput.sendKeys(ConfigReader.getConfigValue(travellerDetails.get(4)));
+        mobileInput.sendKeys(ConfigReader.getConfigValue(travellerDetails.get(5)));
+
+
     }
 
     public void enterTheMobileNumber() {
-        mobileInput.sendKeys(ConfigReader.getConfigValue("bus.booking.mobile"));
+//        mobileInput.sendKeys(ConfigReader.getConfigValue("bus.booking.mobile"));
     }
 
     public void clickOnContinueBtnInTravellersBookingPage() {
 
-        if(continueBookingBtnInTravellersPage.isEnabled()){
-            continueBookingBtnInTravellersPage.click();
-        }
+            continueBookingBtnInTravellerDetailsPage.click();
     }
 
     public boolean verifyIsOnPaymentBookingPage() {
-        wait.until(ExpectedConditions.invisibilityOf(paymentPageLoader));
-        return isDisplay(paymentPageSuccess);
-//        return isPresent(paymentMainBox) && isPresent(paymentTimer);
+        wait.until(ExpectedConditions.invisibilityOf(paymentWaitLoader));
+        return isDisplay(paymentTimer) && isDisplay(upiPaymentVerifyPayBtn);
     }
 }

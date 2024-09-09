@@ -3,32 +3,28 @@ package com.automation.pages.mobile;
 import com.automation.pages.interfaces.HotelBookingPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
-import java.util.Set;
 
 
 public class HotelBookingPageMobile extends BasePageMobile implements HotelBookingPage {
 
-    @FindBy(xpath = "//a[@id='room']/following-sibling::a")
-    WebElement bookNowBtn;
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/button_BookNow']")
+    WebElement selectYourRoomBtn;
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/button_BookNow']")
+    WebElement continueBtn;
+
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/grand_total_traveller']")
+    WebElement roomPriceBtn;
 
     public boolean isHotelBookingPageDisplayed() {
-
-        Set<String> handles = driver.getWindowHandles();
-        String currentHandle = driver.getWindowHandle();
-
-        for (String handle : handles) {
-            if (!handle.equals(currentHandle)) {
-                driver.switchTo().window(handle);
-            }
-        }
-        wait.until(ExpectedConditions.visibilityOf(bookNowBtn));
-        return isDisplay(bookNowBtn);
+        waitForElementToBeVisible(selectYourRoomBtn);
+        return isDisplay(selectYourRoomBtn);
     }
 
     public void clickOnBookNow() {
-        bookNowBtn.click();
+        selectYourRoomBtn.click();
+        continueBtn.click();
+        waitForElementToBeVisible(roomPriceBtn);
+        roomPriceBtn.click();
     }
 
 

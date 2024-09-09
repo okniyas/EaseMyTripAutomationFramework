@@ -1,3 +1,4 @@
+@mobile
 Feature: Validate sort functionality for train
 
   Background:

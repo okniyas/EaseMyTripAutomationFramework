@@ -28,8 +28,8 @@ public class HotelListingPageMobile extends BasePageMobile implements HotelListi
     WebElement container;
     WebElement priceElement;
 
-    @FindBy(xpath = "//div[@class='htl_ttl']")
-    List<WebElement>hotelTitles;
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tvHotelName']")
+    WebElement hotelTitle;
 
     public boolean isHotelListingPageDisplayed() {
         return isDisplay(propertiesListTitle);
@@ -66,9 +66,11 @@ public class HotelListingPageMobile extends BasePageMobile implements HotelListi
     }
 
     public void selectHotel() {
-        hotelTitles.get(0).click();
+        hotelTitle.click();
     }
     public List<Double> getPriceList(){
+        waitForElementToBePresentNotVisible("//android.widget.TextView[@resource-id='com.easemytrip.android:id/tv_orignal_price']");
+
         List<Double>priceList=new ArrayList<>();
 
         for(int i=0;i<10;i++){

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>CucumberAutomation</td>
+              <td>1</td>
+            <td>06 Sep 2024, 11:00</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">com.automation.steps.FlightHomeSteps.user_opens_the_website()</td>
+              <td>6</td>
+              <td class="duration" data-value="38554900">038ms</td>
+              <td class="duration" data-value="6425816">006ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.FlightHomeSteps.verifyUserIsOnHomePage()</td>
+              <td>6</td>
+              <td class="duration" data-value="3830100">003ms</td>
+              <td class="duration" data-value="638350">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.Hooks.cleanUp()</td>
+              <td>6</td>
+              <td class="duration" data-value="5897012000">5s 897ms</td>
+              <td class="duration" data-value="982835333">982ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.Hooks.setUp()</td>
+              <td>6</td>
+              <td class="duration" data-value="72460242400">1m 12s 460ms</td>
+              <td class="duration" data-value="12076707066">12s 076ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelHomeSteps.userClickOnRoomSelect()</td>
+              <td>3</td>
+              <td class="duration" data-value="5037104200">5s 037ms</td>
+              <td class="duration" data-value="1679034733">1s 679ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelHomeSteps.user_click_on_hotel_menu()</td>
+              <td>3</td>
+              <td class="duration" data-value="21108289000">21s 108ms</td>
+              <td class="duration" data-value="7036096333">7s 036ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelHomeSteps.user_click_on_hotel_search()</td>
+              <td>3</td>
+              <td class="duration" data-value="2394554700">2s 394ms</td>
+              <td class="duration" data-value="798184900">798ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelHomeSteps.user_enter_the_check_in_date_as(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="37155399800">37s 155ms</td>
+              <td class="duration" data-value="12385133266">12s 385ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelHomeSteps.user_enter_the_check_out_date_as(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="3523398200">3s 523ms</td>
+              <td class="duration" data-value="1174466066">1s 174ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelHomeSteps.user_select_the_destination_as(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="11744178600">11s 744ms</td>
+              <td class="duration" data-value="3914726200">3s 914ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelHomeSteps.verify_hotel_home_page_is_displayed()</td>
+              <td>3</td>
+              <td class="duration" data-value="15305735900">15s 305ms</td>
+              <td class="duration" data-value="5101911966">5s 101ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelListingSteps.user_click_on_filter()</td>
+              <td>2</td>
+              <td class="duration" data-value="431216900">431ms</td>
+              <td class="duration" data-value="215608450">215ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelListingSteps.user_select_filter_by_price_high_to_low()</td>
+              <td>1</td>
+              <td class="duration" data-value="1906592600">1s 906ms</td>
+              <td class="duration" data-value="1906592600">1s 906ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelListingSteps.user_select_filter_by_price_low_to_high()</td>
+              <td>1</td>
+              <td class="duration" data-value="2360083100">2s 360ms</td>
+              <td class="duration" data-value="2360083100">2s 360ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelListingSteps.verify_price_listing_is_from_high_to_low()</td>
+              <td>1</td>
+              <td class="duration" data-value="26895121000">26s 895ms</td>
+              <td class="duration" data-value="26895121000">26s 895ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelListingSteps.verify_price_listing_is_from_low_to_high()</td>
+              <td>1</td>
+              <td class="duration" data-value="23498290100">23s 498ms</td>
+              <td class="duration" data-value="23498290100">23s 498ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.HotelListingSteps.verify_user_is_on_hotel_listing_page()</td>
+              <td>3</td>
+              <td class="duration" data-value="12049303600">12s 049ms</td>
+              <td class="duration" data-value="4016434533">4s 016ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.click_on_train_search_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="2278451600">2s 278ms</td>
+              <td class="duration" data-value="759483866">759ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.user_click_on_train_menu()</td>
+              <td>3</td>
+              <td class="duration" data-value="23975516200">23s 975ms</td>
+              <td class="duration" data-value="7991838733">7s 991ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.user_select_depart_date_as(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="24415411800">24s 415ms</td>
+              <td class="duration" data-value="8138470600">8s 138ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.user_select_destination_station_as(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="19399159800">19s 399ms</td>
+              <td class="duration" data-value="6466386600">6s 466ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.user_select_source_station_as(java.lang.String)</td>
+              <td>3</td>
+              <td class="duration" data-value="14710360900">14s 710ms</td>
+              <td class="duration" data-value="4903453633">4s 903ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainHomeSteps.verify_train_home_page_is_displayed()</td>
+              <td>3</td>
+              <td class="duration" data-value="12211787000">12s 211ms</td>
+              <td class="duration" data-value="4070595666">4s 070ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainListingSteps.userClickOnSortByNameAToZ()</td>
+              <td>1</td>
+              <td class="duration" data-value="1459785300">1s 459ms</td>
+              <td class="duration" data-value="1459785300">1s 459ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainListingSteps.userClickOnSortByNameZToA()</td>
+              <td>1</td>
+              <td class="duration" data-value="1163717200">1s 163ms</td>
+              <td class="duration" data-value="1163717200">1s 163ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainListingSteps.verifySortByNameAToZ()</td>
+              <td>1</td>
+              <td class="duration" data-value="83004504400">1m 23s 004ms</td>
+              <td class="duration" data-value="83004504400">1m 23s 004ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainListingSteps.verifySortByNameZToA()</td>
+              <td>1</td>
+              <td class="duration" data-value="83878562500">1m 23s 878ms</td>
+              <td class="duration" data-value="83878562500">1m 23s 878ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">com.automation.steps.TrainListingSteps.verify_train_list_is_displayed()</td>
+              <td>3</td>
+              <td class="duration" data-value="11795502200">11s 795ms</td>
+              <td class="duration" data-value="3931834066">3s 931ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>28</td>
+            <td>79</td>
+            <td class="duration">8m 40s 101ms</td>
+            <td class="duration">6s 583ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

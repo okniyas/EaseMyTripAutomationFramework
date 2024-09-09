@@ -1,9 +1,7 @@
 package com.automation.steps;
 
 import com.automation.pages.interfaces.HotelBookingPage;
-import com.automation.pages.mobile.HolidayListingPageMobile;
 import com.automation.pages.mobile.HotelBookingPageMobile;
-import com.automation.pages.web.HolidayListingPageWeb;
 import com.automation.pages.web.HotelBookingPageWeb;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.Then;
@@ -22,7 +20,6 @@ public class HotelBookingSteps {
             hotelBookingPage = new HotelBookingPageWeb();
         }
     }
-//    HotelBookingPageWeb hotelBookingPage=new HotelBookingPageWeb();
 
     @When("click on book now")
     public void click_on_book_now() {

@@ -1,3 +1,4 @@
+@mobile
 Feature: Validate train search
 
   Scenario: verify list of train is displayed

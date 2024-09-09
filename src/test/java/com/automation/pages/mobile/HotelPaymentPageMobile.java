@@ -7,41 +7,36 @@ import org.openqa.selenium.support.FindBy;
 
 public class HotelPaymentPageMobile extends BasePageMobile implements HotelPaymentPage {
 
-    @FindBy(xpath = "//div[@class='price_hed-INR']")
-    WebElement roomPriceDetailsHeader;
-
-    @FindBy(xpath = "//span[contains(@ng-bind,'RoomPrice.price')and not(@id)]")
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/fareHeading']")
+    WebElement fareHeading;
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tv_price']")
     WebElement roomPriceElement;
-
-    @FindBy(xpath = "//span[contains(@ng-bind,'RoomPrice.discountMarkupValue+CpnValue')and not(@id)]")
-    WebElement discountPriceElement;
-
-    @FindBy(xpath = "//span[@id='spnTravellerBaseFare']")
-    WebElement priceAfterDiscountElement;
-
-    @FindBy(xpath = "//span[@id='spnTravellerSurchargeTotal']")
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tv_taxRate']")
+    WebElement promoDiscountElement;
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tv_Discount']")
+    WebElement emtDiscountElement;
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tv_emt_tax']")
     WebElement taxElement;
-
-    @FindBy(xpath = "//span[@id='lblGrandTotal']")
+    @FindBy(xpath = "//android.widget.TextView[@resource-id='com.easemytrip.android:id/tv_GrandTotal']")
     WebElement totalPriceElement;
 
     public boolean isHotelPaymentPageDisplayed() {
-        return isDisplay(roomPriceDetailsHeader);
+        waitForElementToBeVisible(fareHeading);
+        return isDisplay(fareHeading);
     }
 
     public void isPriceSummaryCorrect() {
 
         final double DELTA = 1e-10;
         double roomPrice=Double.parseDouble(roomPriceElement.getText());
-        double discount=Double.parseDouble(discountPriceElement.getText());
-        double priceAfterDiscount=Double.parseDouble(priceAfterDiscountElement.getText());
+        double hotelDiscount=Double.parseDouble(promoDiscountElement.getText());
+        double emtDiscount=Double.parseDouble(emtDiscountElement.getText());
         double tax=Double.parseDouble(taxElement.getText());
         double grandTotal=Double.parseDouble(totalPriceElement.getText());
 
-        double expectedPrice=roomPrice-discount;
+        double priceAfterDiscount=roomPrice-hotelDiscount-emtDiscount;
         double expectedTotal=priceAfterDiscount+tax;
 
-        Assert.assertEquals(expectedPrice,priceAfterDiscount,DELTA);
         Assert.assertEquals(expectedTotal,grandTotal,DELTA);
     }
 

@@ -10,7 +10,7 @@ public class HolidayHomePageMobile extends BasePageMobile implements HolidayHome
     @FindBy(xpath = "//android.widget.TextView[@text='Holidays']")
     WebElement holidayNavBar;
 
-    @FindBy(xpath = "//android.widget.EditText[@resource-id='txtDesCity']")
+    @FindBy(xpath = "//android.widget.EditText")
     WebElement destinationSearchBx;
 
     String XPATH_DESTINATION_DROPDOWN = "//android.widget.ListView//android.view.View[@content-desc='%s']";
@@ -24,7 +24,7 @@ public class HolidayHomePageMobile extends BasePageMobile implements HolidayHome
 //    @FindBy(xpath = "//android.widget.Button[@text='CONTINUE']")
 //    WebElement SSLAlertContinueBtn;
 
-    @FindBy(xpath = "//a[@class='modal_btn fancy']/span")
+    @FindBy(xpath = "//android.view.View[@content-desc='Plan Your Trip']")
     WebElement planYourTripBtn;
 
     public void clickOnHolidaysFromNavBar() {
@@ -37,7 +37,8 @@ public class HolidayHomePageMobile extends BasePageMobile implements HolidayHome
 //            WebElement SSLAlertContinueBtn = driver.findElement(By.xpath("//android.widget.Button[@text='CONTINUE']"));
 //            SSLAlertContinueBtn.click();
 //        }
-        waitForElementToBePresentNotVisible("//android.widget.EditText[@resource-id='txtDesCity']");
+//        waitForElementToBePresentNotVisible("//android.widget.EditText[@resource-id='txtDesCity']");
+        waitForElementToBeVisible(destinationSearchBx);
         return isPresent(destinationSearchBx);
     }
 

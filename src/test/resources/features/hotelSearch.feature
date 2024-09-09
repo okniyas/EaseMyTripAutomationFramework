@@ -1,3 +1,4 @@
+@mobile
 Feature: Validate hotel search
 
   Scenario: verify list of hotels is displayed

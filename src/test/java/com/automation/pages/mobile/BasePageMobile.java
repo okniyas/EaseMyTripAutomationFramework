@@ -2,10 +2,7 @@ package com.automation.pages.mobile;
 
 import com.automation.utils.DriverManager;
 import io.appium.java_client.AppiumDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Pause;
 import org.openqa.selenium.interactions.PointerInput;
 import org.openqa.selenium.interactions.Sequence;
@@ -91,6 +88,14 @@ public class BasePageMobile {
                 .addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 
         ((AppiumDriver) driver).perform(Collections.singletonList(sequence));
+    }
+
+    public void scrollOrSwipeMobile(){
+        Dimension dimension = driver.manage().window().getSize();
+        int width = dimension.getWidth();
+        int height = dimension.getHeight();
+
+        scrollOrSwipe(width/2, height, width/2, 0);
     }
 
 }

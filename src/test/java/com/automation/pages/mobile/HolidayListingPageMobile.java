@@ -2,12 +2,10 @@ package com.automation.pages.mobile;
 
 import com.automation.pages.interfaces.HolidayListingPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -28,7 +26,7 @@ public class HolidayListingPageMobile extends BasePageMobile implements HolidayL
     //    String XPATH_FILTER_MOBILE = "//android.widget.TextView[contains(@text,'%s')]";
     String XPATH_FILTER_MOBILE = "//android.widget.TextView[contains(@text,'%s')]//parent::android.view.View";
 
-    String XPATH_OF_THEME = "//div[@class='topFilterv2']//span[@class='checkmark_f2']/parent::label[contains(text(), '%s')]";
+    String XPATH_OF_THEME = "//android.widget.TextView[@text='%s']";
 
     @FindBy(xpath = "//android.widget.Image[@text='searchicon']")
     WebElement searchBtn;
@@ -46,9 +44,17 @@ public class HolidayListingPageMobile extends BasePageMobile implements HolidayL
     @FindBy(xpath = "//android.widget.RelativeLayout[@resource-id='com.easemytrip.android:id/progress_layout']")
     WebElement waitClock;
 
+    @FindBy(xpath = "//android.widget.TextView[@text='Filter']")
+    WebElement filterOption;
+
+    @FindBy(xpath = "//android.widget.Button[@text='Apply Filter']")
+    WebElement applyFilter;
+
+    String XPATH_OF_HOLIDAY = "//android.view.View/android.widget.TextView[contains(@text, '%s')]";
+
     public boolean verifyListingPageHasResultsForTheGivenDestination(String destination) {
-//        waitForElementToBeVisible(goingToFilter);
         waitForElementToBeInvisible(waitClock);
+        waitForElementToBeVisible(goingToFilter);
         return isPresent(goingToFilter) && isPresent(searchBtn);
     }
 
@@ -95,12 +101,12 @@ public class HolidayListingPageMobile extends BasePageMobile implements HolidayL
         List<Double> holidayPrices = getListOfHolidays();
         System.out.println("list : " + holidayPrices);
         List<Double> holidayCopy = new ArrayList<>(holidayPrices);
-        System.out.println("copy"+ holidayCopy);
-        if(sortingType.contains("Low to High")){
+        System.out.println("copy" + holidayCopy);
+        if (sortingType.contains("Low to High")) {
             Collections.sort(holidayPrices);
-        }else{
+        } else {
             holidayPrices.sort(Collections.reverseOrder());
-            System.out.println("After reverse: "+ holidayPrices);
+            System.out.println("After reverse: " + holidayPrices);
         }
 
 
@@ -111,7 +117,8 @@ public class HolidayListingPageMobile extends BasePageMobile implements HolidayL
 
         List<Double> holidayPrices = new ArrayList<>();
 
-        WebElement holidayNameElement = driver.findElement(By.xpath("//android.view.View[@resource-id='btn123']/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.widget.TextView"));
+//        WebElement holidayNameElement = driver.findElement(By.xpath("//android.view.View[@resource-id='btn123']/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.widget.TextView"));
+        WebElement holidayNameElement = driver.findElement(By.xpath("//android.widget.TextView[@text='Starting from']/preceding-sibling::android.view.View[2]/android.widget.TextView"));
         WebElement holidayDetailsContainer;
         WebElement calendarContainer;
         WebElement holidayPriceElement;
@@ -120,12 +127,16 @@ public class HolidayListingPageMobile extends BasePageMobile implements HolidayL
         String prevHolidayName = "";
         String currentHolidayName = holidayNameElement.getText();
 
-        int totalCount=1;
-        while (!prevHolidayName.equals(currentHolidayName) && totalCount <=10 ) {
+        int totalCount = 1;
+        while (!prevHolidayName.equals(currentHolidayName) && totalCount <= 10) {
 
-            holidayDetailsContainer = driver.findElement(By.xpath("//android.view.View[@resource-id='btn123']/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]"));
+            holidayDetailsContainer = driver.findElement(By.xpath("//android.widget.TextView[@text='Starting from']/parent::android.view.View"));
+//            holidayDetailsContainer = driver.findElement(By.xpath("//android.view.View[@resource-id='btn123']/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]"));
 //            holidayPriceElement = driver.findElement(By.xpath("//android.view.View[@resource-id='btn123']/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View[4]/android.widget.TextView[@resource-id]"));
-            holidayPriceElement = driver.findElement(By.xpath("//android.widget.TextView[@text='Starting from']/following-sibling::android.widget.TextView[@resource-id]"));
+//            holidayPriceElement = driver.findElement(By.xpath("//android.widget.TextView[@text='Starting from']/following-sibling::android.widget.TextView[@resource-id]"));
+            holidayPriceElement = driver.findElement(By.xpath("(//android.widget.TextView[@text='Starting from']/following-sibling::android.widget.TextView[contains(@text, '₹')])[last()]"));
+            //android.widget.TextView[@text='Starting from']/parent::android.view.View/preceding-sibling::android.view.View[2]/android.widget.TextView //mobile
+            //android.widget.TextView[@text='Starting from']/preceding-sibling::android.view.View[2]/android.widget.TextView   //emulator
 
             holidayPrice = Double.parseDouble(holidayPriceElement.getText().split("₹")[1]);
             System.out.println(holidayPrice);
@@ -147,26 +158,27 @@ public class HolidayListingPageMobile extends BasePageMobile implements HolidayL
             scrollOrSwipe(startX + (width / 2), startY + height, startX + (width / 2), startY - 10);
 
             prevHolidayName = currentHolidayName;
-            try {
-                holidayNameElement = driver.findElement(By.xpath("//android.view.View[@resource-id='btn123']/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.widget.TextView"));
-
-            } catch (Exception e) {
-                System.out.println("Exception: " + Arrays.toString(e.getStackTrace()));
-
-                Dimension dimension = driver.manage().window().getSize();
-                int xPage = dimension.getWidth();
-                int yPage = dimension.getHeight();
-
-                System.out.println("Inside exception");
-                System.out.println(xPage/2);
-                System.out.println(yPage/2);
-                System.out.println(xPage/2);
-                System.out.println(yPage/2 - 200);
-//                scrollOrSwipe(startX + (width / 2), startY + height, startX + (width / 2), startY + height - 50);
-                scrollOrSwipe(xPage / 2, yPage /2, xPage/ 2, yPage / 2 - 200);
-                holidayNameElement = driver.findElement(By.xpath("//android.view.View[@resource-id='btn123']/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.widget.TextView"));
-
-            }
+//            try {
+//                holidayNameElement = driver.findElement(By.xpath("//android.widget.TextView[@text='Starting from']/preceding-sibling::android.view.View[2]/android.widget.TextView"));
+//
+//            } catch (Exception e) {
+//                System.out.println("Exception: " + Arrays.toString(e.getStackTrace()));
+//
+//                Dimension dimension = driver.manage().window().getSize();
+//                int xPage = dimension.getWidth();
+//                int yPage = dimension.getHeight();
+//
+//                System.out.println("Inside exception");
+//                System.out.println(xPage / 2);
+//                System.out.println(yPage / 2);
+//                System.out.println(xPage / 2);
+//                System.out.println(yPage / 2 - 200);
+////                scrollOrSwipe(startX + (width / 2), startY + height, startX + (width / 2), startY + height - 50);
+//                scrollOrSwipe(xPage / 2, yPage / 2, xPage / 2, yPage / 2 - 200);
+//                holidayNameElement = driver.findElement(By.xpath("//android.widget.TextView[@text='Starting from']/preceding-sibling::android.view.View[2]/android.widget.TextView"));
+//
+//            }
+            holidayNameElement = driver.findElement(By.xpath("//android.widget.TextView[@text='Starting from']/preceding-sibling::android.view.View[2]/android.widget.TextView"));
             currentHolidayName = holidayNameElement.getText();
 
             System.out.println("previous = " + prevHolidayName + "=====>>>  current = " + currentHolidayName);
@@ -184,15 +196,52 @@ public class HolidayListingPageMobile extends BasePageMobile implements HolidayL
     }
 
     public void clickOnFilterOptionInHolidayListingPage() {
-//        moreFilterOption.click();
+        filterOption.click();
     }
 
     public void selectThemeOfHolidayType(String tripTheme) {
         String xpath = String.format(XPATH_OF_THEME, tripTheme);
         driver.findElement(By.xpath(xpath)).click();
+        applyFilter.click();
     }
 
-    public boolean verifyHolidaysListingPageShowsResultForTripTheme() {
-        return packageWithName.size() > 0 && isPresent(viewPackage);
+    public boolean verifyHolidaysListingPageShowsResultForTripTheme(String themeType) {
+        int x = firstHolidayPackageContainer.getLocation().getX();
+        int y = firstHolidayPackageContainer.getLocation().getY();
+        int width = firstHolidayPackageContainer.getSize().getWidth();
+        int height = firstHolidayPackageContainer.getSize().getHeight();
+
+//// Scroll Logic
+//        Dimension dimension = driver.manage().window().getSize();
+//        int xPage = dimension.getWidth();
+//        int yPage = dimension.getHeight();
+
+        int xPage = holidayPageContainer.getLocation().getX();
+        int yPage = holidayPageContainer.getLocation().getY();
+        int xWidthTotal = holidayPageContainer.getSize().getWidth();
+        int yHeightTotal = holidayPageContainer.getSize().getHeight();
+
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(width);
+        System.out.println(xPage);
+        System.out.println(yPage);
+
+        if (firstHolidayPackageContainer.isDisplayed()) {
+            scrollOrSwipe((x + width) / 2, y, (x + width) / 2, yPage);
+        } else {
+            while (!firstHolidayPackageContainer.isDisplayed()) {
+                scrollOrSwipe(xPage / 2, yPage + yHeightTotal, xPage / 2, yPage);
+            }
+        }
+        String xpathHoliday = String.format(XPATH_OF_HOLIDAY, themeType);
+        WebElement holidayNameElement = driver.findElement(By.xpath(xpathHoliday));
+        System.out.println(holidayNameElement.getText());
+        if (holidayNameElement.getText().contains(themeType)) {
+            return true;
+        }
+
+        return false;
+//        return packageWithName.size() > 0 && isPresent(viewPackage);
     }
 }

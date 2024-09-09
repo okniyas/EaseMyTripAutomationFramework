@@ -53,8 +53,13 @@ public class HolidayListingSteps {
         holidayListingPage.selectThemeOfHolidayType(ConfigReader.getConfigValue(tripThemeKey));
     }
 
-    @Then("verify the holidays listing page shows results for the selected trip theme")
-    public void verifyTheHolidaysListingPageShowsResultsForTheSelectedTripTheme() {
-        Assert.assertTrue(holidayListingPage.verifyHolidaysListingPageShowsResultForTripTheme());
+//    @Then("verify the holidays listing page shows results for the selected trip theme")
+//    public void verifyTheHolidaysListingPageShowsResultsForTheSelectedTripTheme() {
+//        Assert.assertTrue(holidayListingPage.verifyHolidaysListingPageShowsResultForTripTheme());
+//    }
+
+    @Then("verify the holidays listing page shows results for the selected trip theme {string}")
+    public void verifyTheHolidaysListingPageShowsResultsForTheSelectedTripTheme(String themeKey) {
+        Assert.assertTrue(holidayListingPage.verifyHolidaysListingPageShowsResultForTripTheme(ConfigReader.getConfigValue(themeKey)));
     }
 }

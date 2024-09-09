@@ -1,3 +1,4 @@
+@web @mobile
 Feature: Validate flight filter
 
   Scenario: Verify flight listing page with specific flight

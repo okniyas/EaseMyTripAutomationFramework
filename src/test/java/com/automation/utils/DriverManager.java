@@ -33,7 +33,7 @@ public class DriverManager {
 
         }
 
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(45));
     }
 
     public static WebDriver getDriver() {

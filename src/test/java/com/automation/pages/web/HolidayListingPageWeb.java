@@ -76,7 +76,14 @@ public class HolidayListingPageWeb extends BasePageWeb implements HolidayListing
         driver.findElement(By.xpath(xpath)).click();
     }
 
-    public boolean verifyHolidaysListingPageShowsResultForTripTheme() {
-        return packageWithName.size() > 0 && isPresent(viewPackage);
+    public boolean verifyHolidaysListingPageShowsResultForTripTheme(String themeType) {
+
+        for (WebElement name: packageWithName){
+            if(name.getText().contains(themeType)){
+                return true;
+            }
+        }
+        return false;
+//        return packageWithName.size() > 0 && isPresent(viewPackage);
     }
 }

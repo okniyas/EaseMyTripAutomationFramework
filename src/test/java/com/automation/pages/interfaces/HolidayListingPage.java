@@ -12,5 +12,5 @@ public interface HolidayListingPage {
 
     void selectThemeOfHolidayType(String tripTheme);
 
-    boolean verifyHolidaysListingPageShowsResultForTripTheme();
+    boolean verifyHolidaysListingPageShowsResultForTripTheme(String themeType);
 }

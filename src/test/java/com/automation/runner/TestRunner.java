@@ -6,9 +6,10 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features",
+        features = "src/test/resources/features/holidaySearch.feature",
         glue = "com.automation.steps",
-        plugin = "json:target/cucumber.json"
+        plugin = "json:target/cucumber.json",
+        tags = "@mobile"
 )
 public class TestRunner {
 }

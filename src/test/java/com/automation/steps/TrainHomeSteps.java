@@ -1,6 +1,5 @@
 package com.automation.steps;
 
-
 import com.automation.pages.interfaces.TrainHomePage;
 import com.automation.pages.mobile.TrainHomePageMobile;
 import com.automation.pages.web.TrainHomePageWeb;

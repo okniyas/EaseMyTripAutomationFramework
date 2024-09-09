@@ -50,9 +50,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                31,
-                3,
-                54,
+                67,
+                0,
+                0,
                 0,
                 0
             ],
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 88) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 67) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                2,
-                6
+                6,
+                0
             ],
             backgroundColor: [
                 "#00B000",
@@ -143,7 +143,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 8) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 6) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -156,8 +156,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                   2,
-                   2
+                   4,
+                   0
                ],
                backgroundColor: [
                 "#00B000",
@@ -233,7 +233,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>CucumberAutomation</td>
               <td>1</td>
-            <td>06 Sep 2024, 17:17</td>
+            <td>06 Sep 2024, 11:00</td>
     </tr>
   </tbody>
 </table>
@@ -328,41 +328,7 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-busSearch-feature.html">Validate bus functionalities</a></td>
-        
-        <td >0</td>
-        <td >0</td>
-        <td     class="skipped"   >31</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">31</td>
-
-        <td >0</td>
-        <td  class="failed"    >2</td>
-        <td class="total">2</td>
-
-        <td class="duration" data-value="1059800">001ms</td>
-        <td class="failed">Failed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-flightFilter-feature.html">Validate flight filter</a></td>
-        
-        <td      class="passed"    >12</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">12</td>
-
-        <td  class="passed"    >1</td>
-        <td >0</td>
-        <td class="total">1</td>
-
-        <td class="duration" data-value="68297114900">1m 8s 297ms</td>
-        <td class="passed">Passed</td>
-      </tr>
-          <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-flightSearch-feature.html">Validate flight search</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-hotelSearch-feature.html">Validate hotel search</a></td>
         
         <td      class="passed"    >10</td>
         <td >0</td>
@@ -375,58 +341,92 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="57278566200">57s 278ms</td>
+        <td class="duration" data-value="35007556300">35s 007ms</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-holidaySearch-feature.html">Validate holidays functionality</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-trainFilter-feature.html">Validate sort functionality for train</a></td>
+        
+        <td      class="passed"    >22</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">22</td>
+
+        <td  class="passed"    >2</td>
+        <td >0</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="240308470700">4m 308ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-trainSearch-feature.html">Validate train search</a></td>
         
         <td      class="passed"    >9</td>
-        <td      class="failed"    >3</td>
-        <td     class="skipped"   >23</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">35</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">9</td>
 
+        <td  class="passed"    >1</td>
         <td >0</td>
-        <td  class="failed"    >4</td>
-        <td class="total">4</td>
+        <td class="total">1</td>
 
-        <td class="duration" data-value="223570224300">3m 43s 570ms</td>
-        <td class="failed">Failed</td>
+        <td class="duration" data-value="37985846100">37s 985ms</td>
+        <td class="passed">Passed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-hotelFilter-feature.html">validate filter functionality for hotels</a></td>
+        
+        <td      class="passed"    >26</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">26</td>
+
+        <td  class="passed"    >2</td>
+        <td >0</td>
+        <td class="total">2</td>
+
+        <td class="duration" data-value="128442538500">2m 8s 442ms</td>
+        <td class="passed">Passed</td>
       </tr>
       </tbody>
 
   <tfoot class="total">
     <tr>
       <td>4</td>
-            <td>31</td>
-      <td>3</td>
-      <td>54</td>
+            <td>67</td>
       <td>0</td>
       <td>0</td>
-      <td>88</td>
+      <td>0</td>
+      <td>0</td>
+      <td>67</td>
 
-      <td>2</td>
       <td>6</td>
-      <td>8</td>
+      <td>0</td>
+      <td>6</td>
 
-      <td class="duration">5m 49s 146ms</td>
+      <td class="duration">7m 21s 744ms</td>
       <td></td>
     </tr>
     <tr>
       <td></td>
-            <td>35.23%</td>
-      <td>3.41%</td>
-      <td>61.36%</td>
+            <td>100.00%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>25.00%</td>
-      <td>75.00%</td>
+      <td>100.00%</td>
+      <td>0.00%</td>
       <td></td>
       <td></td>
-      <td>50.00%</td>
+      <td>100.00%</td>
     </tr>
   </tfoot>
 </table>

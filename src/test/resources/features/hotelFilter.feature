@@ -1,3 +1,4 @@
+@mobile
 Feature: validate filter functionality for hotels
 
   Background:

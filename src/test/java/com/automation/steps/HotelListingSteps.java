@@ -1,12 +1,11 @@
 package com.automation.steps;
 
 import com.automation.pages.interfaces.HotelListingPage;
-import com.automation.pages.mobile.HotelHomePageMobile;
 import com.automation.pages.mobile.HotelListingPageMobile;
-import com.automation.pages.web.HotelHomePageWeb;
 import com.automation.pages.web.HotelListingPageWeb;
 import com.automation.utils.ConfigReader;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class HotelListingSteps {
@@ -22,7 +21,6 @@ public class HotelListingSteps {
             hotelListingPage = new HotelListingPageWeb();
         }
     }
-//    HotelListingPageWeb hotelListingPage= new HotelListingPageWeb();
 
     @Then("verify user is on hotel listing page")
     public void verify_user_is_on_hotel_listing_page() {

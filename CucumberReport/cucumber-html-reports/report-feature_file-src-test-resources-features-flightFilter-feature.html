@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>CucumberAutomation</td>
               <td>1</td>
-            <td>06 Sep 2024, 17:17</td>
+            <td>17 Sep 2024, 09:57</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Validate flight filter</td>
-                    <td      class="passed"    >12</td>
-          <td >0</td>
-          <td >0</td>
+                    <td      class="passed"    >7</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >4</td>
           <td >0</td>
           <td >0</td>
           <td class="total">12</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="68297114900">1m 8s 297ms</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="34504278500">34s 504ms</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -176,7 +176,7 @@ $(document).ready(function() {
       </div>
 
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">Validate flight filter</span>
   
@@ -197,9 +197,9 @@ $(document).ready(function() {
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Verify flight listing page with specific flight</span>
   
@@ -210,7 +210,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
     
   <div class="inner-level hooks-before">
         <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
@@ -231,7 +231,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.steps.Hooks.setUp()</span>
                         
-  <span class="lead-duration duration">36s 861ms</span>
+  <span class="lead-duration duration">1s 774ms</span>
 
           </div>
 
@@ -247,9 +247,9 @@ $(document).ready(function() {
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -259,14 +259,14 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">user opens the website</span>
   
-  <span class="lead-duration duration">055ms</span>
+  <span class="lead-duration duration">3s 541ms</span>
 
   </div>
 
@@ -287,7 +287,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on home page</span>
   
-  <span class="lead-duration duration">005ms</span>
+  <span class="lead-duration duration">029ms</span>
 
   </div>
 
@@ -308,7 +308,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">user click on from city</span>
   
-  <span class="lead-duration duration">19s 096ms</span>
+  <span class="lead-duration duration">029ms</span>
 
   </div>
 
@@ -329,7 +329,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">user enter from city &quot;flight.source.city&quot;</span>
   
-  <span class="lead-duration duration">4s 390ms</span>
+  <span class="lead-duration duration">305ms</span>
 
   </div>
 
@@ -350,7 +350,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">user click on to city</span>
   
-  <span class="lead-duration duration">2s 218ms</span>
+  <span class="lead-duration duration">141ms</span>
 
   </div>
 
@@ -371,7 +371,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">user enter to city &quot;flight.destination.city&quot;</span>
   
-  <span class="lead-duration duration">3s 754ms</span>
+  <span class="lead-duration duration">241ms</span>
 
   </div>
 
@@ -392,7 +392,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">click on departure date</span>
   
-  <span class="lead-duration duration">6s 769ms</span>
+  <span class="lead-duration duration">048ms</span>
 
   </div>
 
@@ -409,15 +409,52 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">And</span>
   <span class="name">select date &quot;flight.booking.date&quot;</span>
   
-  <span class="lead-duration duration">13s 031ms</span>
+  <span class="lead-duration duration">30s 166ms</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Error message</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fefb6138ad47cfcdc2fbac8296f22624, clickElement {id=f.686C589A50DE13C17C6B9A6E56B6FCD1.d.09C614D5F7EAF508D4190EC8D554616E.e.334}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\280662\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55163}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55163/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fefb6138ad47cfcdc2fbac8296f22624)] -&gt; xpath: //div[@class='main1']/div[@class='box1']//div[@class='month3']]
+Session ID: fefb6138ad47cfcdc2fbac8296f22624
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.automation.pages.web.FlightHomePageWeb.selectDate(FlightHomePageWeb.java:63)
+	at com.automation.steps.FlightHomeSteps.selectDate(FlightHomeSteps.java:48)
+	at &#10045;.select date &quot;flight.booking.date&quot;(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/flightFilter.feature:12)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
         
@@ -430,11 +467,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">And</span>
   <span class="name">click on search button</span>
   
-  <span class="lead-duration duration">2s 104ms</span>
+  <span class="lead-duration duration">000ms</span>
 
   </div>
 
@@ -451,11 +488,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">verify on flight list page</span>
   
-  <span class="lead-duration duration">5s 363ms</span>
+  <span class="lead-duration duration">000ms</span>
 
   </div>
 
@@ -472,11 +509,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">When</span>
   <span class="name">user unTicks all the flights except the flight to be filtered &quot;flight.filter.name&quot;</span>
   
-  <span class="lead-duration duration">5s 477ms</span>
+  <span class="lead-duration duration">000ms</span>
 
   </div>
 
@@ -493,11 +530,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">verify that only the filtered flight &quot;flight.filter.name&quot; is present on the flight listing page</span>
   
-  <span class="lead-duration duration">6s 030ms</span>
+  <span class="lead-duration duration">000ms</span>
 
   </div>
 
@@ -518,7 +555,7 @@ $(document).ready(function() {
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -530,13 +567,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
+    <div id="after-5" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
                         
-  <span class="lead-duration duration">1s 465ms</span>
+  <span class="lead-duration duration">318ms</span>
 
           </div>
 

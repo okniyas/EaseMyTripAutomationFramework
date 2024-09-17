@@ -8,6 +8,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class TrainHomeSteps {
 
     TrainHomePage trainHomePage;
@@ -52,5 +54,23 @@ public class TrainHomeSteps {
         trainHomePage.clickOnTrainSearchBtn();
     }
 
+    @When("user enter train details")
+    public void user_enter_train_details(List<String> trainDetails) {
+        trainHomePage.enterTrainDetails(
+                ConfigReader.getConfigValue(trainDetails.get(0)),
+                ConfigReader.getConfigValue(trainDetails.get(1)),
+                ConfigReader.getConfigValue(trainDetails.get(2)),
+                ConfigReader.getConfigValue(trainDetails.get(3))
+        );
+    }
 
+    @When("user click on search button for trains")
+    public void user_click_on_search_button_for_trains() {
+        trainHomePage.clickOnLiveStationSearch();
+    }
+
+    @When("user click on live station")
+    public void userClickOnLiveStation() {
+        trainHomePage.clickOnLiveStation();
+    }
 }

@@ -26,6 +26,9 @@ public class TrainListingPageWeb extends BasePageWeb implements TrainListingPage
     @FindBy(id = "divTrainLoader")
     WebElement trainLoader;
 
+    @FindBy(xpath = "//div[@class='hedstatn']")
+    WebElement liveStationPageTitle;
+
     public void isTrainListingDisplayed() {
         Assert.assertTrue("Train Listing page not loaded",modifySearchBtn.isDisplayed());
         Assert.assertFalse("Train List is null", trainList.isEmpty());
@@ -70,5 +73,8 @@ public class TrainListingPageWeb extends BasePageWeb implements TrainListingPage
 
         Assert.assertEquals(copy, trainNamesDesc);
 
+    }
+    public boolean isTrainListingPageForLiveStationDisplayed(){
+        return isDisplay(liveStationPageTitle);
     }
 }

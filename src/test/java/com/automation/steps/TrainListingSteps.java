@@ -6,6 +6,7 @@ import com.automation.pages.web.TrainListingPageWeb;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class TrainListingSteps {
 
@@ -44,5 +45,10 @@ public class TrainListingSteps {
     @Then("verify sort by name Z to A")
     public void verifySortByNameZToA() {
         trainListingPage.isSortingByNameZToADisplayed();
+    }
+
+    @Then("verify train listing page is displayed")
+    public void verify_train_listing_page_is_displayed() {
+        Assert.assertTrue(trainListingPage.isTrainListingPageForLiveStationDisplayed());
     }
 }

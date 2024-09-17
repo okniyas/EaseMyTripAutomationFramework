@@ -1,3 +1,4 @@
+@web @mobile
 Feature: validate plan your trip functionality
 
   Background:

@@ -1,3 +1,4 @@
+@web @mobile
 Feature: validate the booking price summary
 
   Background:

@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>CucumberAutomation</td>
               <td>1</td>
-            <td>05 Sep 2024, 22:43</td>
+            <td>17 Sep 2024, 09:57</td>
     </tr>
   </tbody>
 </table>
@@ -129,9 +129,9 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">validate plan your trip functionality</td>
-                    <td      class="passed"    >4</td>
+                    <td      class="passed"    >6</td>
           <td      class="failed"    >1</td>
-          <td     class="skipped"   >4</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">9</td>
@@ -140,7 +140,7 @@ $(document).ready(function() {
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="42904589200">42s 904ms</td>
+          <td class="duration" data-value="9261169100">9s 261ms</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -170,7 +170,10 @@ $(document).ready(function() {
       <div class="feature">
         
 <div class="tags indention">
-  </div>
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
 
         
 <div class="brief failed">
@@ -229,7 +232,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">user opens the website</span>
   
-  <span class="lead-duration duration">001ms</span>
+  <span class="lead-duration duration">3s 871ms</span>
 
   </div>
 
@@ -250,7 +253,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on home page</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">041ms</span>
 
   </div>
 
@@ -271,7 +274,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">the user clicks on Holidays from the navigation bar</span>
   
-  <span class="lead-duration duration">5s 809ms</span>
+  <span class="lead-duration duration">3s 963ms</span>
 
   </div>
 
@@ -292,7 +295,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify the user is on the holidays home page</span>
   
-  <span class="lead-duration duration">5s 806ms</span>
+  <span class="lead-duration duration">053ms</span>
 
   </div>
 
@@ -321,7 +324,10 @@ $(document).ready(function() {
   
   
 <div class="tags indention">
-  </div>
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
 
 
     <span data-toggle="collapse" class=" collapsable-control" data-target="#element-3">
@@ -358,7 +364,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.steps.Hooks.setUp()</span>
                         
-  <span class="lead-duration duration">12s 042ms</span>
+  <span class="lead-duration duration">2s 222ms</span>
 
           </div>
 
@@ -389,11 +395,53 @@ $(document).ready(function() {
   <div id="steps-5" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">When</span>
   <span class="name">user click on plan your trip icon</span>
   
-  <span class="lead-duration duration">31s 287ms</span>
+  <span class="lead-duration duration">077ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify plan form is displayed</span>
+  
+  <span class="lead-duration duration">036ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">user enter the trip details</span>
+  
+  <span class="lead-duration duration">1s 218ms</span>
 
   </div>
 
@@ -405,14 +453,15 @@ $(document).ready(function() {
           <a>Error message</a>
       </div>
       <div id="msg-6" class="collapse collapsable-details">
-        <pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+        <pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=128.0.6613.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: io.appium.java_client.AppiumDriver
-Command: [f5aa495f-dcf4-4508-93a9-c2d4f9382944, findElement {using=xpath, value=//a[@class='modal_btn fancy']/span}]
-Capabilities {appium:app: C:\Users\280662\Downloads\e..., appium:appActivity: com.easemytrip.android.Spla..., appium:appPackage: com.easemytrip.android, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\280662\Downloads\e..., appActivity: com.easemytrip.android.Spla..., appPackage: com.easemytrip.android, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: 217594ec, platformName: ANDROID}, appium:deviceApiLevel: 34, appium:deviceManufacturer: samsung, appium:deviceModel: SM-A528B, appium:deviceName: RZCRA0C03NV, appium:deviceScreenDensity: 450, appium:deviceScreenSize: 1080x2400, appium:deviceUDID: RZCRA0C03NV, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.8125, appium:platformVersion: 14, appium:statBarHeight: 87, appium:takesScreenshot: true, appium:viewportRect: {height: 2313, left: 0, top: 87, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
-Session ID: f5aa495f-dcf4-4508-93a9-c2d4f9382944
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8c1270e12408991b1cb3eb7690aa57a3, executeScript {script=arguments[0].click();, args=[{element-6066-11e4-a52e-4f735466cecf=f.EFEC731595FE5AE2BFD2A02136134F5B.d.B2F7DE7C11A46DBE2121B3191D0F7954.e.579}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\280662\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65501}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65501/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8c1270e12408991b1cb3eb7690aa57a3
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -422,64 +471,18 @@ Session ID: f5aa495f-dcf4-4508-93a9-c2d4f9382944
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy23.click(Unknown Source)
-	at com.automation.pages.mobile.HolidayHomePageMobile.clickOnPlanYourTripIcon(HolidayHomePageMobile.java:65)
-	at com.automation.steps.HolidayHomeSteps.user_click_on_plan_your_trip_icon(HolidayHomeSteps.java:51)
-	at &#10045;.user click on plan your trip icon(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/holidayQuery.feature:10)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
+	at com.automation.pages.web.BasePageWeb.clickByJS(BasePageWeb.java:28)
+	at com.automation.pages.web.HolidayQueryPageWeb.enterTripDetails(HolidayQueryPageWeb.java:63)
+	at com.automation.steps.HolidayQuerySteps.user_enter_the_trip_details(HolidayQuerySteps.java:34)
+	at &#10045;.user enter the trip details(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/holidayQuery.feature:13)
 </pre>
       </div>
     </div>
   </div>
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">verify plan form is displayed</span>
-  
-  <span class="lead-duration duration">000ms</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
-  <span class="keyword indention">When</span>
-  <span class="name">user enter the trip details</span>
-  
-  <span class="lead-duration duration">000ms</span>
-
-  </div>
-
-        
 
 
         
@@ -556,7 +559,7 @@ Session ID: f5aa495f-dcf4-4508-93a9-c2d4f9382944
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
                         
-  <span class="lead-duration duration">761ms</span>
+  <span class="lead-duration duration">480ms</span>
 
           </div>
 

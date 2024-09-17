@@ -102,10 +102,11 @@ public class FlightHomePageWeb extends BasePageWeb implements FlightHomePage {
 
         toCityInput.sendKeys(toCity);
         String toXpath = String.format("//span[contains(text(),'%s')]", toCity);
-        waitForElementToPresent(toXpath);
-        WebElement dropdown = driver.findElement(By.xpath(toXpath));
-        if (isPresent(dropdown)) {
-            clickByJS(dropdown);
-        }
+        waitForElementToBePresentNotVisible(toXpath);
+        driver.findElement(By.xpath(toXpath));
+//        WebElement dropdown = driver.findElement(By.xpath(toXpath));
+//        if (isPresent(dropdown)) {
+//            clickByJS(dropdown);
+//        }
     }
 }

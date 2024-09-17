@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>CucumberAutomation</td>
               <td>1</td>
-            <td>06 Sep 2024, 17:17</td>
+            <td>17 Sep 2024, 09:57</td>
     </tr>
   </tbody>
 </table>
@@ -129,18 +129,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@web</td>
-                    <td      class="passed"    >22</td>
+                    <td      class="passed"    >106</td>
+          <td      class="failed"    >5</td>
+          <td     class="skipped"   >31</td>
           <td >0</td>
-          <td     class="skipped"   >20</td>
           <td >0</td>
-          <td >0</td>
-          <td class="total">42</td>
+          <td class="total">142</td>
 
-          <td  class="passed"    >2</td>
-          <td  class="failed"    >5</td>
-          <td class="total">7</td>
+          <td  class="passed"    >12</td>
+          <td  class="failed"    >9</td>
+          <td class="total">21</td>
 
-          <td class="duration" data-value="125576042100">2m 5s 576ms</td>
+          <td class="duration" data-value="146612677500">2m 26s 612ms</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -173,6 +173,1696 @@ $(document).ready(function() {
 <div class="element">
       <div class="indention">
       <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-GiftCardSendOtp-feature.html">Validate gift card checkout functionality</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify gift card booking checkout</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-2" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">2s 764ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user opens the website</span>
+  
+  <span class="lead-duration duration">4s 913ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on home page</span>
+  
+  <span class="lead-duration duration">035ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">the user clicks on gift card menu</span>
+  
+  <span class="lead-duration duration">1s 559ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user select the gift card type &quot;gift.card.type.1&quot;</span>
+  
+  <span class="lead-duration duration">1s 366ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the gift card details</span>
+  
+  <span class="lead-duration duration">161ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>gift.card.denomination</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.quantity</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the sender and receiver details</span>
+  
+  <span class="lead-duration duration">654ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>gift.card.sender.name</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.sender.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.sender.mobile</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.name</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.retype.receiver.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.mobile</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on accept terms and conditions</span>
+  
+  <span class="lead-duration duration">058ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on pay now button</span>
+  
+  <span class="lead-duration duration">057ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify enter OTP code field is displayed</span>
+  
+  <span class="lead-duration duration">606ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-4" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">314ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-GiftCardSendOtp-feature.html">Validate gift card checkout functionality</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify gift card booking checkout</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-5" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-6">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-6" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">2s 960ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-7">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-7" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user opens the website</span>
+  
+  <span class="lead-duration duration">2s 941ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on home page</span>
+  
+  <span class="lead-duration duration">028ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">the user clicks on gift card menu</span>
+  
+  <span class="lead-duration duration">1s 543ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user select the gift card type &quot;gift.card.type.2&quot;</span>
+  
+  <span class="lead-duration duration">1s 440ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the gift card details</span>
+  
+  <span class="lead-duration duration">238ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>gift.card.denomination</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.quantity</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the sender and receiver details</span>
+  
+  <span class="lead-duration duration">638ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>gift.card.sender.name</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.sender.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.sender.mobile</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.name</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.retype.receiver.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.mobile</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on accept terms and conditions</span>
+  
+  <span class="lead-duration duration">055ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on pay now button</span>
+  
+  <span class="lead-duration duration">052ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify enter OTP code field is displayed</span>
+  
+  <span class="lead-duration duration">651ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-8">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-8" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">296ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-GiftCardSendOtp-feature.html">Validate gift card checkout functionality</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-9">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify gift card booking checkout</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-9" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-10">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-10" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">1s 879ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-11" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user opens the website</span>
+  
+  <span class="lead-duration duration">3s 682ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on home page</span>
+  
+  <span class="lead-duration duration">033ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">the user clicks on gift card menu</span>
+  
+  <span class="lead-duration duration">2s 496ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user select the gift card type &quot;gift.card.type.3&quot;</span>
+  
+  <span class="lead-duration duration">1s 478ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the gift card details</span>
+  
+  <span class="lead-duration duration">194ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>gift.card.denomination</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.quantity</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the sender and receiver details</span>
+  
+  <span class="lead-duration duration">614ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>gift.card.sender.name</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.sender.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.sender.mobile</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.name</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.retype.receiver.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.mobile</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on accept terms and conditions</span>
+  
+  <span class="lead-duration duration">066ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on pay now button</span>
+  
+  <span class="lead-duration duration">073ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify enter OTP code field is displayed</span>
+  
+  <span class="lead-duration duration">608ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-12">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-12" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">374ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-GiftCardSendOtp-feature.html">Validate gift card checkout functionality</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify gift card booking checkout</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-13" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-14">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-14" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">1s 889ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-15">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-15" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user opens the website</span>
+  
+  <span class="lead-duration duration">3s 712ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on home page</span>
+  
+  <span class="lead-duration duration">027ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">the user clicks on gift card menu</span>
+  
+  <span class="lead-duration duration">2s 369ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user select the gift card type &quot;gift.card.type.4&quot;</span>
+  
+  <span class="lead-duration duration">1s 791ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the gift card details</span>
+  
+  <span class="lead-duration duration">212ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>gift.card.denomination</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.quantity</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the sender and receiver details</span>
+  
+  <span class="lead-duration duration">613ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>gift.card.sender.name</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.sender.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.sender.mobile</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.name</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.retype.receiver.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.mobile</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on accept terms and conditions</span>
+  
+  <span class="lead-duration duration">067ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on pay now button</span>
+  
+  <span class="lead-duration duration">051ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify enter OTP code field is displayed</span>
+  
+  <span class="lead-duration duration">618ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-16">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-16" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">469ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-GiftCardSendOtp-feature.html">Validate gift card checkout functionality</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-17">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify gift card booking checkout</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-17" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-18">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-18" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">1s 963ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-19">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-19" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user opens the website</span>
+  
+  <span class="lead-duration duration">3s 737ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on home page</span>
+  
+  <span class="lead-duration duration">030ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">the user clicks on gift card menu</span>
+  
+  <span class="lead-duration duration">1s 533ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user select the gift card type &quot;gift.card.type.5&quot;</span>
+  
+  <span class="lead-duration duration">1s 223ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the gift card details</span>
+  
+  <span class="lead-duration duration">282ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>gift.card.denomination</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.quantity</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the sender and receiver details</span>
+  
+  <span class="lead-duration duration">857ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>gift.card.sender.name</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.sender.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.sender.mobile</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.name</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.retype.receiver.email</td>
+                              </tr>
+                          <tr>
+                                  <td>gift.card.receiver.mobile</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on accept terms and conditions</span>
+  
+  <span class="lead-duration duration">077ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on pay now button</span>
+  
+  <span class="lead-duration duration">071ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify enter OTP code field is displayed</span>
+  
+  <span class="lead-duration duration">697ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-20">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-20" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">289ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
       <a href="report-feature_file-src-test-resources-features-busSearch-feature.html">Validate bus functionalities</a>
     </div>
   
@@ -184,7 +1874,7 @@ $(document).ready(function() {
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-21">
     
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -197,12 +1887,12 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-21" class="collapse collapsable-details  in ">
     
   <div class="inner-level hooks-before">
-        <div data-toggle="collapse" class=" collapsable-control" data-target="#before-2">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-22">
       
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
   
@@ -212,120 +1902,17 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="before-2" class="inner-level collapse collapsable-details  in ">
+    <div id="before-22" class="inner-level collapse collapsable-details ">
               <div class="hook">
-          <div class="brief failed">
+          <div class="brief passed">
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.steps.Hooks.setUp()</span>
                         
-  <span class="lead-duration duration">24s 735ms</span>
+  <span class="lead-duration duration">1s 839ms</span>
 
           </div>
 
                       
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
-          <a>Error message</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details">
-        <pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'G736LTRV', ip: '172.16.253.110'
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: io.appium.java_client.AppiumDriver
-Command: [null, newSession {capabilities=[{appium:app=C:\Users\280662\Downloads\easemytrip.apk, appium:appActivity=com.easemytrip.android.SplashScreenActivity, appium:appPackage=com.easemytrip.android, appium:autoGrantPermissions=true, appium:automationName=UiAutomator2, appium:deviceName=emulator-5554, platformName=ANDROID}], desiredCapabilities=Capabilities {app: C:\Users\280662\Downloads\e..., appActivity: com.easemytrip.android.Spla..., appPackage: com.easemytrip.android, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: emulator-5554, platformName: ANDROID}}]
-Capabilities {app: C:\Users\280662\Downloads\e..., appActivity: com.easemytrip.android.Spla..., appPackage: com.easemytrip.android, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: emulator-5554, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:274)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:137)
-	at com.automation.utils.DriverManager.createDriver(DriverManager.java:27)
-	at com.automation.steps.Hooks.setUp(Hooks.java:13)
-Caused by: io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException: [The local appium server has not been started, Reason: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20002 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\node-v20.16.0-win-x64\node.exe, Arguments: [C:\node-v20.16.0-win-x64\node_modules\appium\build\lib\main.js, --port, 4723, --address, 0.0.0.0], Output: [38;5;112m[Appium][0m Welcome to Appium v2.11.3
-[38;5;112m[Appium][0m The autodetected Appium home path: C:\Users\280662\.appium
-[38;5;112m[Appium][0m Attempting to load driver uiautomator2...
-[38;5;112m[Appium][0m Requiring driver at C:\Users\280662\.appium\node_modules\appium-uiautomator2-driver\build\index.js
-]
-	at io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:203)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$execute$2(AppiumCommandExecutor.java:242)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:240)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:274)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:137)
-	at com.automation.utils.DriverManager.createDriver(DriverManager.java:27)
-	at com.automation.steps.Hooks.setUp(Hooks.java:13)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
-	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
-	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:147)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:162)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:145)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20002 ms
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:94)
-	at io.appium.java_client.service.local.AppiumDriverLocalService.ping(AppiumDriverLocalService.java:157)
-	at io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:182)
-	... 62 more
-Caused by: java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:91)
-	... 64 more
-</pre>
-      </div>
-    </div>
-  </div>
 
           
           
@@ -337,7 +1924,7 @@ Caused by: java.util.concurrent.TimeoutException
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-4">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-23">
     
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -349,7 +1936,7 @@ Caused by: java.util.concurrent.TimeoutException
 
   </div>
 
-  <div id="steps-4" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-23" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief skipped">
@@ -377,9 +1964,9 @@ Caused by: java.util.concurrent.TimeoutException
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsable-control" data-target="#after-5">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-24">
       
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
   
@@ -389,30 +1976,484 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="after-5" class="inner-level collapse collapsable-details  in ">
+    <div id="after-24" class="inner-level collapse collapsable-details ">
               <div class="hook">
-          <div class="brief failed">
+          <div class="brief passed">
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
                         
-  <span class="lead-duration duration">001ms</span>
+  <span class="lead-duration duration">378ms</span>
 
           </div>
 
                       
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
-          <a>Error message</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details">
-        <pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.quit()&quot; because the return value of &quot;com.automation.utils.DriverManager.getDriver()&quot; is null
-	at com.automation.steps.Hooks.cleanUp(Hooks.java:18)
-</pre>
-      </div>
-    </div>
+          
+          
+  
+        </div>
+          </div>
   </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-busSearch-feature.html">Validate bus functionalities</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-25">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Verify bus booking checkout</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-25" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-26">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-26" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">1s 812ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-27">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-27" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on listing page of the bus page</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">user click on select seat button for the first bus displayed on listing page</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">select the first available seat</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify the seat is selected</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">user select the first boarding point</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">user select the first dropping point</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on continue button</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on bus booking review page</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">user click on &quot;secure my trip with insurance&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">enter the email address &quot;bus.booking.email&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on continue button in review booking page</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on bus booking travellers page</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">user enter the traveller details</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>bus.booking.title</td>
+                              </tr>
+                          <tr>
+                                  <td>bus.booking.first.name</td>
+                              </tr>
+                          <tr>
+                                  <td>bus.booking.last.name</td>
+                              </tr>
+                          <tr>
+                                  <td>bus.booking.age</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the mobile number</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on continue button in travellers booking page</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on payment booking page</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-28">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-28" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">322ms</span>
+
+          </div>
+
+                      
 
           
           
@@ -439,9 +2480,9 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-29">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Verify flight listing page with specific flight</span>
   
@@ -452,10 +2493,10 @@ Caused by: java.util.concurrent.TimeoutException
   </span>
   <div class="description indention"></div>
 
-  <div id="element-7" class="collapse collapsable-details ">
+  <div id="element-29" class="collapse collapsable-details  in ">
     
   <div class="inner-level hooks-before">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-8">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-30">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -467,13 +2508,13 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="before-8" class="inner-level collapse collapsable-details ">
+    <div id="before-30" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.steps.Hooks.setUp()</span>
                         
-  <span class="lead-duration duration">36s 861ms</span>
+  <span class="lead-duration duration">1s 774ms</span>
 
           </div>
 
@@ -489,9 +2530,9 @@ Caused by: java.util.concurrent.TimeoutException
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-9">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-31">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -501,14 +2542,14 @@ Caused by: java.util.concurrent.TimeoutException
 
   </div>
 
-  <div id="steps-9" class="inner-level collapse collapsable-details ">
+  <div id="steps-31" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">user opens the website</span>
   
-  <span class="lead-duration duration">055ms</span>
+  <span class="lead-duration duration">3s 541ms</span>
 
   </div>
 
@@ -529,7 +2570,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on home page</span>
   
-  <span class="lead-duration duration">005ms</span>
+  <span class="lead-duration duration">029ms</span>
 
   </div>
 
@@ -550,7 +2591,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">When</span>
   <span class="name">user click on from city</span>
   
-  <span class="lead-duration duration">19s 096ms</span>
+  <span class="lead-duration duration">029ms</span>
 
   </div>
 
@@ -571,7 +2612,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">And</span>
   <span class="name">user enter from city &quot;flight.source.city&quot;</span>
   
-  <span class="lead-duration duration">4s 390ms</span>
+  <span class="lead-duration duration">305ms</span>
 
   </div>
 
@@ -592,7 +2633,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">And</span>
   <span class="name">user click on to city</span>
   
-  <span class="lead-duration duration">2s 218ms</span>
+  <span class="lead-duration duration">141ms</span>
 
   </div>
 
@@ -613,7 +2654,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">And</span>
   <span class="name">user enter to city &quot;flight.destination.city&quot;</span>
   
-  <span class="lead-duration duration">3s 754ms</span>
+  <span class="lead-duration duration">241ms</span>
 
   </div>
 
@@ -634,7 +2675,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">And</span>
   <span class="name">click on departure date</span>
   
-  <span class="lead-duration duration">6s 769ms</span>
+  <span class="lead-duration duration">048ms</span>
 
   </div>
 
@@ -651,15 +2692,52 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">And</span>
   <span class="name">select date &quot;flight.booking.date&quot;</span>
   
-  <span class="lead-duration duration">13s 031ms</span>
+  <span class="lead-duration duration">30s 166ms</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-32">
+          <a>Error message</a>
+      </div>
+      <div id="msg-32" class="collapse collapsable-details">
+        <pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fefb6138ad47cfcdc2fbac8296f22624, clickElement {id=f.686C589A50DE13C17C6B9A6E56B6FCD1.d.09C614D5F7EAF508D4190EC8D554616E.e.334}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\280662\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55163}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55163/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fefb6138ad47cfcdc2fbac8296f22624)] -&gt; xpath: //div[@class='main1']/div[@class='box1']//div[@class='month3']]
+Session ID: fefb6138ad47cfcdc2fbac8296f22624
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at com.automation.pages.web.FlightHomePageWeb.selectDate(FlightHomePageWeb.java:63)
+	at com.automation.steps.FlightHomeSteps.selectDate(FlightHomeSteps.java:48)
+	at &#10045;.select date &quot;flight.booking.date&quot;(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/flightFilter.feature:12)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
         
@@ -672,11 +2750,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">And</span>
   <span class="name">click on search button</span>
   
-  <span class="lead-duration duration">2s 104ms</span>
+  <span class="lead-duration duration">000ms</span>
 
   </div>
 
@@ -693,11 +2771,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">verify on flight list page</span>
   
-  <span class="lead-duration duration">5s 363ms</span>
+  <span class="lead-duration duration">000ms</span>
 
   </div>
 
@@ -714,11 +2792,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">When</span>
   <span class="name">user unTicks all the flights except the flight to be filtered &quot;flight.filter.name&quot;</span>
   
-  <span class="lead-duration duration">5s 477ms</span>
+  <span class="lead-duration duration">000ms</span>
 
   </div>
 
@@ -735,11 +2813,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">verify that only the filtered flight &quot;flight.filter.name&quot; is present on the flight listing page</span>
   
-  <span class="lead-duration duration">6s 030ms</span>
+  <span class="lead-duration duration">000ms</span>
 
   </div>
 
@@ -760,7 +2838,7 @@ Caused by: java.util.concurrent.TimeoutException
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-10">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-33">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -772,13 +2850,13 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="after-10" class="inner-level collapse collapsable-details ">
+    <div id="after-33" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
                         
-  <span class="lead-duration duration">1s 465ms</span>
+  <span class="lead-duration duration">318ms</span>
 
           </div>
 
@@ -809,7 +2887,7 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-11">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-34">
     
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -822,10 +2900,10 @@ Caused by: java.util.concurrent.TimeoutException
   </span>
   <div class="description indention"></div>
 
-  <div id="element-11" class="collapse collapsable-details ">
+  <div id="element-34" class="collapse collapsable-details ">
     
   <div class="inner-level hooks-before">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-12">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-35">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -837,13 +2915,13 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="before-12" class="inner-level collapse collapsable-details ">
+    <div id="before-35" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.steps.Hooks.setUp()</span>
                         
-  <span class="lead-duration duration">25s 666ms</span>
+  <span class="lead-duration duration">1s 771ms</span>
 
           </div>
 
@@ -859,7 +2937,7 @@ Caused by: java.util.concurrent.TimeoutException
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-13">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-36">
     
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -871,14 +2949,14 @@ Caused by: java.util.concurrent.TimeoutException
 
   </div>
 
-  <div id="steps-13" class="inner-level collapse collapsable-details ">
+  <div id="steps-36" class="inner-level collapse collapsable-details ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">user opens the website</span>
   
-  <span class="lead-duration duration">001ms</span>
+  <span class="lead-duration duration">3s 261ms</span>
 
   </div>
 
@@ -899,7 +2977,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on home page</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">036ms</span>
 
   </div>
 
@@ -920,7 +2998,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">When</span>
   <span class="name">user click on from city</span>
   
-  <span class="lead-duration duration">18s 126ms</span>
+  <span class="lead-duration duration">030ms</span>
 
   </div>
 
@@ -941,7 +3019,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">And</span>
   <span class="name">user enter from city &quot;flight.source.city&quot;</span>
   
-  <span class="lead-duration duration">4s 410ms</span>
+  <span class="lead-duration duration">265ms</span>
 
   </div>
 
@@ -962,7 +3040,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">And</span>
   <span class="name">user click on to city</span>
   
-  <span class="lead-duration duration">2s 675ms</span>
+  <span class="lead-duration duration">279ms</span>
 
   </div>
 
@@ -983,7 +3061,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">And</span>
   <span class="name">user enter to city &quot;flight.destination.city&quot;</span>
   
-  <span class="lead-duration duration">3s 602ms</span>
+  <span class="lead-duration duration">231ms</span>
 
   </div>
 
@@ -1004,7 +3082,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">And</span>
   <span class="name">click on departure date</span>
   
-  <span class="lead-duration duration">7s 264ms</span>
+  <span class="lead-duration duration">042ms</span>
 
   </div>
 
@@ -1025,7 +3103,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">And</span>
   <span class="name">select date &quot;flight.booking.date&quot;</span>
   
-  <span class="lead-duration duration">13s 172ms</span>
+  <span class="lead-duration duration">231ms</span>
 
   </div>
 
@@ -1046,7 +3124,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">And</span>
   <span class="name">click on search button</span>
   
-  <span class="lead-duration duration">1s 857ms</span>
+  <span class="lead-duration duration">3s 664ms</span>
 
   </div>
 
@@ -1067,7 +3145,7 @@ Caused by: java.util.concurrent.TimeoutException
   <span class="keyword indention">Then</span>
   <span class="name">verify on flight list page</span>
   
-  <span class="lead-duration duration">6s 166ms</span>
+  <span class="lead-duration duration">5s 055ms</span>
 
   </div>
 
@@ -1088,7 +3166,7 @@ Caused by: java.util.concurrent.TimeoutException
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-14">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-37">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1100,13 +3178,273 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="after-14" class="inner-level collapse collapsable-details ">
+    <div id="after-37" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
                         
-  <span class="lead-duration duration">1s 291ms</span>
+  <span class="lead-duration duration">465ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-holidayQuery-feature.html">validate plan your trip functionality</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-38">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">verify user can submit query for plan your trip</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-38" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-39">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-39" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">2s 222ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-40">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-40" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user click on plan your trip icon</span>
+  
+  <span class="lead-duration duration">077ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify plan form is displayed</span>
+  
+  <span class="lead-duration duration">036ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">user enter the trip details</span>
+  
+  <span class="lead-duration duration">1s 218ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-41">
+          <a>Error message</a>
+      </div>
+      <div id="msg-41" class="collapse collapsable-details">
+        <pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=128.0.6613.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8c1270e12408991b1cb3eb7690aa57a3, executeScript {script=arguments[0].click();, args=[{element-6066-11e4-a52e-4f735466cecf=f.EFEC731595FE5AE2BFD2A02136134F5B.d.B2F7DE7C11A46DBE2121B3191D0F7954.e.579}]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\280662\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65501}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65501/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8c1270e12408991b1cb3eb7690aa57a3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
+	at com.automation.pages.web.BasePageWeb.clickByJS(BasePageWeb.java:28)
+	at com.automation.pages.web.HolidayQueryPageWeb.enterTripDetails(HolidayQueryPageWeb.java:63)
+	at com.automation.steps.HolidayQuerySteps.user_enter_the_trip_details(HolidayQuerySteps.java:34)
+	at &#10045;.user enter the trip details(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/holidayQuery.feature:13)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on submit button</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify query success message is displayed</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-42">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-42" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">480ms</span>
 
           </div>
 
@@ -1137,9 +3475,9 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-15">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-43">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Verify holidays search functionality</span>
   
@@ -1150,12 +3488,12 @@ Caused by: java.util.concurrent.TimeoutException
   </span>
   <div class="description indention"></div>
 
-  <div id="element-15" class="collapse collapsable-details  in ">
+  <div id="element-43" class="collapse collapsable-details ">
     
   <div class="inner-level hooks-before">
-        <div data-toggle="collapse" class=" collapsable-control" data-target="#before-16">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-44">
       
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Hooks</span>
   <span class="name"></span>
   
@@ -1165,120 +3503,17 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="before-16" class="inner-level collapse collapsable-details  in ">
+    <div id="before-44" class="inner-level collapse collapsable-details ">
               <div class="hook">
-          <div class="brief failed">
+          <div class="brief passed">
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.steps.Hooks.setUp()</span>
                         
-  <span class="lead-duration duration">22s 276ms</span>
+  <span class="lead-duration duration">2s 124ms</span>
 
           </div>
 
                       
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-17">
-          <a>Error message</a>
-      </div>
-      <div id="msg-17" class="collapse collapsable-details">
-        <pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'G736LTRV', ip: '172.16.253.110'
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: io.appium.java_client.AppiumDriver
-Command: [null, newSession {capabilities=[{appium:app=C:\Users\280662\Downloads\easemytrip.apk, appium:appActivity=com.easemytrip.android.SplashScreenActivity, appium:appPackage=com.easemytrip.android, appium:autoGrantPermissions=true, appium:automationName=UiAutomator2, appium:deviceName=emulator-5554, platformName=ANDROID}], desiredCapabilities=Capabilities {app: C:\Users\280662\Downloads\e..., appActivity: com.easemytrip.android.Spla..., appPackage: com.easemytrip.android, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: emulator-5554, platformName: ANDROID}}]
-Capabilities {app: C:\Users\280662\Downloads\e..., appActivity: com.easemytrip.android.Spla..., appPackage: com.easemytrip.android, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: emulator-5554, platformName: ANDROID}
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:620)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:274)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:137)
-	at com.automation.utils.DriverManager.createDriver(DriverManager.java:27)
-	at com.automation.steps.Hooks.setUp(Hooks.java:13)
-Caused by: io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException: [The local appium server has not been started, Reason: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20010 ms, Consider increasing the server startup timeout value (currently 20000ms), Node.js executable path: C:\node-v20.16.0-win-x64\node.exe, Arguments: [C:\node-v20.16.0-win-x64\node_modules\appium\build\lib\main.js, --port, 4723, --address, 0.0.0.0], Output: [38;5;112m[Appium][0m Welcome to Appium v2.11.3
-[38;5;112m[Appium][0m The autodetected Appium home path: C:\Users\280662\.appium
-[38;5;112m[Appium][0m Attempting to load driver uiautomator2...
-[38;5;112m[Appium][0m Requiring driver at C:\Users\280662\.appium\node_modules\appium-uiautomator2-driver\build\index.js
-]
-	at io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:203)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$execute$2(AppiumCommandExecutor.java:242)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:240)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:274)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:163)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:112)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:137)
-	at com.automation.utils.DriverManager.createDriver(DriverManager.java:27)
-	at com.automation.steps.Hooks.setUp(Hooks.java:13)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
-	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
-	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:81)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:53)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:78)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:147)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:162)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:145)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20010 ms
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:94)
-	at io.appium.java_client.service.local.AppiumDriverLocalService.ping(AppiumDriverLocalService.java:157)
-	at io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:182)
-	... 62 more
-Caused by: java.util.concurrent.TimeoutException
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
-	at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:91)
-	... 64 more
-</pre>
-      </div>
-    </div>
-  </div>
 
           
           
@@ -1290,9 +3525,9 @@ Caused by: java.util.concurrent.TimeoutException
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-18">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-45">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -1302,14 +3537,14 @@ Caused by: java.util.concurrent.TimeoutException
 
   </div>
 
-  <div id="steps-18" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-45" class="inner-level collapse collapsable-details ">
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">When</span>
   <span class="name">the user enters the destination &quot;holidays.destination&quot;</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">109ms</span>
 
   </div>
 
@@ -1326,11 +3561,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">And</span>
   <span class="name">user select the destination from the dropdown list</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">1s 689ms</span>
 
   </div>
 
@@ -1347,11 +3582,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
   <span class="name">verify the holidays listing page shows results for the destination &quot;holidays.destination&quot;</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">1s 597ms</span>
 
   </div>
 
@@ -1372,7 +3607,7 @@ Caused by: java.util.concurrent.TimeoutException
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-19">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-46">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1384,13 +3619,13 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="after-19" class="inner-level collapse collapsable-details ">
+    <div id="after-46" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
                         
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">500ms</span>
 
           </div>
 
@@ -1421,9 +3656,9 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-20">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-47">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Verify holidays by filtering themes trip</span>
   
@@ -1434,10 +3669,10 @@ Caused by: java.util.concurrent.TimeoutException
   </span>
   <div class="description indention"></div>
 
-  <div id="element-20" class="collapse collapsable-details  in ">
+  <div id="element-47" class="collapse collapsable-details ">
     
   <div class="inner-level hooks-before">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-21">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-48">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1449,13 +3684,13 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="before-21" class="inner-level collapse collapsable-details ">
+    <div id="before-48" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.steps.Hooks.setUp()</span>
                         
-  <span class="lead-duration duration">27s 759ms</span>
+  <span class="lead-duration duration">3s 377ms</span>
 
           </div>
 
@@ -1471,9 +3706,9 @@ Caused by: java.util.concurrent.TimeoutException
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-22">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-49">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -1483,14 +3718,14 @@ Caused by: java.util.concurrent.TimeoutException
 
   </div>
 
-  <div id="steps-22" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-49" class="inner-level collapse collapsable-details ">
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">When</span>
   <span class="name">the user enters the destination &quot;holidays.destination&quot;</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">092ms</span>
 
   </div>
 
@@ -1507,11 +3742,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">And</span>
   <span class="name">user select the destination from the dropdown list</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">2s 546ms</span>
 
   </div>
 
@@ -1528,11 +3763,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
   <span class="name">verify the holidays listing page shows results for the destination &quot;holidays.destination&quot;</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">1s 980ms</span>
 
   </div>
 
@@ -1549,11 +3784,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">When</span>
   <span class="name">user click on more filter option in holidays listing page</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">095ms</span>
 
   </div>
 
@@ -1570,11 +3805,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">And</span>
   <span class="name">select the theme of holiday type as &quot;holidays.type&quot;</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">217ms</span>
 
   </div>
 
@@ -1591,11 +3826,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
   <span class="name">verify the holidays listing page shows results for the selected trip theme &quot;holidays.type&quot;</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">028ms</span>
 
   </div>
 
@@ -1616,7 +3851,7 @@ Caused by: java.util.concurrent.TimeoutException
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-23">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-50">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1628,13 +3863,13 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="after-23" class="inner-level collapse collapsable-details ">
+    <div id="after-50" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
                         
-  <span class="lead-duration duration">1s 469ms</span>
+  <span class="lead-duration duration">593ms</span>
 
           </div>
 
@@ -1665,7 +3900,7 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-24">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-51">
     
 <div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
@@ -1678,10 +3913,10 @@ Caused by: java.util.concurrent.TimeoutException
   </span>
   <div class="description indention"></div>
 
-  <div id="element-24" class="collapse collapsable-details  in ">
+  <div id="element-51" class="collapse collapsable-details  in ">
     
   <div class="inner-level hooks-before">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-25">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-52">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1693,13 +3928,13 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="before-25" class="inner-level collapse collapsable-details ">
+    <div id="before-52" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.steps.Hooks.setUp()</span>
                         
-  <span class="lead-duration duration">25s 942ms</span>
+  <span class="lead-duration duration">2s 498ms</span>
 
           </div>
 
@@ -1715,7 +3950,7 @@ Caused by: java.util.concurrent.TimeoutException
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-26">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-53">
     
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1727,14 +3962,14 @@ Caused by: java.util.concurrent.TimeoutException
 
   </div>
 
-  <div id="steps-26" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-53" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">When</span>
   <span class="name">the user enters the destination &quot;holidays.destination&quot;</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">122ms</span>
 
   </div>
 
@@ -1751,11 +3986,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">And</span>
   <span class="name">user select the destination from the dropdown list</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">1s 715ms</span>
 
   </div>
 
@@ -1772,11 +4007,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
   <span class="name">verify the holidays listing page shows results for the destination &quot;holidays.destination&quot;</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">1s 841ms</span>
 
   </div>
 
@@ -1793,11 +4028,11 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">When</span>
   <span class="name">user select sorting option from &quot;Low to High&quot;</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">273ms</span>
 
   </div>
 
@@ -1814,15 +4049,32 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief failed">
   <span class="keyword indention">Then</span>
   <span class="name">verify the holidays listing page shows results in &quot;Low to High&quot; order</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">495ms</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-54">
+          <a>Error message</a>
+      </div>
+      <div id="msg-54" class="collapse collapsable-details">
+        <pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.automation.steps.HolidayListingSteps.verifyTheHolidaysListingPageShowsResultsInOrder(HolidayListingSteps.java:43)
+	at &#10045;.verify the holidays listing page shows results in &quot;Low to High&quot; order(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/holidaySearch.feature:34)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
         
@@ -1839,7 +4091,7 @@ Caused by: java.util.concurrent.TimeoutException
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-27">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-55">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1851,13 +4103,13 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="after-27" class="inner-level collapse collapsable-details ">
+    <div id="after-55" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
                         
-  <span class="lead-duration duration">1s 527ms</span>
+  <span class="lead-duration duration">538ms</span>
 
           </div>
 
@@ -1888,7 +4140,7 @@ Caused by: java.util.concurrent.TimeoutException
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-28">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-56">
     
 <div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
@@ -1901,10 +4153,10 @@ Caused by: java.util.concurrent.TimeoutException
   </span>
   <div class="description indention"></div>
 
-  <div id="element-28" class="collapse collapsable-details  in ">
+  <div id="element-56" class="collapse collapsable-details  in ">
     
   <div class="inner-level hooks-before">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-29">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-57">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1916,13 +4168,13 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="before-29" class="inner-level collapse collapsable-details ">
+    <div id="before-57" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.steps.Hooks.setUp()</span>
                         
-  <span class="lead-duration duration">27s 205ms</span>
+  <span class="lead-duration duration">2s 432ms</span>
 
           </div>
 
@@ -1938,7 +4190,7 @@ Caused by: java.util.concurrent.TimeoutException
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-30">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-58">
     
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -1950,12 +4202,433 @@ Caused by: java.util.concurrent.TimeoutException
 
   </div>
 
-  <div id="steps-30" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-58" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">the user enters the destination &quot;holidays.destination&quot;</span>
+  
+  <span class="lead-duration duration">112ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user select the destination from the dropdown list</span>
+  
+  <span class="lead-duration duration">1s 581ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify the holidays listing page shows results for the destination &quot;holidays.destination&quot;</span>
+  
+  <span class="lead-duration duration">1s 380ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user select sorting option from &quot;High to Low&quot;</span>
+  
+  <span class="lead-duration duration">249ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify the holidays listing page shows results in &quot;High to Low&quot; order</span>
+  
+  <span class="lead-duration duration">507ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-59">
+          <a>Error message</a>
+      </div>
+      <div id="msg-59" class="collapse collapsable-details">
+        <pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at com.automation.steps.HolidayListingSteps.verifyTheHolidaysListingPageShowsResultsInOrder(HolidayListingSteps.java:43)
+	at &#10045;.verify the holidays listing page shows results in &quot;High to Low&quot; order(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/holidaySearch.feature:34)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-60">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-60" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">586ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-hotelFilter-feature.html">validate filter functionality for hotels</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-61">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">filter by price low to high</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-61" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-62">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-62" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">2s 346ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-63">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-63" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user click on filter</span>
+  
+  <span class="lead-duration duration">033ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user select filter by price low to high</span>
+  
+  <span class="lead-duration duration">2s 728ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify price listing is from low to high</span>
+  
+  <span class="lead-duration duration">710ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-64">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-64" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">661ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-hotelFilter-feature.html">validate filter functionality for hotels</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-65">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">filter by price high to low</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-65" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-66">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-66" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">2s 377ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-67">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-67" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief skipped">
   <span class="keyword indention">When</span>
-  <span class="name">the user enters the destination &quot;holidays.destination&quot;</span>
+  <span class="name">user click on filter</span>
   
   <span class="lead-duration duration">000ms</span>
 
@@ -1976,7 +4649,7 @@ Caused by: java.util.concurrent.TimeoutException
         
 <div class="brief skipped">
   <span class="keyword indention">And</span>
-  <span class="name">user select the destination from the dropdown list</span>
+  <span class="name">user select filter by price high to low</span>
   
   <span class="lead-duration duration">000ms</span>
 
@@ -1997,49 +4670,7 @@ Caused by: java.util.concurrent.TimeoutException
         
 <div class="brief skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">verify the holidays listing page shows results for the destination &quot;holidays.destination&quot;</span>
-  
-  <span class="lead-duration duration">000ms</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
-  <span class="keyword indention">When</span>
-  <span class="name">user select sorting option from &quot;High to Low&quot;</span>
-  
-  <span class="lead-duration duration">000ms</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">verify the holidays listing page shows results in &quot;High to Low&quot; order</span>
+  <span class="name">verify price listing is from high to low</span>
   
   <span class="lead-duration duration">000ms</span>
 
@@ -2062,7 +4693,7 @@ Caused by: java.util.concurrent.TimeoutException
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-31">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-68">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -2074,13 +4705,1239 @@ Caused by: java.util.concurrent.TimeoutException
 
     </div>
 
-    <div id="after-31" class="inner-level collapse collapsable-details ">
+    <div id="after-68" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
                         
-  <span class="lead-duration duration">1s 518ms</span>
+  <span class="lead-duration duration">355ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-hotelPriceSummary-feature.html">validate the booking price summary</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-69">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">verify the price summary for hotel booking</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-69" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-70">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-70" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">2s 038ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-71">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-71" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user select a hotel</span>
+  
+  <span class="lead-duration duration">163ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify hotel booking page is displayed</span>
+  
+  <span class="lead-duration duration">3s 029ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-72">
+          <a>Error message</a>
+      </div>
+      <div id="msg-72" class="collapse collapsable-details">
+        <pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=128.0.6613.138)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c4244dc42d5368e71742fcbd50b52b43, isElementDisplayed {id=f.98290A3FB556B140969958E9D4D24CED.d.AF94E8D4533619C3EA84A1CF1C56ECE2.e.3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\280662\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50822}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50822/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c4244dc42d5368e71742fcbd50b52b43)] -&gt; xpath: //a[@id='room']/following-sibling::a]
+Session ID: c4244dc42d5368e71742fcbd50b52b43
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:283)
+	at jdk.internal.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:37)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
+	at com.automation.pages.web.HotelBookingPageWeb.isHotelBookingPageDisplayed(HotelBookingPageWeb.java:26)
+	at com.automation.steps.HotelBookingSteps.verifyHotelBookingPageIsDisplayed(HotelBookingSteps.java:31)
+	at &#10045;.verify hotel booking page is displayed(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/hotelPriceSummary.feature:18)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">click on book now</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify hotel payment page is displayed</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">verify the price summary calculations</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-73">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-73" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">679ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-hotelSearch-feature.html">Validate hotel search</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-74">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">verify list of hotels is displayed</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-74" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-75">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-75" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">2s 324ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-76">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-76" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user opens the website</span>
+  
+  <span class="lead-duration duration">4s 581ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on home page</span>
+  
+  <span class="lead-duration duration">165ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user click on hotel menu</span>
+  
+  <span class="lead-duration duration">2s 190ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify hotel home page is displayed</span>
+  
+  <span class="lead-duration duration">226ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user select the destination as &quot;Trivandrum&quot;</span>
+  
+  <span class="lead-duration duration">1s 319ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the check in date as &quot;12 Dec 2024&quot;</span>
+  
+  <span class="lead-duration duration">284ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter the check out date as &quot;13 Dec 2024&quot;</span>
+  
+  <span class="lead-duration duration">186ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on room select</span>
+  
+  <span class="lead-duration duration">282ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on hotel search</span>
+  
+  <span class="lead-duration duration">4s 900ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on hotel listing page</span>
+  
+  <span class="lead-duration duration">026ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-77">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-77" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">662ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-trainFilter-feature.html">Validate sort functionality for train</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-78">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">verify user can sort train by name ascending</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-78" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-79">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-79" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">2s 068ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-80">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-80" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user click on sort by name A to Z</span>
+  
+  <span class="lead-duration duration">2s 412ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify sort by name A to Z</span>
+  
+  <span class="lead-duration duration">300ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-81">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-81" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">481ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-trainFilter-feature.html">Validate sort functionality for train</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-82">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">verify user can sort train by name descending</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-82" class="collapse collapsable-details  in ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-83">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-83" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">2s 530ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-84">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-84" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">user click on sort by name Z to A</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify sort by name Z to A</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-85">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-85" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">297ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+  </div>
+</div>
+
+                  
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_file-src-test-resources-features-trainSearch-feature.html">Validate train search</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_web.html">@web</a>
+           <a href="report-tag_mobile.html">@mobile</a>
+      </div>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-86">
+    
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">verify list of train is displayed</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-86" class="collapse collapsable-details ">
+    
+  <div class="inner-level hooks-before">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-87">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="before-87" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                        
+  <span class="lead-duration duration">1s 704ms</span>
+
+          </div>
+
+                      
+
+          
+          
+  
+        </div>
+          </div>
+  </div>
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-88">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-88" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user opens the website</span>
+  
+  <span class="lead-duration duration">4s 791ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify user is on home page</span>
+  
+  <span class="lead-duration duration">060ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user click on train menu</span>
+  
+  <span class="lead-duration duration">2s 761ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify train home page is displayed</span>
+  
+  <span class="lead-duration duration">027ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user select source station as &quot;Trivandrum&quot;</span>
+  
+  <span class="lead-duration duration">1s 065ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user select destination station as &quot;Kochi&quot;</span>
+  
+  <span class="lead-duration duration">702ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user select depart date as &quot;12 November 2024&quot;</span>
+  
+  <span class="lead-duration duration">293ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">click on train search button</span>
+  
+  <span class="lead-duration duration">3s 447ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify train list is displayed</span>
+  
+  <span class="lead-duration duration">116ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-89">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-89" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                        
+  <span class="lead-duration duration">375ms</span>
 
           </div>
 

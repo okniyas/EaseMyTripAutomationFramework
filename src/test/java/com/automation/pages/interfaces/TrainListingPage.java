@@ -11,4 +11,8 @@ public interface TrainListingPage {
     void sortByNameZtoA();
 
     void isSortingByNameZToADisplayed();
+
+    default boolean isTrainListingPageForLiveStationDisplayed(){
+        return false;
+    };
 }

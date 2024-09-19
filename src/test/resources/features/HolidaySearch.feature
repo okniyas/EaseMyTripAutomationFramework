@@ -37,10 +37,3 @@ Feature: Validate holidays functionality
       | sorting type |
       | Low to High  |
       | High to Low  |
-
-    #  Scenario: Verify holidays package sorting from low to high
-#    When the user enters the destination "Kerala"
-#    And user select the destination from the dropdown list
-#    Then verify the holidays listing page shows results for the destination "Kerala"
-#    When user select sorting option from "Low to High"
-#    Then verify the holidays listing page shows results in ascending order

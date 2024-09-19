@@ -50,9 +50,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                182,
-                9,
-                35,
+                184,
+                10,
+                40,
                 0,
                 0
             ],
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 226) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 234) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -107,7 +107,7 @@ $(document).ready(function() {
         datasets: [{
             data: [
                 12,
-                9
+                10
             ],
             backgroundColor: [
                 "#00B000",
@@ -143,7 +143,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 21) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 22) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -157,7 +157,7 @@ $(document).ready(function() {
         datasets: [{
             data: [
                    4,
-                   7
+                   8
                ],
                backgroundColor: [
                 "#00B000",
@@ -190,7 +190,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 11) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 12) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -233,7 +233,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>CucumberAutomation</td>
               <td>1</td>
-            <td>17 Sep 2024, 09:57</td>
+            <td>18 Sep 2024, 14:41</td>
     </tr>
   </tbody>
 </table>
@@ -328,24 +328,24 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-busSearch-feature.html">Validate bus functionalities</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-BusSearch-feature.html">Validate bus functionalities</a></td>
         
-        <td      class="passed"    >12</td>
-        <td      class="failed"    >2</td>
-        <td     class="skipped"   >19</td>
+        <td      class="passed"    >18</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >14</td>
         <td >0</td>
         <td >0</td>
         <td class="total">33</td>
 
-        <td >0</td>
-        <td  class="failed"    >2</td>
+        <td  class="passed"    >1</td>
+        <td  class="failed"    >1</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="104540859100">1m 44s 540ms</td>
+        <td class="duration" data-value="147716438300">2m 27s 716ms</td>
         <td class="failed">Failed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-flightFilter-feature.html">Validate flight filter</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-FlightFilter-feature.html">Validate flight filter</a></td>
         
         <td      class="passed"    >7</td>
         <td      class="failed"    >1</td>
@@ -358,25 +358,25 @@ $(document).ready(function() {
         <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="34504278500">34s 504ms</td>
+        <td class="duration" data-value="37577307100">37s 577ms</td>
         <td class="failed">Failed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-flightSearch-feature.html">Validate flight search</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-FlightSearch-feature.html">Validate flight search</a></td>
         
-        <td      class="passed"    >10</td>
-        <td >0</td>
-        <td >0</td>
+        <td      class="passed"    >3</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >6</td>
         <td >0</td>
         <td >0</td>
         <td class="total">10</td>
 
-        <td  class="passed"    >1</td>
         <td >0</td>
+        <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="13100403000">13s 100ms</td>
-        <td class="passed">Passed</td>
+        <td class="duration" data-value="4091266300">4s 091ms</td>
+        <td class="failed">Failed</td>
       </tr>
           <tr>
         <td class="tagname"><a href="report-feature_file-src-test-resources-features-GiftCardSendOtp-feature.html">Validate gift card checkout functionality</a></td>
@@ -392,45 +392,62 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">5</td>
 
-        <td class="duration" data-value="44228767800">44s 228ms</td>
+        <td class="duration" data-value="55077312900">55s 077ms</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-holidaySearch-feature.html">Validate holidays functionality</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-HolidaySearch-feature.html">Validate holidays functionality</a></td>
         
-        <td      class="passed"    >33</td>
-        <td      class="failed"    >2</td>
-        <td >0</td>
+        <td      class="passed"    >28</td>
+        <td      class="failed"    >3</td>
+        <td     class="skipped"   >4</td>
         <td >0</td>
         <td >0</td>
         <td class="total">35</td>
 
-        <td  class="passed"    >2</td>
-        <td  class="failed"    >2</td>
+        <td  class="passed"    >1</td>
+        <td  class="failed"    >3</td>
         <td class="total">4</td>
 
-        <td class="duration" data-value="48907696800">48s 907ms</td>
+        <td class="duration" data-value="50278681600">50s 278ms</td>
         <td class="failed">Failed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-hotelSearch-feature.html">Validate hotel search</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-HotelSearch-feature.html">Validate hotel search</a></td>
         
-        <td      class="passed"    >10</td>
-        <td >0</td>
-        <td >0</td>
+        <td      class="passed"    >7</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >2</td>
         <td >0</td>
         <td >0</td>
         <td class="total">10</td>
+
+        <td >0</td>
+        <td  class="failed"    >1</td>
+        <td class="total">1</td>
+
+        <td class="duration" data-value="10481537300">10s 481ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-TrainStatus-feature.html">Validate live station</a></td>
+        
+        <td      class="passed"    >8</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">8</td>
 
         <td  class="passed"    >1</td>
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="14163308200">14s 163ms</td>
+        <td class="duration" data-value="11317165700">11s 317ms</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-trainFilter-feature.html">Validate sort functionality for train</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-TrainFilter-feature.html">Validate sort functionality for train</a></td>
         
         <td      class="passed"    >19</td>
         <td      class="failed"    >1</td>
@@ -443,11 +460,11 @@ $(document).ready(function() {
         <td  class="failed"    >1</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="72478029500">1m 12s 478ms</td>
+        <td class="duration" data-value="75541587600">1m 15s 541ms</td>
         <td class="failed">Failed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-trainSearch-feature.html">Validate train search</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-TrainSearch-feature.html">Validate train search</a></td>
         
         <td      class="passed"    >9</td>
         <td >0</td>
@@ -460,15 +477,15 @@ $(document).ready(function() {
         <td >0</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="13266029900">13s 266ms</td>
+        <td class="duration" data-value="12524685000">12s 524ms</td>
         <td class="passed">Passed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-hotelFilter-feature.html">validate filter functionality for hotels</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-HotelFilter-feature.html">validate filter functionality for hotels</a></td>
         
-        <td      class="passed"    >20</td>
+        <td      class="passed"    >24</td>
         <td      class="failed"    >1</td>
-        <td     class="skipped"   >5</td>
+        <td     class="skipped"   >1</td>
         <td >0</td>
         <td >0</td>
         <td class="total">26</td>
@@ -477,32 +494,32 @@ $(document).ready(function() {
         <td  class="failed"    >1</td>
         <td class="total">2</td>
 
-        <td class="duration" data-value="28342406900">28s 342ms</td>
+        <td class="duration" data-value="35655317700">35s 655ms</td>
         <td class="failed">Failed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-holidayQuery-feature.html">validate plan your trip functionality</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-HolidayQuery-feature.html">validate plan your trip functionality</a></td>
         
-        <td      class="passed"    >6</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >2</td>
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td >0</td>
         <td >0</td>
         <td >0</td>
         <td class="total">9</td>
 
+        <td  class="passed"    >1</td>
         <td >0</td>
-        <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="9261169100">9s 261ms</td>
-        <td class="failed">Failed</td>
+        <td class="duration" data-value="22239153200">22s 239ms</td>
+        <td class="passed">Passed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-feature_file-src-test-resources-features-hotelPriceSummary-feature.html">validate the booking price summary</a></td>
+        <td class="tagname"><a href="report-feature_file-src-test-resources-features-HotelPriceSummary-feature.html">validate the booking price summary</a></td>
         
-        <td      class="passed"    >11</td>
+        <td      class="passed"    >7</td>
         <td      class="failed"    >1</td>
-        <td     class="skipped"   >3</td>
+        <td     class="skipped"   >7</td>
         <td >0</td>
         <td >0</td>
         <td class="total">15</td>
@@ -511,41 +528,41 @@ $(document).ready(function() {
         <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="18552324500">18s 552ms</td>
+        <td class="duration" data-value="10508501900">10s 508ms</td>
         <td class="failed">Failed</td>
       </tr>
       </tbody>
 
   <tfoot class="total">
     <tr>
-      <td>11</td>
-            <td>182</td>
-      <td>9</td>
-      <td>35</td>
+      <td>12</td>
+            <td>184</td>
+      <td>10</td>
+      <td>40</td>
       <td>0</td>
       <td>0</td>
-      <td>226</td>
+      <td>234</td>
 
       <td>12</td>
-      <td>9</td>
-      <td>21</td>
+      <td>10</td>
+      <td>22</td>
 
-      <td class="duration">6m 41s 345ms</td>
+      <td class="duration">7m 53s 008ms</td>
       <td></td>
     </tr>
     <tr>
       <td></td>
-            <td>80.53%</td>
-      <td>3.98%</td>
-      <td>15.49%</td>
+            <td>78.63%</td>
+      <td>4.27%</td>
+      <td>17.09%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>57.14%</td>
-      <td>42.86%</td>
+      <td>54.55%</td>
+      <td>45.45%</td>
       <td></td>
       <td></td>
-      <td>36.36%</td>
+      <td>33.33%</td>
     </tr>
   </tfoot>
 </table>

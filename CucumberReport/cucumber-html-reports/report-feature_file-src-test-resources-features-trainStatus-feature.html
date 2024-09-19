@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
   
-<title>Cucumber Reports (no 1) - Feature: Validate flight search</title>
+<title>Cucumber Reports (no 1) - Feature: Validate live station</title>
 
 </head>
 <body>
@@ -128,20 +128,20 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">Validate flight search</td>
-                    <td      class="passed"    >3</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >6</td>
+          <td class="tagname">Validate live station</td>
+                    <td      class="passed"    >8</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">10</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">8</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="4091266300">4s 091ms</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="11317165700">11s 317ms</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -172,13 +172,12 @@ $(document).ready(function() {
 <div class="tags indention">
       <b>Tags:</b>
            <a href="report-tag_web.html">@web</a>
-           <a href="report-tag_mobile.html">@mobile</a>
       </div>
 
         
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Feature</span>
-  <span class="name">Validate flight search</span>
+  <span class="name">Validate live station</span>
   
 
   </div>
@@ -193,15 +192,14 @@ $(document).ready(function() {
 <div class="tags indention">
       <b>Tags:</b>
            <a href="report-tag_web.html">@web</a>
-           <a href="report-tag_mobile.html">@mobile</a>
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Verify flight search</span>
+  <span class="name">verify live station</span>
   
 
        <i class="chevron fa fa-fw"></i>
@@ -210,7 +208,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
     
   <div class="inner-level hooks-before">
         <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
@@ -231,7 +229,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
                           <span class="location name">com.automation.steps.Hooks.setUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">2s 025ms</span>
+  <span class="lead-duration duration">2s 223ms</span>
 
           </div>
 
@@ -247,9 +245,9 @@ $(document).ready(function() {
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -259,14 +257,14 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">user opens the website</span>
   
-  <span class="lead-duration duration">3s 679ms</span>
+  <span class="lead-duration duration">4s 637ms</span>
 
   </div>
 
@@ -287,7 +285,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on home page</span>
   
-  <span class="lead-duration duration">031ms</span>
+  <span class="lead-duration duration">046ms</span>
 
   </div>
 
@@ -306,9 +304,9 @@ $(document).ready(function() {
         
 <div class="brief passed">
   <span class="keyword indention">When</span>
-  <span class="name">user click on from city</span>
+  <span class="name">user click on train menu</span>
   
-  <span class="lead-duration duration">040ms</span>
+  <span class="lead-duration duration">2s 484ms</span>
 
   </div>
 
@@ -325,174 +323,109 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief failed">
-  <span class="keyword indention">And</span>
-  <span class="name">user enter from city &quot;flight.source.city&quot;</span>
-  
-  <span class="lead-duration duration">338ms</span>
-
-  </div>
-
-        
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
-          <a>Error message</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
-  (Session info: chrome=128.0.6613.138)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9ae3eafd52eab53ae83b733e93cb66f1, executeScript {script=arguments[0].click();, args=[{element-6066-11e4-a52e-4f735466cecf=f.2BB15180F4DCDCB0935C57BA4EFD84AD.d.FD66862B859C0352DFB511471860B50F.e.289}]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\280662\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62204}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62204/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9ae3eafd52eab53ae83b733e93cb66f1
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:467)
-	at com.automation.pages.web.BasePageWeb.clickByJS(BasePageWeb.java:28)
-	at com.automation.pages.web.FlightHomePageWeb.enterFromCity(FlightHomePageWeb.java:97)
-	at com.automation.steps.FlightHomeSteps.userEnterFromCity(FlightHomeSteps.java:68)
-	at &#10045;.user enter from city &quot;flight.source.city&quot;(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/FlightSearch.feature:8)
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">user click on to city</span>
-  
-  <span class="lead-duration duration">000ms</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">user enter to city &quot;flight.destination.city&quot;</span>
-  
-  <span class="lead-duration duration">000ms</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">click on departure date</span>
-  
-  <span class="lead-duration duration">000ms</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">select date &quot;flight.booking.date&quot;</span>
-  
-  <span class="lead-duration duration">000ms</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
-  <span class="keyword indention">And</span>
-  <span class="name">click on search button</span>
-  
-  <span class="lead-duration duration">000ms</span>
-
-  </div>
-
-        
-
-
-        
-        
-
-        
-
-        
-  
-      </div>
-          <div class="step">
-        
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
-  <span class="name">verify on flight list page</span>
+  <span class="name">verify train home page is displayed</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">034ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user click on live station</span>
+  
+  <span class="lead-duration duration">206ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enter train details</span>
+  
+  <span class="lead-duration duration">1s 854ms</span>
+
+  </div>
+
+        
+
+
+                  <table class="step-arguments">
+                          <tr>
+                                  <td>live.source.station</td>
+                              </tr>
+                          <tr>
+                                  <td>live.destination</td>
+                              </tr>
+                          <tr>
+                                  <td>live.time</td>
+                              </tr>
+                          <tr>
+                                  <td>live.types</td>
+                              </tr>
+                      </table>
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user click on search button for trains</span>
+  
+  <span class="lead-duration duration">2s 024ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">verify train listing page is displayed</span>
+  
+  <span class="lead-duration duration">030ms</span>
 
   </div>
 
@@ -513,7 +446,7 @@ Session ID: 9ae3eafd52eab53ae83b733e93cb66f1
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -525,13 +458,13 @@ Session ID: 9ae3eafd52eab53ae83b733e93cb66f1
 
     </div>
 
-    <div id="after-5" class="inner-level collapse collapsable-details ">
+    <div id="after-4" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
                           <span class="location name">com.automation.steps.Hooks.cleanUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">714ms</span>
+  <span class="lead-duration duration">422ms</span>
 
           </div>
 
@@ -539,21 +472,6 @@ Session ID: 9ae3eafd52eab53ae83b733e93cb66f1
 
           
           
-    <div class="embeddings inner-level">
-                <div class="embedding indention">
-        <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
-      <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_-881168629.png" target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-6" class="collapse collapsable-details">
-      <span class="embedding-content">
-        <img src="embeddings/embedding_-881168629.png">
-      </span>
-    </div>
-  </div>
-        </div>
   
         </div>
           </div>

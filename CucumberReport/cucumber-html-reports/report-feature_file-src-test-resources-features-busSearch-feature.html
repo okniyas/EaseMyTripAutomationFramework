@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>CucumberAutomation</td>
               <td>1</td>
-            <td>17 Sep 2024, 09:57</td>
+            <td>18 Sep 2024, 14:41</td>
     </tr>
   </tbody>
 </table>
@@ -129,18 +129,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Validate bus functionalities</td>
-                    <td      class="passed"    >12</td>
-          <td      class="failed"    >2</td>
-          <td     class="skipped"   >19</td>
+                    <td      class="passed"    >18</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >14</td>
           <td >0</td>
           <td >0</td>
           <td class="total">33</td>
 
-          <td >0</td>
-          <td  class="failed"    >2</td>
+          <td  class="passed"    >1</td>
+          <td  class="failed"    >1</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="104540859100">1m 44s 540ms</td>
+          <td class="duration" data-value="147716438300">2m 27s 716ms</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -191,9 +191,9 @@ $(document).ready(function() {
   </div>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Background</span>
   <span class="name"></span>
   
@@ -204,15 +204,15 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -222,14 +222,14 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">user opens the website</span>
   
-  <span class="lead-duration duration">3s 806ms</span>
+  <span class="lead-duration duration">5s 348ms</span>
 
   </div>
 
@@ -250,7 +250,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on home page</span>
   
-  <span class="lead-duration duration">030ms</span>
+  <span class="lead-duration duration">070ms</span>
 
   </div>
 
@@ -271,7 +271,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">the user clicks on Bus from the navigation bar</span>
   
-  <span class="lead-duration duration">2s 057ms</span>
+  <span class="lead-duration duration">2s 882ms</span>
 
   </div>
 
@@ -292,7 +292,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify the user is on the bus home page</span>
   
-  <span class="lead-duration duration">012ms</span>
+  <span class="lead-duration duration">080ms</span>
 
   </div>
 
@@ -313,7 +313,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">user enter the source city &quot;bus.source.city&quot;</span>
   
-  <span class="lead-duration duration">298ms</span>
+  <span class="lead-duration duration">378ms</span>
 
   </div>
 
@@ -334,7 +334,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">user enter the destination city &quot;bus.destination.city&quot;</span>
   
-  <span class="lead-duration duration">332ms</span>
+  <span class="lead-duration duration">425ms</span>
 
   </div>
 
@@ -351,54 +351,15 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">And</span>
   <span class="name">user select departure date as &quot;bus.booking.checkout.date&quot;</span>
   
-  <span class="lead-duration duration">45s 163ms</span>
+  <span class="lead-duration duration">315ms</span>
 
   </div>
 
         
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
-          <a>Error message</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details">
-        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table[@class='ui-datepicker-calendar']//td[@data-handler='selectDay']/a[contains(text(), '12')]&quot;}
-  (Session info: chrome=128.0.6613.138)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d12c601ab18b83a0ff77e6c1ac60d2ac, findElement {using=xpath, value=//table[@class='ui-datepicker-calendar']//td[@data-handler='selectDay']/a[contains(text(), '12')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\280662\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54667}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54667/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at com.automation.pages.web.BusHomePageWeb.selectDepartureDate(BusHomePageWeb.java:81)
-	at com.automation.steps.BusHomeSteps.user_select_departure_date_as(BusHomeSteps.java:50)
-	at &#10045;.user select departure date as &quot;bus.booking.checkout.date&quot;(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/busSearch.feature:10)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
         
@@ -411,11 +372,11 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">And</span>
   <span class="name">user click on search button on the bus page</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">4s 040ms</span>
 
   </div>
 
@@ -450,9 +411,9 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Verify bus booking</span>
   
@@ -463,10 +424,10 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details  in ">
+  <div id="element-3" class="collapse collapsable-details ">
     
   <div class="inner-level hooks-before">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-5">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-4">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -478,13 +439,13 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
 
     </div>
 
-    <div id="before-5" class="inner-level collapse collapsable-details ">
+    <div id="before-4" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
-                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">1s 839ms</span>
+  <span class="lead-duration duration">6s 751ms</span>
 
           </div>
 
@@ -500,9 +461,9 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-5">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -512,14 +473,14 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
 
   </div>
 
-  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-5" class="inner-level collapse collapsable-details ">
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on listing page of the bus page</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">45s 102ms</span>
 
   </div>
 
@@ -540,7 +501,7 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-7">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-6">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -552,13 +513,13 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
 
     </div>
 
-    <div id="after-7" class="inner-level collapse collapsable-details ">
+    <div id="after-6" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">378ms</span>
+  <span class="lead-duration duration">448ms</span>
 
           </div>
 
@@ -582,9 +543,9 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
   </div>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-8">
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-7">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Background</span>
   <span class="name"></span>
   
@@ -595,15 +556,15 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
   </span>
   <div class="description indention"></div>
 
-  <div id="element-8" class="collapse collapsable-details  in ">
+  <div id="element-7" class="collapse collapsable-details ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-8">
     
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -613,14 +574,14 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
 
   </div>
 
-  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-8" class="inner-level collapse collapsable-details ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">user opens the website</span>
   
-  <span class="lead-duration duration">4s 131ms</span>
+  <span class="lead-duration duration">5s 765ms</span>
 
   </div>
 
@@ -641,7 +602,7 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on home page</span>
   
-  <span class="lead-duration duration">031ms</span>
+  <span class="lead-duration duration">046ms</span>
 
   </div>
 
@@ -662,7 +623,7 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
   <span class="keyword indention">When</span>
   <span class="name">the user clicks on Bus from the navigation bar</span>
   
-  <span class="lead-duration duration">2s 841ms</span>
+  <span class="lead-duration duration">3s 464ms</span>
 
   </div>
 
@@ -683,7 +644,7 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
   <span class="keyword indention">Then</span>
   <span class="name">verify the user is on the bus home page</span>
   
-  <span class="lead-duration duration">011ms</span>
+  <span class="lead-duration duration">014ms</span>
 
   </div>
 
@@ -704,7 +665,7 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
   <span class="keyword indention">When</span>
   <span class="name">user enter the source city &quot;bus.source.city&quot;</span>
   
-  <span class="lead-duration duration">316ms</span>
+  <span class="lead-duration duration">234ms</span>
 
   </div>
 
@@ -725,7 +686,7 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
   <span class="keyword indention">And</span>
   <span class="name">user enter the destination city &quot;bus.destination.city&quot;</span>
   
-  <span class="lead-duration duration">328ms</span>
+  <span class="lead-duration duration">378ms</span>
 
   </div>
 
@@ -742,54 +703,15 @@ Session ID: d12c601ab18b83a0ff77e6c1ac60d2ac
       </div>
           <div class="step">
         
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">And</span>
   <span class="name">user select departure date as &quot;bus.booking.checkout.date&quot;</span>
   
-  <span class="lead-duration duration">45s 178ms</span>
+  <span class="lead-duration duration">214ms</span>
 
   </div>
 
         
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
-          <a>Error message</a>
-      </div>
-      <div id="msg-10" class="collapse collapsable-details">
-        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table[@class='ui-datepicker-calendar']//td[@data-handler='selectDay']/a[contains(text(), '12')]&quot;}
-  (Session info: chrome=128.0.6613.138)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.13.0', revision: 'ba948ece5b*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [206eb1f3579790a09941aaf1193b96d4, findElement {using=xpath, value=//table[@class='ui-datepicker-calendar']//td[@data-handler='selectDay']/a[contains(text(), '12')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\280662\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54897}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54897/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 206eb1f3579790a09941aaf1193b96d4
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at com.automation.pages.web.BusHomePageWeb.selectDepartureDate(BusHomePageWeb.java:81)
-	at com.automation.steps.BusHomeSteps.user_select_departure_date_as(BusHomeSteps.java:50)
-	at &#10045;.user select departure date as &quot;bus.booking.checkout.date&quot;(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/busSearch.feature:10)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
         
@@ -802,11 +724,11 @@ Session ID: 206eb1f3579790a09941aaf1193b96d4
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">And</span>
   <span class="name">user click on search button on the bus page</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">3s 786ms</span>
 
   </div>
 
@@ -840,7 +762,7 @@ Session ID: 206eb1f3579790a09941aaf1193b96d4
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-11">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-9">
     
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -853,10 +775,10 @@ Session ID: 206eb1f3579790a09941aaf1193b96d4
   </span>
   <div class="description indention"></div>
 
-  <div id="element-11" class="collapse collapsable-details  in ">
+  <div id="element-9" class="collapse collapsable-details  in ">
     
   <div class="inner-level hooks-before">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-12">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-10">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -868,13 +790,13 @@ Session ID: 206eb1f3579790a09941aaf1193b96d4
 
     </div>
 
-    <div id="before-12" class="inner-level collapse collapsable-details ">
+    <div id="before-10" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
-                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">1s 812ms</span>
+  <span class="lead-duration duration">2s 103ms</span>
 
           </div>
 
@@ -890,7 +812,7 @@ Session ID: 206eb1f3579790a09941aaf1193b96d4
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-13">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-11">
     
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -902,14 +824,14 @@ Session ID: 206eb1f3579790a09941aaf1193b96d4
 
   </div>
 
-  <div id="steps-13" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-11" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief passed">
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on listing page of the bus page</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">45s 112ms</span>
 
   </div>
 
@@ -926,15 +848,41 @@ Session ID: 206eb1f3579790a09941aaf1193b96d4
       </div>
           <div class="step">
         
-<div class="brief skipped">
+<div class="brief failed">
   <span class="keyword indention">When</span>
   <span class="name">user click on select seat button for the first bus displayed on listing page</span>
   
-  <span class="lead-duration duration">000ms</span>
+  <span class="lead-duration duration">30s 053ms</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
+          <a>Error message</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
+	at java.base/java.util.Objects.checkIndex(Objects.java:359)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.get(Unknown Source)
+	at com.automation.pages.web.BusListingPageWeb.clickOnSelectSeatBtnOfTheFirstBus(BusListingPageWeb.java:26)
+	at com.automation.steps.BusListingSteps.userClickOnSelectSeatButtonForTheFirstBusDisplayedOnListingPage(BusListingSteps.java:32)
+	at &#10045;.user click on select seat button for the first bus displayed on listing page(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/BusSearch.feature:22)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
         
@@ -1259,7 +1207,7 @@ Session ID: 206eb1f3579790a09941aaf1193b96d4
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-14">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-13">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -1271,13 +1219,13 @@ Session ID: 206eb1f3579790a09941aaf1193b96d4
 
     </div>
 
-    <div id="after-14" class="inner-level collapse collapsable-details ">
+    <div id="after-13" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">322ms</span>
+  <span class="lead-duration duration">680ms</span>
 
           </div>
 
@@ -1285,6 +1233,21 @@ Session ID: 206eb1f3579790a09941aaf1193b96d4
 
           
           
+    <div class="embeddings inner-level">
+                <div class="embedding indention">
+        <div data-toggle="collapse" data-target="#embedding-14" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-224789331.png" target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-14" class="collapse collapsable-details">
+      <span class="embedding-content">
+        <img src="embeddings/embedding_-224789331.png">
+      </span>
+    </div>
+  </div>
+        </div>
   
         </div>
           </div>

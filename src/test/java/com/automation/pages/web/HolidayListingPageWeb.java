@@ -47,6 +47,7 @@ public class HolidayListingPageWeb extends BasePageWeb implements HolidayListing
     public boolean verifyListingPageHasResultsInAscendingOrder(String sortingType) {
         List<WebElement> listOfPricesElements = driver.findElements(By.xpath("//div[@class='listpnl']/div//span[@class='prc-ttl']/span[1]"));
         List<Integer> listOfPrices = new ArrayList<>();
+        System.out.println(listOfPrices+ " beforeee call");
         for(WebElement eachPrice : listOfPricesElements){
             int price = Integer.parseInt(eachPrice.getText().split("₹ ")[1]);
             System.out.println(price);
@@ -54,15 +55,19 @@ public class HolidayListingPageWeb extends BasePageWeb implements HolidayListing
         }
 
         List<Integer> listOfPricesCopy = new ArrayList<>(listOfPrices);
+
+        System.out.println("beforee");
         if(sortingType.contains("Low to High")){
+            System.out.println("lowwww");
             Collections.sort(listOfPricesCopy);
         }else{
+            System.out.println("highh");
             listOfPricesCopy.sort(Collections.reverseOrder());
             System.out.println("After reverse: "+ listOfPricesCopy);
         }
 
         System.out.println("list : "+ listOfPrices);
-        System.out.println("list copy : "+ listOfPricesCopy);
+//        System.out.println("list copy : "+ listOfPricesCopy);
 
         return listOfPrices.equals(listOfPricesCopy);
     }

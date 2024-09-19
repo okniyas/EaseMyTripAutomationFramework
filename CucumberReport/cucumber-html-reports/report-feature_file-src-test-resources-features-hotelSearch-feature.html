@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>CucumberAutomation</td>
               <td>1</td>
-            <td>17 Sep 2024, 09:57</td>
+            <td>18 Sep 2024, 14:41</td>
     </tr>
   </tbody>
 </table>
@@ -129,19 +129,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Validate hotel search</td>
-                    <td      class="passed"    >10</td>
-          <td >0</td>
-          <td >0</td>
+                    <td      class="passed"    >7</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">10</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="14163308200">14s 163ms</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="10481537300">10s 481ms</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -176,7 +176,7 @@ $(document).ready(function() {
       </div>
 
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">Validate hotel search</span>
   
@@ -197,9 +197,9 @@ $(document).ready(function() {
       </div>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">verify list of hotels is displayed</span>
   
@@ -210,7 +210,7 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
     
   <div class="inner-level hooks-before">
         <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
@@ -229,9 +229,9 @@ $(document).ready(function() {
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
-                          <span class="location name">com.automation.steps.Hooks.setUp()</span>
+                          <span class="location name">com.automation.steps.Hooks.setUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">2s 324ms</span>
+  <span class="lead-duration duration">3s 364ms</span>
 
           </div>
 
@@ -247,9 +247,9 @@ $(document).ready(function() {
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-3">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -259,14 +259,14 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-3" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">user opens the website</span>
   
-  <span class="lead-duration duration">4s 581ms</span>
+  <span class="lead-duration duration">4s 448ms</span>
 
   </div>
 
@@ -287,7 +287,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on home page</span>
   
-  <span class="lead-duration duration">165ms</span>
+  <span class="lead-duration duration">043ms</span>
 
   </div>
 
@@ -308,7 +308,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">user click on hotel menu</span>
   
-  <span class="lead-duration duration">2s 190ms</span>
+  <span class="lead-duration duration">2s 478ms</span>
 
   </div>
 
@@ -329,7 +329,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">verify hotel home page is displayed</span>
   
-  <span class="lead-duration duration">226ms</span>
+  <span class="lead-duration duration">094ms</span>
 
   </div>
 
@@ -350,7 +350,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">user select the destination as &quot;Trivandrum&quot;</span>
   
-  <span class="lead-duration duration">1s 319ms</span>
+  <span class="lead-duration duration">1s 652ms</span>
 
   </div>
 
@@ -371,7 +371,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">user enter the check in date as &quot;12 Dec 2024&quot;</span>
   
-  <span class="lead-duration duration">284ms</span>
+  <span class="lead-duration duration">399ms</span>
 
   </div>
 
@@ -392,7 +392,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">user enter the check out date as &quot;13 Dec 2024&quot;</span>
   
-  <span class="lead-duration duration">186ms</span>
+  <span class="lead-duration duration">236ms</span>
 
   </div>
 
@@ -409,15 +409,57 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">And</span>
   <span class="name">user click on room select</span>
   
-  <span class="lead-duration duration">282ms</span>
+  <span class="lead-duration duration">1s 129ms</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Error message</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a id=&quot;exithotelroom&quot; class=&quot;addroom exitroom&quot; href=&quot;javascript:void(0)&quot;&gt;...&lt;/a&gt; is not clickable at point (1037, 405). Other element would receive the click: &lt;div id=&quot;login_pp&quot; style=&quot;display: block;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=128.0.6613.138)
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [64a4c5b926de4b63ceef0ceeef038b95, clickElement {id=f.9D3108E386070B25760161216F9C1C10.d.484D76478C16A74E81BAE508CE9FF6CD.e.398}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.138, chrome: {chromedriverVersion: 128.0.6613.137 (fe621c5aa2d..., userDataDir: C:\Users\280662\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64245}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64245/devtoo..., se:cdpVersion: 128.0.6613.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (64a4c5b926de4b63ceef0ceeef038b95)] -&gt; id: exithotelroom]
+Session ID: 64a4c5b926de4b63ceef0ceeef038b95
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor7.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy23.click(Unknown Source)
+	at com.automation.pages.web.HotelHomePageWeb.clickOnRoomsDone(HotelHomePageWeb.java:86)
+	at com.automation.steps.HotelHomeSteps.userClickOnRoomSelect(HotelHomeSteps.java:58)
+	at &#10045;.user click on room select(file:///C:/UST_Java/EaseMyTripAutomation/src/test/resources/features/HotelSearch.feature:12)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
         
@@ -430,11 +472,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">And</span>
   <span class="name">user click on hotel search</span>
   
-  <span class="lead-duration duration">4s 900ms</span>
+  <span class="lead-duration duration">000ms</span>
 
   </div>
 
@@ -451,11 +493,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">verify user is on hotel listing page</span>
   
-  <span class="lead-duration duration">026ms</span>
+  <span class="lead-duration duration">000ms</span>
 
   </div>
 
@@ -476,7 +518,7 @@ $(document).ready(function() {
 
     
   <div class="inner-level hooks-after">
-        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
       
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -488,13 +530,13 @@ $(document).ready(function() {
 
     </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
+    <div id="after-5" class="inner-level collapse collapsable-details ">
               <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-                          <span class="location name">com.automation.steps.Hooks.cleanUp()</span>
+                          <span class="location name">com.automation.steps.Hooks.cleanUp(io.cucumber.java.Scenario)</span>
                         
-  <span class="lead-duration duration">662ms</span>
+  <span class="lead-duration duration">611ms</span>
 
           </div>
 
@@ -502,6 +544,21 @@ $(document).ready(function() {
 
           
           
+    <div class="embeddings inner-level">
+                <div class="embedding indention">
+        <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_567698474.png" target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-6" class="collapse collapsable-details">
+      <span class="embedding-content">
+        <img src="embeddings/embedding_567698474.png">
+      </span>
+    </div>
+  </div>
+        </div>
   
         </div>
           </div>

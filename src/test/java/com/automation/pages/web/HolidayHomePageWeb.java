@@ -34,8 +34,9 @@ public class HolidayHomePageWeb extends BasePageWeb implements HolidayHomePage {
     }
 
     public void selectTheDestinationFromDropDownList() {
-        waitForElementToBePresentNotVisible("//ul[@ng-show='citytrue']/li//p");
+//        waitForElementToBePresentNotVisible("//ul[@ng-show='citytrue']/li//p");
 //        waitForElementToBeVisible(destinationDropdown);
+        waitForElementToBeClickable(destinationSearchBx);
         destinationDropdown.click();
     }
 
